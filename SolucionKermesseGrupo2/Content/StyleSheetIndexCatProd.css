@@ -1,0 +1,34 @@
+﻿h2 {
+    text-align: center;
+}
+
+#Container {
+    position: relative;
+    margin: 0 auto;
+    max-width: 1280px;
+    width: 90%;
+    margin: 75px;
+}
+
+.center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+#tblCatProd {
+    table-layout: fixed;
+    background-color: lightblue;
+    width: 1280px;
+    border-collapse: collapse;
+    border: 3px solid black;
+}
+
+#BtnCrear {
+}
+
+#lblCatProd1, #lblCatProd2, #lblCatProd3, #ModelCatProd1, #ModelCatProd2, #ModelCatProd3 {
+    text-align: center;
+}

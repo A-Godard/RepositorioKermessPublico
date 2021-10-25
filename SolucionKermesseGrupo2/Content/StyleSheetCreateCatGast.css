@@ -1,0 +1,16 @@
+﻿h2 {
+    text-align: center;
+}
+
+#Boton {
+    margin-top: 40px;
+    margin-left: 670px;
+}
+
+
+#lblCrCatGasto1, #lblCrCatGasto2, #lblCrCatGasto3 {
+    margin-left: 460px;
+    display: block;
+    text-align: center;
+    width: 500px;
+}

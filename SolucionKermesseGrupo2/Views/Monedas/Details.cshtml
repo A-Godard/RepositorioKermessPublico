@@ -1,0 +1,61 @@
+﻿@model SolucionKermesseGrupo2.Models.Moneda
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutControladores.cshtml";
+}
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+<h2>Detalles de las Monedas</h2>
+
+<head>
+    @Styles.Render("~/Content/StyleSheetDetallesMoneda.css")
+    @Styles.Render("~/Content/Site.css")
+</head>
+<div>
+
+    <hr />
+    <dl class="dl-horizontal" id="DetMoneda">
+        <dt>
+            <u> @Html.DisplayNameFor(model => model.nombre)</u>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombre)
+        </dd>
+
+        <dt>
+            <u>  @Html.DisplayNameFor(model => model.simbolo)</u>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.simbolo)
+        </dd>
+
+        <dt>
+            <u>  @Html.DisplayNameFor(model => model.estado)</u>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.estado)
+        </dd>
+
+    </dl>
+</div>
+<p id="BtnsHome">
+    @Html.ActionLink("Editar", "Edit", new { id = Model.idMoneda }) |
+    @Html.ActionLink("Regresar a la página principal", "Index")
+</p>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />

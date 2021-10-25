@@ -1,0 +1,22 @@
+﻿h2, h3 {
+    text-align: center;
+}
+
+#NombreUser1, #NombreUser2, #NombreUser3, #NombreUser4, #NombreUser5, #NombreUser6 {
+    margin-left: 600px;
+    text-align: center;
+    margin-right: 600px;
+}
+
+#ModelUser1, #ModelUser2, #ModelUser3, #ModelUser4, #ModelUser5, #ModelUser6
+{
+    margin-left: 600px;
+    text-align: center;
+    margin-right: 600px;
+}
+
+#BtnEliminarUser {
+    margin-left: 630px;
+    text-align: center;
+    margin-right: 600px;
+}

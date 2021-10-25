@@ -1,0 +1,69 @@
+﻿@model SolucionKermesseGrupo2.Models.Opcion
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_LayoutControladores.cshtml";
+}
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+<h2>Crear Nueva Opcion</h2>
+
+<head>
+    @Styles.Render("~/Content/StyleSheetCreate.css")
+    @Styles.Render("~/Content/Site.css")
+</head>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal" id="GeneralForm">
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group" id="lblForm">
+           <p id="Labl1"> @Html.LabelFor(model => model.opcionDescripcion, htmlAttributes: new { @class = "control-label col-md-2" })</p>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.opcionDescripcion, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.opcionDescripcion, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group" id="lblForm2">
+           <p id="Labl2">@Html.LabelFor(model => model.estado, htmlAttributes: new { @class = "control-label col-md-2" })</p>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.estado, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.estado, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Crear" class="btn btn-primary" id="Boton"/>
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Regresar al menu principal", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />

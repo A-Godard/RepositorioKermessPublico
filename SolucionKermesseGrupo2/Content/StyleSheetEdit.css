@@ -1,0 +1,47 @@
+﻿h2{
+text-align:center;
+
+}
+
+#Container {
+    position: relative;
+    margin: 0 auto;
+    max-width: 1280px;
+    width: 90%;
+    margin: 75px;
+}
+
+.center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+#tablita {
+    table-layout: fixed;
+    background-color: lightblue;
+    width: 1280px;
+    border-collapse: collapse;
+    border: 3px solid black;
+}
+
+
+#BtnCrear {
+
+}
+#titulo1{
+
+text-align:center;
+}
+#titulo2 {
+    text-align: center;
+}
+#valor1 {
+    text-align: center;
+}
+#valor2{
+    text-align: center;
+}
+

@@ -1,0 +1,36 @@
+﻿h2 {
+    text-align: center;
+}
+
+#Container {
+    position: relative;
+    margin: 0 auto;
+    max-width: 1280px;
+    width: 90%;
+    margin: 75px;
+}
+
+.center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+#TblCatGastos {
+    table-layout: fixed;
+    width: 1280px;
+    background-color: lightblue;
+    border-collapse: collapse;
+    border: 3px solid black;
+}
+
+#BtnCrear {
+    
+}
+
+#lblCatGastos1, #lblCatGastos2, #lblCatGastos3, #ModelCatGasto1, #ModelCatGasto2, #ModelCatGasto3 {
+    text-align: center;
+}

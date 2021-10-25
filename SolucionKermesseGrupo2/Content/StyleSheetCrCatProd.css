@@ -1,0 +1,16 @@
+﻿h2 {
+    text-align: center;
+}
+
+#Boton {
+    margin-top: 40px;
+    margin-left: 680px;
+}
+
+
+#lblFormCatProd1, #lblFormCatProd2, #lblFormCatProd3 {
+    margin-left: 470px;
+    display: block;
+    text-align: center;
+    width: 500px;
+}

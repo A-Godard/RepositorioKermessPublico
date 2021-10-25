@@ -1,0 +1,16 @@
+﻿h2 {
+    text-align: center;
+}
+
+#Boton {
+    margin-top: 40px;
+    margin-left: 650px;
+}
+
+#lblUserForm1, #lblUserForm2, #lblUserForm3, #lblUserForm4, #lblUserForm5, #lblUserForm6 
+{
+    margin-left: 450px;
+    display: block;
+    text-align: center;
+    width: 500px;
+}

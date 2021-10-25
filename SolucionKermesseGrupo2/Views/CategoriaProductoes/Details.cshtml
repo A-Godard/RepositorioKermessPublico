@@ -1,0 +1,60 @@
+﻿@model SolucionKermesseGrupo2.Models.CategoriaProducto
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutControladores.cshtml";
+}
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+<h2>Detalles de Categoria Productos</h2>
+
+<head>
+    @Styles.Render("~/Content/StyleSheetDetallesCatProd.css")
+    @Styles.Render("~/Content/Site.css")
+</head>
+<div>
+    <hr />
+    <dl class="dl-horizontal" id="DetCatProd">
+        <dt>
+            <u> @Html.DisplayNameFor(model => model.nombre)</u>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombre)
+        </dd>
+
+        <dt>
+            <u> @Html.DisplayNameFor(model => model.descripcion)</u>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.descripcion)
+        </dd>
+
+        <dt>
+            <u>  @Html.DisplayNameFor(model => model.estado)</u>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.estado)
+        </dd>
+
+    </dl>
+</div>
+<p id="BtnsHome">
+    @Html.ActionLink("Editar", "Edit", new { id = Model.idCatProd }) 
+    @Html.ActionLink("Regresar a la página principal", "Index")
+</p>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />

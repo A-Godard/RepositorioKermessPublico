@@ -1,0 +1,33 @@
+﻿h2{
+
+text-align:center;
+}
+
+#Boton {
+    margin-top:40px;
+    margin-left: 670px;
+}
+
+#lblForm {
+  margin-left:500px;
+    display: block;
+    text-align: center;
+    width: 500px;
+}
+
+#lblForm2 {
+    margin-left: 500px;
+    display: block;
+    text-align: center;
+    width: 500px;
+}
+
+#Labl1{
+
+    margin-right:130px;
+}
+
+#Labl2 {
+    margin-top:20px;
+    margin-right: 100px;
+}

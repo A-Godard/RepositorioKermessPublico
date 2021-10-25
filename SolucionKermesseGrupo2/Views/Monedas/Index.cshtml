@@ -1,0 +1,74 @@
+﻿@model IEnumerable<SolucionKermesseGrupo2.Models.Moneda>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutControladores.cshtml";
+}
+
+<head>
+    @Styles.Render("~/Content/StyleSheetIndexMoneda.css")
+    @Styles.Render("~/Content/Site.css")
+</head>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+<h2>Tabla Moneda</h2>
+<div id="Container">
+    <div class="center">
+        <table class="table" id="TablaMoneda">
+            <tr>
+                <th id="lblMoneda1">
+                    @Html.DisplayNameFor(model => model.nombre)
+                </th>
+                <th id="lblMoneda2">
+                    @Html.DisplayNameFor(model => model.simbolo)
+                </th>
+                <th id="lblMoneda3">
+                    @Html.DisplayNameFor(model => model.estado)
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td id="ModelMoneda1">
+                        @Html.DisplayFor(modelItem => item.nombre)
+                    </td>
+                    <td id="ModelMoneda2">
+                        @Html.DisplayFor(modelItem => item.simbolo)
+                    </td>
+                    <td id="ModelMoneda3">
+                        @Html.DisplayFor(modelItem => item.estado)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Editar", "Edit", new { id = item.idMoneda }) |
+                        @Html.ActionLink("Detalles", "Details", new { id = item.idMoneda }) |
+                        @Html.ActionLink("Eliminar", "Delete", new { id = item.idMoneda })
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </div>
+</div>
+<br />
+
+<div id="Container">
+    <div class="center">
+        <a class="btn btn-primary" id="BtnCrear" href="@Url.Action("Create")" role="button">Crear nuevo</a>
+    </div>
+</div>
+    
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />

@@ -1,0 +1,91 @@
+﻿@model IEnumerable<SolucionKermesseGrupo2.Models.Parroquia>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutControladores.cshtml";
+}
+
+<head>
+    @Styles.Render("~/Content/StyleSheetIndexParroquia.css")
+    @Styles.Render("~/Content/Site.css")
+</head>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+<h2>Tabla Parroquia</h2>
+
+<div id="Container">
+    <div class="center">
+        <table class="table" id="TblParroquia">
+            <tr>
+                <th id="lblParroquia1">
+                    @Html.DisplayNameFor(model => model.nombre)
+                </th>
+                <th id="lblParroquia2">
+                    @Html.DisplayNameFor(model => model.direccion)
+                </th>
+                <th id="lblParroquia3">
+                    @Html.DisplayNameFor(model => model.telefono)
+                </th>
+                <th id="lblParroquia4">
+                    @Html.DisplayNameFor(model => model.parroco)
+                </th>
+                <th id="lblParroquia5">
+                    @Html.DisplayNameFor(model => model.logo)
+                </th>
+                <th id="lblParroquia6">
+                    @Html.DisplayNameFor(model => model.sitioWeb)
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td id="ModelParroquia1">
+                        @Html.DisplayFor(modelItem => item.nombre)
+                    </td>
+                    <td id="ModelParroquia2">
+                        @Html.DisplayFor(modelItem => item.direccion)
+                    </td>
+                    <td id="ModelParroquia3">
+                        @Html.DisplayFor(modelItem => item.telefono)
+                    </td>
+                    <td id="ModelParroquia4">
+                        @Html.DisplayFor(modelItem => item.parroco)
+                    </td>
+                    <td id="ModelParroquia5">
+                        @Html.DisplayFor(modelItem => item.logo)
+                    </td>
+                    <td id="ModelParroquia6">
+                        @Html.DisplayFor(modelItem => item.sitioWeb)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Editar", "Edit", new { id = item.idParroquia }) |
+                        @Html.ActionLink("Detalles", "Details", new { id = item.idParroquia }) |
+                        @Html.ActionLink("Eliminar", "Delete", new { id = item.idParroquia })
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </div>
+</div>
+<br />
+<div id="Container">
+    <div class="center">
+        <a class="btn btn-primary" id="BtnCrear" href="@Url.Action("Create")" role="button">Crear nuevo</a>
+    </div>
+</div>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+

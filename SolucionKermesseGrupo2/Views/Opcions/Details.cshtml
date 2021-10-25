@@ -1,0 +1,57 @@
+﻿@model SolucionKermesseGrupo2.Models.Opcion
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutControladores.cshtml";
+}
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+<h2>Detalles de las opciones</h2>
+
+<head>
+    @Styles.Render("~/Content/StyleSheetDetalles.css")
+    @Styles.Render("~/Content/Site.css")
+</head>
+
+<div class="form-horizontal">
+
+    <hr />
+    <div class="form-group" id="FormulGeneral">
+        <h6> @Html.DisplayNameFor(model => model.opcionDescripcion):</h6>
+
+        <div class="col-md-10">
+            <p id="descp"> @Html.DisplayFor(model => model.opcionDescripcion)</p>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <h6>  @Html.DisplayNameFor(model => model.estado):</h6>
+        <div class="col-md-10">
+
+            <p id="modelado"> @Html.DisplayFor(model => model.estado)</p>
+        </div>
+    </div>
+
+
+</div>
+<p id="menupeque">
+    @Html.ActionLink("Editar", "Edit", new { id = Model.idOpcion }) |
+    @Html.ActionLink("Regresar al menu principal", "Index")
+</p>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />

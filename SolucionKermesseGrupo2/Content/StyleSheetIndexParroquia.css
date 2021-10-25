@@ -1,0 +1,35 @@
+﻿h2 {
+    text-align: center;
+}
+
+#Container {
+    position: relative;
+    margin: 0 auto;
+    max-width: 1280px;
+    width: 90%;
+    margin: 75px;
+}
+
+.center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+#TblParroquia {
+    table-layout: fixed;
+    background-color: lightblue;
+    width: 1280px;
+    border-collapse: collapse;
+    border: 3px solid black;
+}
+
+#BtnCrear {
+}
+
+#lblParroquia1, #lblParroquia2, #lblParroquia3, #lblParroquia4, #lblParroquia5, #lblParroquia6, #ModelParroquia1, #ModelParroquia2, #ModelParroquia3, #ModelParroquia4, #ModelParroquia5, #ModelParroquia6 {
+    text-align: center;
+}

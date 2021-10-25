@@ -1,0 +1,38 @@
+﻿h2, h3{
+    
+    text-align:center;
+}
+h2{
+
+    margin-top:60px;
+}
+
+#NombreC {
+    margin-left: 600px;
+    text-align: center;
+    margin-right: 600px;
+}
+
+#NombreE {
+    margin-left: 600px;
+    text-align: center;
+    margin-right: 600px;
+}
+
+#NombreModel1 {
+    margin-left: 600px;
+    text-align: center;
+    margin-right: 600px;
+}
+
+#NombreModel2 {
+    margin-left: 600px;
+    text-align: center;
+    margin-right: 600px;
+}
+
+#BtnEliminar {
+    margin-left: 630px;
+    text-align: center;
+    margin-right: 600px;
+}

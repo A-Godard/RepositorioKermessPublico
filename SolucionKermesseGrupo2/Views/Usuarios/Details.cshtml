@@ -1,0 +1,87 @@
+﻿@model SolucionKermesseGrupo2.Models.Usuario
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutControladores.cshtml";
+}
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+<h2>Detalles de Usuarios</h2>
+
+<head>
+    @Styles.Render("~/Content/StyleSheetDetallesUsers.css")
+    @Styles.Render("~/Content/Site.css")
+</head>
+
+<div>
+
+    <hr />
+    <dl class="dl-horizontal" id="dlDetalles">
+        <dt>
+            <u> @Html.DisplayNameFor(model => model.userName)</u>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.userName)
+        </dd>
+
+        <dt>
+            <u> @Html.DisplayNameFor(model => model.pwd)</u>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pwd)
+        </dd>
+
+        <dt>
+            <u> @Html.DisplayNameFor(model => model.nombres)</u>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombres)
+        </dd>
+
+        <dt>
+            <u>  @Html.DisplayNameFor(model => model.apellidos)</u>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.apellidos)
+        </dd>
+
+        <dt>
+            <u> @Html.DisplayNameFor(model => model.email)</u>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.email)
+        </dd>
+
+        <dt>
+            <u>   @Html.DisplayNameFor(model => model.estado)</u>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.estado)
+        </dd>
+
+    </dl>
+</div>
+<p id="homebutons">
+    @Html.ActionLink("Editar", "Edit", new { id = Model.idUsuario }) |
+    @Html.ActionLink("Regresar a la página principal", "Index")
+</p>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />

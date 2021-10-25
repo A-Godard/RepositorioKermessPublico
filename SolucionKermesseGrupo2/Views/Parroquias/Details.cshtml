@@ -1,0 +1,79 @@
+﻿@model SolucionKermesseGrupo2.Models.Parroquia
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutControladores.cshtml";
+}
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+<h2>Detalles Parroquia</h2>
+
+<head>
+    @Styles.Render("~/Content/StyleSheetDetParroquia.css")
+    @Styles.Render("~/Content/Site.css")
+    </head>
+
+    <div>
+     
+        <hr />
+        <dl class="dl-horizontal" id="DetParroquia">
+            <dt>
+             <u>   @Html.DisplayNameFor(model => model.nombre)</u>
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.nombre)
+            </dd>
+
+            <dt>
+            <u>    @Html.DisplayNameFor(model => model.direccion) </u>
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.direccion)
+            </dd>
+
+            <dt>
+             <u>   @Html.DisplayNameFor(model => model.telefono)</u>
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.telefono)
+            </dd>
+
+            <dt>
+             <u>   @Html.DisplayNameFor(model => model.parroco)</u>
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.parroco)
+            </dd>
+
+            <dt>
+             <u>   @Html.DisplayNameFor(model => model.logo)</u>
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.logo)
+            </dd>
+
+            <dt>
+             <u>   @Html.DisplayNameFor(model => model.sitioWeb)</u>
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.sitioWeb)
+            </dd>
+
+        </dl>
+    </div>
+    <p id="BtnsHome">
+        @Html.ActionLink("Editar", "Edit", new { id = Model.idParroquia }) |
+        @Html.ActionLink("Regresar a la página principal", "Index")
+    </p>

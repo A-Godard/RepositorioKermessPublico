@@ -1,0 +1,21 @@
+﻿h2, h3 {
+    text-align: center;
+}
+
+#NombreCatprod1, #NombreCatprod2, #NombreCatprod3 {
+    margin-left: 600px;
+    text-align: center;
+    margin-right: 600px;
+}
+
+#MdelCatProd1, #MdelCatProd2, #MdelCatProd3 {
+    margin-left: 600px;
+    text-align: center;
+    margin-right: 600px;
+}
+
+#BtnEliminar {
+    margin-left: 630px;
+    text-align: center;
+    margin-right: 600px;
+}

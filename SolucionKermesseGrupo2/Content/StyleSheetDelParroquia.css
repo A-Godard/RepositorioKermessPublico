@@ -1,0 +1,21 @@
+﻿h2, h3 {
+    text-align: center;
+}
+
+#NombreParroquia1, #NombreParroquia2, #NombreParroquia3, #NombreParroquia4, #NombreParroquia5, #NombreParroquia6 {
+    margin-left: 600px;
+    text-align: center;
+    margin-right: 600px;
+}
+
+#ModelPq1, #ModelPq2, #ModelPq3, #ModelPq4, #ModelPq5, #ModelPq6 {
+    margin-left: 600px;
+    text-align: center;
+    margin-right: 600px;
+}
+
+#BtnEliminar {
+    margin-left: 630px;
+    text-align: center;
+    margin-right: 600px;
+}

@@ -1,0 +1,21 @@
+﻿h2, h3 {
+    text-align: center;
+}
+
+#NombreMoneda1, #NombreMoneda2, #NombreMoneda3 {
+    margin-left: 600px;
+    text-align: center;
+    margin-right: 600px;
+}
+
+#ModelMnda1, #ModelMnda2, #ModelMnda3 {
+    margin-left: 600px;
+    text-align: center;
+    margin-right: 600px;
+}
+
+#BtnEliminar{
+    margin-left: 630px;
+    text-align: center;
+    margin-right: 600px;
+}

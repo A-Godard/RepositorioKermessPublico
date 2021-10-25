@@ -1,0 +1,21 @@
+﻿h2, h3 {
+    text-align: center;
+}
+
+#NombreCatGast1, #NombreCatGast2, #NombreCatGast3 {
+    margin-left: 600px;
+    text-align: center;
+    margin-right: 600px;
+}
+
+#ModCatGasto1, #ModCatGasto2, #ModCatGasto3 {
+    margin-left: 600px;
+    text-align: center;
+    margin-right: 600px;
+}
+
+#BtnEliminar {
+    margin-left: 630px;
+    text-align: center;
+    margin-right: 600px;
+}

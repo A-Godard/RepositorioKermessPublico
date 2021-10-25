@@ -1,0 +1,79 @@
+﻿@model IEnumerable<SolucionKermesseGrupo2.Models.CategoriaProducto>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutControladores.cshtml";
+}
+
+<head>
+    @Styles.Render("~/Content/StyleSheetIndexCatProd.css")
+    @Styles.Render("~/Content/Site.css")
+</head>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+<h2>Tabla Categoria de Productos</h2>
+
+<div id="Container">
+    <div class="center">
+        <table class="table" id="tblCatProd">
+            <tr>
+                <th id="lblCatProd1">
+                    <u> @Html.DisplayNameFor(model => model.nombre)</u>
+                </th>
+                <th id="lblCatProd2">
+                    <u> @Html.DisplayNameFor(model => model.descripcion)</u>
+                </th>
+                <th id="lblCatProd3">
+                    <u>  @Html.DisplayNameFor(model => model.estado)</u>
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td id="ModelCatProd1">
+                        @Html.DisplayFor(modelItem => item.nombre)
+                    </td>
+                    <td id="ModelCatProd2">
+                        @Html.DisplayFor(modelItem => item.descripcion)
+                    </td>
+                    <td id="ModelCatProd3">
+                        @Html.DisplayFor(modelItem => item.estado)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Editar", "Edit", new { id = item.idCatProd }) |
+                        @Html.ActionLink("Detalles", "Details", new { id = item.idCatProd }) |
+                        @Html.ActionLink("Eliminar", "Delete", new { id = item.idCatProd })
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </div>
+</div>
+
+<br />
+<div id="Container">
+    <div class="center">
+        <a class="btn btn-primary" id="BtnCrear" href="@Url.Action("Create")" role="button">Crear nuevo</a>
+    </div>
+</div>
+
+<p>
+    @Html.ActionLink("Exportar a PDF", "VerReporte", new { tipo = "PDF" })
+</p>
+
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />

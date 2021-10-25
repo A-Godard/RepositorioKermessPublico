@@ -1,0 +1,16 @@
+﻿h2 {
+    text-align: center;
+}
+
+#Boton {
+    margin-top: 40px;
+    margin-left: 680px;
+}
+
+
+#lblFormPQ1, #lblFormPQ2, #lblFormPQ3, #lblFormPQ4, #lblFormPQ5, #lblFormPQ6 {
+    margin-left: 470px;
+    display: block;
+    text-align: center;
+    width: 500px;
+}
