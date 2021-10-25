@@ -416,6 +416,7 @@
     <Content Include="Views\Auth\Login.cshtml" />
     <Content Include="Views\Auth\Logout.cshtml" />
     <Content Include="Views\CategoriaGastoes\VerReporte.cshtml" />
+    <Content Include="Views\Parroquias\VerReporteParroquia.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -439,6 +440,7 @@
   <ItemGroup>
     <EmbeddedResource Include="Reportes\RptCategoriaGasto.rdlc" />
     <EmbeddedResource Include="Reportes\RptCategoriaProducto.rdlc" />
+    <EmbeddedResource Include="Reportes\RptParroquia.rdlc" />
     <EmbeddedResource Include="Reportes\RptUsuario.rdlc" />
   </ItemGroup>
   <PropertyGroup>
