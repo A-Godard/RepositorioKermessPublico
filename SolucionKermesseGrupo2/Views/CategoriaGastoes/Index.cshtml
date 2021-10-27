@@ -39,9 +39,7 @@
                 <th id="lblCatGastos2">
                     @Html.DisplayNameFor(model => model.descripcion)
                 </th>
-                <th id="lblCatGastos3">
-                    @Html.DisplayNameFor(model => model.estado)
-                </th>
+                
                 <th></th>
             </tr>
 
@@ -53,9 +51,6 @@
                     </td>
                     <td id="ModelCatGasto2">
                         @Html.DisplayFor(modelItem => item.descripcion)
-                    </td>
-                    <td id="ModelCatGasto3">
-                        @Html.DisplayFor(modelItem => item.estado)
                     </td>
                     <td>
                         @Html.ActionLink("Editar", "Edit", new { id = item.idCatGasto }) |
