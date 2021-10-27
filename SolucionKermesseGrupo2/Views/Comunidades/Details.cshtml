@@ -1,0 +1,53 @@
+﻿@model SolucionKermesseGrupo2.Models.Comunidad
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutControladores.cshtml";
+}
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+<h2>Detalles Comunidad</h2>
+
+<head>
+    @Styles.Render("~/Content/StyleSheetComunidad.css")
+    @Styles.Render("~/Content/Site.css")
+</head>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal" id="DetComunidad">
+        <dt>
+            @Html.DisplayNameFor(model => model.nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.responsble)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.responsble)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.descContribucion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.descContribucion)
+        </dd>
+    </dl>
+</div>
+<p id="BtnsHome">
+    @Html.ActionLink("Editar", "Edit", new { id = Model.idComunidad }) |
+    @Html.ActionLink("Regresar a la página principal", "Index")
+</p>

@@ -152,6 +152,7 @@
     <Compile Include="Controllers\AuthController.cs" />
     <Compile Include="Controllers\CategoriaGastoesController.cs" />
     <Compile Include="Controllers\CategoriaProductoesController.cs" />
+    <Compile Include="Controllers\ComunidadesController.cs" />
     <Compile Include="Controllers\ControlBonoesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MonedasController.cs" />
@@ -273,6 +274,7 @@
     <Content Include="Content\img\flat-g924eb82b4_1280.png" />
     <Content Include="Content\img\iglesia.jpg" />
     <Content Include="Content\StyleSheetCarrousel.css" />
+    <Content Include="Content\StyleSheetComunidad.css" />
     <Content Include="Content\StyleSheetCrCatProd.css" />
     <Content Include="Content\StyleSheetCreate.css" />
     <Content Include="Content\StyleSheetCreateCatGast.css" />
@@ -431,6 +433,11 @@
     <Content Include="Views\Rols\Index.cshtml" />
     <Content Include="Views\Monedas\VerReporte.cshtml" />
     <Content Include="Views\Opcions\VerReporte.cshtml" />
+    <Content Include="Views\Comunidades\Create.cshtml" />
+    <Content Include="Views\Comunidades\Delete.cshtml" />
+    <Content Include="Views\Comunidades\Details.cshtml" />
+    <Content Include="Views\Comunidades\Edit.cshtml" />
+    <Content Include="Views\Comunidades\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -454,6 +461,7 @@
   <ItemGroup>
     <EmbeddedResource Include="Reportes\RptCategoriaGasto.rdlc" />
     <EmbeddedResource Include="Reportes\RptCategoriaProducto.rdlc" />
+    <EmbeddedResource Include="Reportes\RptComunidad.rdlc" />
     <EmbeddedResource Include="Reportes\RptMoneda.rdlc" />
     <EmbeddedResource Include="Reportes\RptOpcion.rdlc" />
     <EmbeddedResource Include="Reportes\RptParroquia.rdlc" />

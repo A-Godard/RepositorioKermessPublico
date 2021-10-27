@@ -12,24 +12,11 @@ using SolucionKermesseGrupo2.Models;
 
 namespace SolucionKermesseGrupo2.Controllers
 {
-    public class ParroquiasController : Controller
+    public class ComunidadesController : Controller
     {
         private BDKermesseEntities db = new BDKermesseEntities();
 
-        // GET: Parroquias
-        public ActionResult Index(string ValorBusqued=" ")
-        {
-            var Parroquia = from m in db.Parroquia select m;
-            if (!string.IsNullOrEmpty(ValorBusqued))
-            {
-                Parroquia = Parroquia.Where(m => m.nombre.Contains(ValorBusqued));
-            }
-            return View(db.Parroquia.ToList());
-        }
-        // busqueda
-
-        
-        public ActionResult VerReporteParroquia(string tipo)
+        public ActionResult verReporte(string tipo)
         {
             LocalReport rpt = new LocalReport();
             string mt, enc, f;
@@ -37,15 +24,15 @@ namespace SolucionKermesseGrupo2.Controllers
             Warning[] w;
 
 
-            string ruta = Path.Combine(Server.MapPath("~/Reportes"), "RptParroquia.rdlc");
+            string ruta = Path.Combine(Server.MapPath("~/Reportes"), "RptComunidad.rdlc");
             rpt.ReportPath = ruta;
 
             BDKermesseEntities modelo = new BDKermesseEntities();
-            List<Parroquia> ls = new List<Parroquia>();
-            ls = modelo.Parroquia.ToList();
-           
+            List<Comunidad> ls = new List<Comunidad>();
+            ls = modelo.Comunidad.ToList();
 
-            ReportDataSource rds = new ReportDataSource("DsParroquia", ls);
+
+            ReportDataSource rds = new ReportDataSource("DsComunidad", ls);
             rpt.DataSources.Add(rds);
 
             byte[] b = rpt.Render(tipo, null, out mt, out enc, out f, out s, out w);
@@ -53,109 +40,103 @@ namespace SolucionKermesseGrupo2.Controllers
             return File(b, mt);
         }
 
+        // GET: Comunidades
+        public ActionResult Index()
+        {
+            return View(db.Comunidad.ToList());
+        }
 
-
-
-
-
-
-
-
-
-
-
-
-        // GET: Parroquias/Details/5
+        // GET: Comunidades/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Parroquia parroquia = db.Parroquia.Find(id);
-            if (parroquia == null)
+            Comunidad comunidad = db.Comunidad.Find(id);
+            if (comunidad == null)
             {
                 return HttpNotFound();
             }
-            return View(parroquia);
+            return View(comunidad);
         }
 
-        // GET: Parroquias/Create
+        // GET: Comunidades/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Parroquias/Create
+        // POST: Comunidades/Create
         // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que quiere enlazarse. Para obtener 
         // más detalles, vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "idParroquia,nombre,direccion,telefono,parroco,logo,sitioWeb")] Parroquia parroquia)
+        public ActionResult Create([Bind(Include = "idComunidad,nombre,responsble,descContribucion,estado")] Comunidad comunidad)
         {
             if (ModelState.IsValid)
             {
-                db.Parroquia.Add(parroquia);
+                db.Comunidad.Add(comunidad);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(parroquia);
+            return View(comunidad);
         }
 
-        // GET: Parroquias/Edit/5
+        // GET: Comunidades/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Parroquia parroquia = db.Parroquia.Find(id);
-            if (parroquia == null)
+            Comunidad comunidad = db.Comunidad.Find(id);
+            if (comunidad == null)
             {
                 return HttpNotFound();
             }
-            return View(parroquia);
+            return View(comunidad);
         }
 
-        // POST: Parroquias/Edit/5
+        // POST: Comunidades/Edit/5
         // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que quiere enlazarse. Para obtener 
         // más detalles, vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "idParroquia,nombre,direccion,telefono,parroco,logo,sitioWeb")] Parroquia parroquia)
+        public ActionResult Edit([Bind(Include = "idComunidad,nombre,responsble,descContribucion,estado")] Comunidad comunidad)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(parroquia).State = EntityState.Modified;
+                db.Entry(comunidad).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(parroquia);
+            return View(comunidad);
         }
 
-        // GET: Parroquias/Delete/5
+        // GET: Comunidades/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Parroquia parroquia = db.Parroquia.Find(id);
-            if (parroquia == null)
+            Comunidad comunidad = db.Comunidad.Find(id);
+            if (comunidad == null)
             {
                 return HttpNotFound();
             }
-            return View(parroquia);
+            return View(comunidad);
         }
 
-        // POST: Parroquias/Delete/5
+        // POST: Comunidades/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Parroquia parroquia = db.Parroquia.Find(id);
-            db.Parroquia.Remove(parroquia);
+            Comunidad comunidad = db.Comunidad.Find(id);
+            db.Comunidad.Remove(comunidad);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
