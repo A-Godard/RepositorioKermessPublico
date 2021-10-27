@@ -38,7 +38,7 @@ namespace SolucionKermesseGrupo2.Controllers
             ls = modelo.Parroquia.ToList();
            
 
-            ReportDataSource rds = new ReportDataSource("DataSet1", ls);
+            ReportDataSource rds = new ReportDataSource("DsParroquia", ls);
             rpt.DataSources.Add(rds);
 
             byte[] b = rpt.Render(tipo, null, out mt, out enc, out f, out s, out w);
