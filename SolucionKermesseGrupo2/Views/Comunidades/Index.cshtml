@@ -1,0 +1,79 @@
+﻿@model IEnumerable<SolucionKermesseGrupo2.Models.Comunidad>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutControladores.cshtml";
+}
+
+<head>
+    @Styles.Render("~/Content/StyleSheetComunidad.css")
+    @Styles.Render("~/Content/Site.css")
+</head>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+<h2>Comunidad</h2>
+<p>
+    @Html.ActionLink("Exportar a Pdf", "verReporte", new { tipo = "PDF" }) <br />
+    @Html.ActionLink("Exportar a Excel", "verReporte", new { tipo = "Excel" }) <br />
+    @Html.ActionLink("Exportar a Word", "verReporte", new { tipo = "Word" })
+</p>
+<div id="Container">
+    <div class="center">
+        <table class="table" id="TblComunidad">
+            <tr>
+                <th id="lblComunidad">
+                    @Html.DisplayNameFor(model => model.nombre)
+                </th>
+                <th id="lblComunidad">
+                    @Html.DisplayNameFor(model => model.responsble)
+                </th>
+                <th id="lblComunidad">
+                    @Html.DisplayNameFor(model => model.descContribucion)
+                </th>
+                <th id="lblComunidad">
+                    @Html.DisplayNameFor(model => model.estado)
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td id="lblComunidad">
+                        @Html.DisplayFor(modelItem => item.nombre)
+                    </td>
+                    <td id="lblComunidad">
+                        @Html.DisplayFor(modelItem => item.responsble)
+                    </td>
+                    <td id="lblComunidad">
+                        @Html.DisplayFor(modelItem => item.descContribucion)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Editar", "Edit", new { id = item.idComunidad }) |
+                        @Html.ActionLink("Detalles", "Details", new { id = item.idComunidad }) |
+                        @Html.ActionLink("Eliminar", "Delete", new { id = item.idComunidad })
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </div>
+</div>
+<br />
+<div id="Container">
+    <div class="center">
+        <a class="btn btn-primary" id="BtnCrear" href="@Url.Action("Create")" role="button">Crear nuevo</a>
+    </div>
+</div>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
