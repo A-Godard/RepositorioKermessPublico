@@ -20,11 +20,11 @@ namespace SolucionKermesseGrupo2.Controllers
         public ActionResult Index(string ValorBusqued)
         {
             var Parroquia = from m in db.Parroquia select m;
-            if (!string.IsNullOrEmpty(ValorBusqued))
+            if (!String.IsNullOrEmpty(ValorBusqued))
             {
                 Parroquia = Parroquia.Where(s => s.nombre.Contains(ValorBusqued));
             }
-            return View(db.Parroquia.ToList());
+            return View(Parroquia.ToList());
         }
         // busqueda
 

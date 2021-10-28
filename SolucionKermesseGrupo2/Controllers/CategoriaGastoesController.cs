@@ -22,16 +22,7 @@ namespace SolucionKermesseGrupo2.Controllers
             return View(db.CategoriaGasto.ToList());
         }
 
-        public ActionResult BusquedaSmart(string datos="")
-        {
-            var CatGasto = from m in db.CategoriaGasto 
-                           select m;
-            if (!String.IsNullOrEmpty(datos))
-            {
-                CatGasto = CatGasto.Where(s => s.nombreCategoria.Contains(datos));
-            }
-            return View(db.CategoriaGasto.ToList());
-        }
+      
 
         //Metodo del reporte categoria gastos GET: VerReporte
 
