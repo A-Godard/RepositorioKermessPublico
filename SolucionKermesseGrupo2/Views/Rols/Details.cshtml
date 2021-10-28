@@ -4,32 +4,49 @@
     ViewBag.Title = "Details";
     Layout = "~/Views/Shared/_LayoutControladores.cshtml";
 }
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
 
-<h2>Details</h2>
+<h2>Detalles de Roles</h2>
 
+<head>
+    @Styles.Render("~/Content/StyleSheetDetallesRoles.css")
+    @Styles.Render("~/Content/Site.css")
+</head>
 <div>
-    <h4>Rol</h4>
+  
     <hr />
-    <dl class="dl-horizontal">
+    <dl class="dl-horizontal" id="detroles">
         <dt>
-            @Html.DisplayNameFor(model => model.rolDescripcion)
+          <u> @Html.DisplayNameFor(model => model.rolDescripcion)</u>
         </dt>
 
         <dd>
             @Html.DisplayFor(model => model.rolDescripcion)
         </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.estado)
-        </dt>
+     
 
-        <dd>
-            @Html.DisplayFor(model => model.estado)
-        </dd>
+     
 
     </dl>
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.idRol }) |
-    @Html.ActionLink("Back to List", "Index")
+<br />
+<br />
+<br />
+<p id="BtnsHome">
+    @Html.ActionLink("Editar", "Edit", new { id = Model.idRol }) |
+    @Html.ActionLink("Regresar a la página principal", "Index")
 </p>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />

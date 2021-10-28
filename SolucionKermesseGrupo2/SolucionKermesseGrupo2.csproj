@@ -290,6 +290,7 @@
     <Content Include="Content\StyleSheetDetalles.css" />
     <Content Include="Content\StyleSheetDetallesCatProd.css" />
     <Content Include="Content\StyleSheetDetallesMoneda.css" />
+    <Content Include="Content\StyleSheetDetallesRoles.css" />
     <Content Include="Content\StyleSheetDetallesUsers.css" />
     <Content Include="Content\StyleSheetDetCatGasto.css" />
     <Content Include="Content\StyleSheetDetParroquia.css" />
