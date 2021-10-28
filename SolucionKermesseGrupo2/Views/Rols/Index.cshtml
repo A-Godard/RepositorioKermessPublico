@@ -4,35 +4,62 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_LayoutControladores.cshtml";
 }
-
+<head>
+    @Styles.Render("~/Content/StyleSheetIndexRol.css")
+    @Styles.Render("~/Content/Site.css")
+</head>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
 <h2>Roles</h2>
+<br />
+<br />
 
-
-<table class="table">
-    <tr>
-        <th>
+<table class="table" id="container">
+    <tr id="Principal">
+        <th id="RolTitle">
             @Html.DisplayNameFor(model => model.rolDescripcion)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.estado)
-        </th>
+
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.rolDescripcion)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.estado)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.idRol }) |
-            @Html.ActionLink("Details", "Details", new { id=item.idRol }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.idRol })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td id="Roldesc">
+                @Html.DisplayFor(modelItem => item.rolDescripcion)
+            </td>
+
+            <td>
+                @Html.ActionLink("Editar", "Edit", new { id = item.idRol }) |
+                @Html.ActionLink("Detalles", "Details", new { id = item.idRol }) |
+                @Html.ActionLink("Eliminar", "Delete", new { id = item.idRol })
+            </td>
+        </tr>
+    }
 
 </table>
+<br />
+<br />
+<br />
+<div id="Container">
+    <div class="center">
+        <a class="btn btn-primary" id="BtnCrear" href="@Url.Action("Create")" role="button">Crear nuevo</a>
+    </div>
+</div>
+<br />
+<br />
+<p>
+    @Html.ActionLink("Exportar a Pdf", "VerReporteParroquia", new { tipo = "PDF" }) <br />
+    @Html.ActionLink("Exportar a Excel", "VerReporteParroquia", new { tipo = "Excel" }) <br />
+    @Html.ActionLink("Exportar a Word", "VerReporteParroquia", new { tipo = "Word" })
+</p>
+<br />
+<br />
+<br />
+<br />

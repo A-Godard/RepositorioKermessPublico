@@ -304,6 +304,7 @@
     <Content Include="Content\StyleSheetIndexCatProd.css" />
     <Content Include="Content\StyleSheetIndexMoneda.css" />
     <Content Include="Content\StyleSheetIndexParroquia.css" />
+    <Content Include="Content\StyleSheetIndexRol.css" />
     <Content Include="Content\StyleSheetIndexUser.css" />
     <Content Include="Content\StyleSheetLogin.css" />
     <Content Include="favicon.ico" />

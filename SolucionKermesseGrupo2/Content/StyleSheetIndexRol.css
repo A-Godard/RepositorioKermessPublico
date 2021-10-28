@@ -1,0 +1,29 @@
+﻿h2 {
+    text-align: center;
+}
+
+#container {
+    table-layout: fixed;
+    background-color: lightblue;
+    width: 1280px;
+    border-collapse: collapse;
+    border: 3px solid black;
+    margin-left:50px;
+}
+#Principal{
+
+
+}
+
+#Roldesc, #RolTitle {
+    text-align: center;
+}
+#RolTitle{
+    margin-left:700px;
+}
+
+#BtnCrear
+{
+
+    margin-left:620px;
+}
