@@ -16,6 +16,20 @@
 <br />
 <br />
 <h2>Opciones</h2>
+
+@using (Html.BeginForm("Index", "Opcions", FormMethod.Post))
+{
+    <div class="row">
+        <div class="form-group">
+
+            @Html.TextBox("ValorBusqued", "", new { @class = "form-control col-md-8" })
+            <button type="submit" class="btn btn-success col-md-2">Buscar</button>
+        </div>
+
+    </div>
+
+}
+
 <div id="Container">
     <div class="center">
         <table class="table" id="tablita">
@@ -25,10 +39,10 @@
                     @Html.DisplayNameFor(model => model.opcionDescripcion)
 
                 </th>
-                <th id="titulo2">
+                @*<th id="titulo2">
                     @Html.DisplayNameFor(model => model.estado)
 
-                </th>
+                </th>*@
                 <th></th>
             </tr>
 
@@ -38,9 +52,9 @@
                     <td id="valor1">
                         @Html.DisplayFor(modelItem => item.opcionDescripcion)
                     </td>
-                    <td id="valor2">
+                    @*<td id="valor2">
                         @Html.DisplayFor(modelItem => item.estado)
-                    </td>
+                    </td>*@
                     <td>
                         @Html.ActionLink("Editar", "Edit", new { id = item.idOpcion }) |
                         @Html.ActionLink("Detalles", "Details", new { id = item.idOpcion }) |
@@ -52,7 +66,7 @@
         </table>
     </div>
 </div>
-        
+
 
 <br />
 <div id="Container">

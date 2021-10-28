@@ -17,8 +17,13 @@ namespace SolucionKermesseGrupo2.Controllers
         private BDKermesseEntities db = new BDKermesseEntities();
 
         // GET: Monedas
-        public ActionResult Index()
+        public ActionResult Index(string ValorBusqued = " ")
         {
+            var Moneda = from m in db.Moneda select m;
+            if (!string.IsNullOrEmpty(ValorBusqued))
+            {
+                Moneda = Moneda.Where(m => m.nombre.Contains(ValorBusqued));
+            }
             return View(db.Moneda.ToList());
         }
 

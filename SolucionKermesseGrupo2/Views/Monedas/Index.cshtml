@@ -19,7 +19,18 @@
 
 <h2>Moneda</h2>
 
+@using (Html.BeginForm("Index", "Monedas", FormMethod.Post))
+{
+    <div class="row">
+        <div class="form-group">
 
+            @Html.TextBox("ValorBusqued", "", new { @class = "form-control col-md-8" })
+            <button type="submit" class="btn btn-success col-md-2">Buscar</button>
+        </div>
+
+    </div>
+
+}
 
 <div id="Container">
     <div class="center">
@@ -31,9 +42,9 @@
                 <th id="lblMoneda2">
                     @Html.DisplayNameFor(model => model.simbolo)
                 </th>
-                <th id="lblMoneda3">
-                    @Html.DisplayNameFor(model => model.estado)
-                </th>
+                @*<th id="lblMoneda3">
+            @Html.DisplayNameFor(model => model.estado)
+        </th>*@
                 <th></th>
             </tr>
 
@@ -46,9 +57,9 @@
                     <td id="ModelMoneda2">
                         @Html.DisplayFor(modelItem => item.simbolo)
                     </td>
-                    <td id="ModelMoneda3">
+                    @*<td id="ModelMoneda3">
                         @Html.DisplayFor(modelItem => item.estado)
-                    </td>
+                    </td>*@
                     <td>
                         @Html.ActionLink("Editar", "Edit", new { id = item.idMoneda }) |
                         @Html.ActionLink("Detalles", "Details", new { id = item.idMoneda }) |

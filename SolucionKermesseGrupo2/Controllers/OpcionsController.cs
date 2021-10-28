@@ -17,8 +17,13 @@ namespace SolucionKermesseGrupo2.Controllers
         private BDKermesseEntities db = new BDKermesseEntities();
 
         // GET: Opcions
-        public ActionResult Index()
+        public ActionResult Index(string ValorBusqued = " ")
         {
+            var Opcion = from m in db.Opcion select m;
+            if (!string.IsNullOrEmpty(ValorBusqued))
+            {
+                Opcion = Opcion.Where(m => m.opcionDescripcion.Contains(ValorBusqued));
+            }
             return View(db.Opcion.ToList());
         }
 
