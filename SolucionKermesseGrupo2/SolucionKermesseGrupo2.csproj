@@ -46,10 +46,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
@@ -152,10 +152,12 @@
     <Compile Include="Controllers\AuthController.cs" />
     <Compile Include="Controllers\CategoriaGastoesController.cs" />
     <Compile Include="Controllers\CategoriaProductoesController.cs" />
+    <Compile Include="Controllers\ControlBonoesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MonedasController.cs" />
     <Compile Include="Controllers\OpcionsController.cs" />
     <Compile Include="Controllers\ParroquiasController.cs" />
+    <Compile Include="Controllers\RolsController.cs" />
     <Compile Include="Controllers\UsuariosController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -417,6 +419,18 @@
     <Content Include="Views\Auth\Logout.cshtml" />
     <Content Include="Views\CategoriaGastoes\VerReporte.cshtml" />
     <Content Include="Views\Parroquias\VerReporteParroquia.cshtml" />
+    <Content Include="Views\ControlBonoes\Create.cshtml" />
+    <Content Include="Views\ControlBonoes\Delete.cshtml" />
+    <Content Include="Views\ControlBonoes\Details.cshtml" />
+    <Content Include="Views\ControlBonoes\Edit.cshtml" />
+    <Content Include="Views\ControlBonoes\Index.cshtml" />
+    <Content Include="Views\Rols\Create.cshtml" />
+    <Content Include="Views\Rols\Delete.cshtml" />
+    <Content Include="Views\Rols\Details.cshtml" />
+    <Content Include="Views\Rols\Edit.cshtml" />
+    <Content Include="Views\Rols\Index.cshtml" />
+    <Content Include="Views\Monedas\VerReporte.cshtml" />
+    <Content Include="Views\Opcions\VerReporte.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -440,6 +454,8 @@
   <ItemGroup>
     <EmbeddedResource Include="Reportes\RptCategoriaGasto.rdlc" />
     <EmbeddedResource Include="Reportes\RptCategoriaProducto.rdlc" />
+    <EmbeddedResource Include="Reportes\RptMoneda.rdlc" />
+    <EmbeddedResource Include="Reportes\RptOpcion.rdlc" />
     <EmbeddedResource Include="Reportes\RptParroquia.rdlc" />
     <EmbeddedResource Include="Reportes\RptUsuario.rdlc" />
   </ItemGroup>
