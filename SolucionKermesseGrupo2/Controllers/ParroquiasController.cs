@@ -17,12 +17,12 @@ namespace SolucionKermesseGrupo2.Controllers
         private BDKermesseEntities db = new BDKermesseEntities();
 
         // GET: Parroquias
-        public ActionResult Index(string ValorBusqued=" ")
+        public ActionResult Index(string ValorBusqued)
         {
             var Parroquia = from m in db.Parroquia select m;
             if (!string.IsNullOrEmpty(ValorBusqued))
             {
-                Parroquia = Parroquia.Where(m => m.nombre.Contains(ValorBusqued));
+                Parroquia = Parroquia.Where(s => s.nombre.Contains(ValorBusqued));
             }
             return View(db.Parroquia.ToList());
         }

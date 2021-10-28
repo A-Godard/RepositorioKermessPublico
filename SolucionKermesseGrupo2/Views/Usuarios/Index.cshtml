@@ -18,6 +18,36 @@
 
 <h2>Tabla de Usuarios</h2>
 
+@*CREACION DEL FORM BUSQUEDA*@
+
+@*@using (Html.BeginForm("Index", "Usuarios", FormMethod.Post))
+{
+    <div class="row">
+        <div class="form-group">
+
+            @Html.TextBox("searchString", " ", new { @class = "form-control col-md-8" })
+            <button type="submit" class="btn btn-success col-md-2">Buscar</button>
+        </div>
+
+    </div>
+
+}*@
+<br />
+<br />
+<br />
+<form asp-controller="Usuarios" asp-action="Index">
+    <p>
+        Title: <input type="text" name="SearchString" />
+        <input type="submit" value="Filter" />
+    </p>
+</form>
+
+
+<br />
+<br />
+<br />
+<br />
+
 <div id="Container">
     <div class="center">
         <table class="table" id="TablaUsers">

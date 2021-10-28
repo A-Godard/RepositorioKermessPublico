@@ -17,8 +17,19 @@ namespace SolucionKermesseGrupo2.Controllers
         private BDKermesseEntities db = new BDKermesseEntities();
 
         // GET: Usuarios
-        public ActionResult Index()
+
+       
+        public ActionResult Index(string searchString)
         {
+            var usuario = from m in db.Usuario
+                           select m;
+
+            if(!String.IsNullOrEmpty(searchString))
+            {
+
+                usuario = usuario.Where(s => s.userName.Contains(searchString));
+            }
+
             return View(db.Usuario.ToList());
         }
 
