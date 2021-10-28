@@ -18,6 +18,9 @@
 <br />
 
 <h2>Moneda</h2>
+
+
+
 <div id="Container">
     <div class="center">
         <table class="table" id="TablaMoneda">
@@ -64,7 +67,10 @@
         <a class="btn btn-primary" id="BtnCrear" href="@Url.Action("Create")" role="button">Crear nuevo</a>
     </div>
 </div>
-    
+
+<p>
+    @Html.ActionLink("Exportar a PDF", "VerReporte", new { tipo = "PDF" })
+</p>
 
 <br />
 <br />

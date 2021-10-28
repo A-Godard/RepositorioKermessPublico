@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using Microsoft.Reporting.WebForms;
 using SolucionKermesseGrupo2.Models;
 
 namespace SolucionKermesseGrupo2.Controllers
@@ -122,6 +124,27 @@ namespace SolucionKermesseGrupo2.Controllers
                 db.Dispose();
             }
             base.Dispose(disposing);
+        }
+
+        public ActionResult VerReporte(string tipo)
+        {
+            LocalReport rpt = new LocalReport();
+            string mt, enc, f;
+            string[] s;
+            Warning[] w;
+
+            string ruta = Path.Combine(Server.MapPath("~/Reportes"), "RptMoneda.rdlc");
+            rpt.ReportPath = ruta;
+
+            BDKermesseEntities modelo = new BDKermesseEntities();
+            List<Moneda> ls = new List<Moneda>();
+            ls = modelo.Moneda.ToList();
+
+            ReportDataSource rd = new ReportDataSource("DsMoneda", ls);
+            rpt.DataSources.Add(rd);
+
+            var b = rpt.Render(tipo, null, out mt, out enc, out f, out s, out w);
+            return new FileContentResult(b, mt);
         }
     }
 }
