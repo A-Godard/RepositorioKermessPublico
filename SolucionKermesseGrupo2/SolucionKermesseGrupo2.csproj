@@ -299,6 +299,7 @@
     <Content Include="Content\StyleSheetEditEspecial.css" />
     <Content Include="Content\StyleSheetEditMoneda.css" />
     <Content Include="Content\StyleSheetEditParroquia.css" />
+    <Content Include="Content\StyleSheetEditRoles.css" />
     <Content Include="Content\StyleSheetEditUsers.css" />
     <Content Include="Content\StyleSheetIndexCatGastos.css" />
     <Content Include="Content\StyleSheetIndexCatProd.css" />

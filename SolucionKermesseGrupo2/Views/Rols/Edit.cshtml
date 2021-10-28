@@ -5,30 +5,41 @@
     Layout = "~/Views/Shared/_LayoutControladores.cshtml";
 }
 
-<h2>Edit</h2>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<h2>Editar Roles <img id="iconouser" src="~/Content/img/flat-g924eb82b4_1280.png" /></h2>
 
+<head>
+    @Styles.Render("~/Content/StyleSheetEditRoles.css")
+    @Styles.Render("~/Content/Site.css")
+</head>
 
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
-    <div class="form-horizontal">
+
+    <div class="form-horizontal" id="FomularioCatProd">
         <h4>Rol</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         @Html.HiddenFor(model => model.idRol)
 
-        <div class="form-group">
+        <div class="form-group" id="IFormRol1">
             @Html.LabelFor(model => model.rolDescripcion, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+            <div class="col-md-10" id="model1">
                 @Html.EditorFor(model => model.rolDescripcion, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.rolDescripcion, "", new { @class = "text-danger" })
             </div>
         </div>
 
-        <div class="form-group">
+        <div class="form-group" id="IFormRol1">
             @Html.LabelFor(model => model.estado, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+            <div class="col-md-10" id="model2">
                 @Html.EditorFor(model => model.estado, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.estado, "", new { @class = "text-danger" })
             </div>
@@ -36,14 +47,14 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Save" class="btn btn-default" />
+                <input type="submit" value="Guardar" id="BtnGuardar" class="btn btn-primary" />
             </div>
         </div>
     </div>
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Regresar a la pagina principal", "Index")
 </div>
 
 @section Scripts {
