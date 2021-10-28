@@ -1,0 +1,18 @@
+﻿h2, h3
+{
+    text-align: center;
+}
+
+
+#Nombrerol, #Nombrerol2, #ModRol, #ModRol2 {
+    margin-left: 460px;
+    display: block;
+    text-align: center;
+    width: 500px;
+}
+
+#BtnEliminar {
+    margin-left: 660px;
+    text-align: center;
+    margin-right: 600px;
+}

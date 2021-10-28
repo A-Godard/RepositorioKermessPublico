@@ -287,6 +287,7 @@
     <Content Include="Content\StyleSheetDeleteMnda.css" />
     <Content Include="Content\StyleSheetDeleteUsers.css" />
     <Content Include="Content\StyleSheetDelParroquia.css" />
+    <Content Include="Content\StyleSheetDelRol.css" />
     <Content Include="Content\StyleSheetDetalles.css" />
     <Content Include="Content\StyleSheetDetallesCatProd.css" />
     <Content Include="Content\StyleSheetDetallesMoneda.css" />
