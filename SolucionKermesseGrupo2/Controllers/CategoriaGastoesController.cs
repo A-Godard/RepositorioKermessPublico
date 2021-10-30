@@ -17,9 +17,14 @@ namespace SolucionKermesseGrupo2.Controllers
         private BDKermesseEntities db = new BDKermesseEntities();
 
         // GET: CategoriaGastoes
-        public ActionResult Index()
+        public ActionResult Index(string ValorBusqued)
         {
-            return View(db.CategoriaGasto.ToList());
+            var CatGasto = from m in db.CategoriaGasto select m;
+            if (!String.IsNullOrEmpty(ValorBusqued))
+            {
+                CatGasto = CatGasto.Where(s => s.nombreCategoria.Contains(ValorBusqued));
+            }
+            return View(CatGasto.ToList());
         }
 
       
