@@ -1,0 +1,35 @@
+﻿h2 {
+    text-align: center;
+}
+
+.center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+#TblBonos {
+    table-layout: fixed;
+    background-color: lightblue;
+    width: 1280px;
+    border-collapse: collapse;
+    border: 3px solid black;
+}
+
+#BtnCrear
+{
+    margin-top:380px;
+
+}
+
+#containertitulos
+{
+    margin-top:100px;
+
+}
+#FormBusq {
+    
+}

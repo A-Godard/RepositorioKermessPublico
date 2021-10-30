@@ -304,6 +304,7 @@
     <Content Include="Content\StyleSheetEditRoles.css" />
     <Content Include="Content\StyleSheetEditUsers.css" />
     <Content Include="Content\StyleSheetIcon.css" />
+    <Content Include="Content\StyleSheetIndexBonos.css" />
     <Content Include="Content\StyleSheetIndexCatGastos.css" />
     <Content Include="Content\StyleSheetIndexCatProd.css" />
     <Content Include="Content\StyleSheetIndexMoneda.css" />
@@ -443,6 +444,7 @@
     <Content Include="Views\Comunidades\Details.cshtml" />
     <Content Include="Views\Comunidades\Edit.cshtml" />
     <Content Include="Views\Comunidades\Index.cshtml" />
+    <Content Include="Views\ControlBonoes\VerReporteBonos.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -467,6 +469,7 @@
     <EmbeddedResource Include="Reportes\RptCategoriaGasto.rdlc" />
     <EmbeddedResource Include="Reportes\RptCategoriaProducto.rdlc" />
     <EmbeddedResource Include="Reportes\RptComunidad.rdlc" />
+    <EmbeddedResource Include="Reportes\RptControlBono.rdlc" />
     <EmbeddedResource Include="Reportes\RptMoneda.rdlc" />
     <EmbeddedResource Include="Reportes\RptOpcion.rdlc" />
     <EmbeddedResource Include="Reportes\RptParroquia.rdlc" />
