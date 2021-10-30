@@ -33,3 +33,22 @@
 #lblParroquia1, #lblParroquia2, #lblParroquia3, #lblParroquia4, #lblParroquia5, #lblParroquia6, #ModelParroquia1, #ModelParroquia2, #ModelParroquia3, #ModelParroquia4, #ModelParroquia5, #ModelParroquia6 {
     text-align: center;
 }
+
+#FormBusq {
+    
+    margin-left:45px;
+}
+
+#titulopdf {
+    margin-left: 10px;
+    color:darkred;
+}
+#tituloexcel {
+    margin-left: 10px;
+    color: darkgreen;
+}
+
+#tituloword {
+    margin-left: 10px;
+    color: darkblue;
+}
