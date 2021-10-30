@@ -19,14 +19,14 @@ namespace SolucionKermesseGrupo2.Controllers
         // GET: Monedas
         public ActionResult Index(string ValorBusqued)
         {
-            var Moneda = from m in db.Moneda 
+            var Monedas = from m in db.Moneda 
                          select m;
 
             if (!string.IsNullOrEmpty(ValorBusqued))
             {
-                Moneda = Moneda.Where(s => s.nombre.Contains(ValorBusqued));
+                Monedas = Monedas.Where(s => s.nombre.Contains(ValorBusqued));
             }
-            return View(db.Moneda.ToList());
+            return View(Monedas.ToList());
         }
 
         // GET: Monedas/Details/5
