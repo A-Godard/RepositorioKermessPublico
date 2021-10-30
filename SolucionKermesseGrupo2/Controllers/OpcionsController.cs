@@ -17,14 +17,14 @@ namespace SolucionKermesseGrupo2.Controllers
         private BDKermesseEntities db = new BDKermesseEntities();
 
         // GET: Opcions
-        public ActionResult Index(string ValorBusqued = " ")
+        public ActionResult Index(string ValorBusqued)
         {
-            var Opcion = from m in db.Opcion select m;
-            if (!string.IsNullOrEmpty(ValorBusqued))
+            var Opciones = from m in db.Opcion select m;
+            if (!String.IsNullOrEmpty(ValorBusqued))
             {
-                Opcion = Opcion.Where(m => m.opcionDescripcion.Contains(ValorBusqued));
+                Opciones = Opciones.Where(m => m.opcionDescripcion.Contains(ValorBusqued));
             }
-            return View(db.Opcion.ToList());
+            return View(Opciones.ToList());
         }
 
         // GET: Opcions/Details/5

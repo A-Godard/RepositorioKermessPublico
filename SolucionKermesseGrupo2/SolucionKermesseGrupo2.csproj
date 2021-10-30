@@ -303,6 +303,7 @@
     <Content Include="Content\StyleSheetEditParroquia.css" />
     <Content Include="Content\StyleSheetEditRoles.css" />
     <Content Include="Content\StyleSheetEditUsers.css" />
+    <Content Include="Content\StyleSheetIcon.css" />
     <Content Include="Content\StyleSheetIndexCatGastos.css" />
     <Content Include="Content\StyleSheetIndexCatProd.css" />
     <Content Include="Content\StyleSheetIndexMoneda.css" />
