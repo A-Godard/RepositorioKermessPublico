@@ -1,34 +1,51 @@
-﻿h2 {
+﻿body {
+    margin: 0;
     text-align: center;
+}
+
+h2 
+{
+    position: relative;
+    top: 80px;
+    right: 30px;
+    text-align: center;
+    margin-bottom: 100px;
 }
 
 #Container {
     position: relative;
-    margin: 0 auto;
+    top: 100px;
+    right: 20px;
+    margin: auto;
     max-width: 1280px;
     width: 90%;
     margin: 75px;
 }
 
 .center {
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
+    margin: auto;
+    position: relative;
+    top: 20px;
+    right: 120px;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
 
 #TblCatGastos {
-    table-layout: fixed;
-    width: 1280px;
+    position: relative;
+    left: 900px;
+    table-layout: auto;
     background-color: lightblue;
+    width: 1280px;
     border-collapse: collapse;
     border: 3px solid black;
 }
 
 #BtnCrear {
-    
+    position: relative;
+    top: 20px;
+    left: 700px;
+    text-align: center;
 }
 
 #lblCatGastos1, #lblCatGastos2, #lblCatGastos3, #ModelCatGasto1, #ModelCatGasto2, #ModelCatGasto3 {
