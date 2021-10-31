@@ -4,6 +4,32 @@
 
 }
 
+#Container {
+    position: relative;
+    margin: 0 auto;
+    max-width: 1280px;
+    width: 90%;
+    margin: 75px;
+}
+
+.center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+
+#FormEdit {
+    width: 100%
+}
+
+.TitleEdit {
+    margin-bottom: 10px;
+}
+
 #FormUserG {
     padding: 20px 0px 0px 30px; /* margen con valores: arriba - derecha - abajo - izquierda */
     font-family: verdana,arial;
@@ -15,15 +41,12 @@
 #GpUser1, #GpUser2, #GpUser3, #GpUser4, #GpUser5, #GpUser6 {
     width: 500px; /* anchura de campos de formulario */
     font-size: 13pt; /* tamaño de la letra*/
-    display: inline-block;
-    margin-left: auto;
-    margin-right: auto;
+    margin-top: 30px;
     text-align: center;
 }
 
 #BtnGuardarUsers {
     margin-top: 30px;
-    margin-left: 130px;
 }
 
 #iconouser
