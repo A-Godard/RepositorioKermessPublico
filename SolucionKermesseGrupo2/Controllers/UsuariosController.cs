@@ -19,18 +19,18 @@ namespace SolucionKermesseGrupo2.Controllers
         // GET: Usuarios
 
        
-        public ActionResult Index(string searchString)
+        public ActionResult Index(string ValorBusqued)
         {
             var usuario = from m in db.Usuario
                            select m;
 
-            if(!String.IsNullOrEmpty(searchString))
+            if(!String.IsNullOrEmpty(ValorBusqued))
             {
 
-                usuario = usuario.Where(s => s.userName.Contains(searchString));
+                usuario = usuario.Where(s => s.userName.Contains(ValorBusqued));
             }
 
-            return View(db.Usuario.ToList());
+            return View(usuario.ToList());
         }
 
         // GET: Usuarios/Details/5

@@ -42,6 +42,7 @@ h2
     border-collapse: collapse;
     border: 3px solid black;
 }
+
 #TituloUsers1, #TituloPwd1, #TituloNombreUsers, #TituloApellidosUsers, #TituloEmailUsers, #TituloEstadosUsers, #ValorUser1, #ValorUser2, #ValorUser3, #ValorUser4, #ValorUser5, #ValorUser6
 {
     text-align: justify;

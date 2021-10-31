@@ -19,10 +19,10 @@
     <br />
     <br />
 
-    <form asp-controller="CategoriaProductoes" asp-action="Index">
-        <p>
-            Title: <input type="text" name="SearchString" />
-            <input type="submit" value="Filter" />
+    <form asp-controller="CategoriaProductoes" asp-action="Index" id="FormBusq">
+        <p id="pbusq">
+            Buscar: <input type="text" name="ValorBusqued" />
+            <input type="submit" value="Buscar" id="BtnBusq" />
         </p>
     </form>
 
