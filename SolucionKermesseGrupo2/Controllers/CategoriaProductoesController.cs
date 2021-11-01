@@ -34,12 +34,7 @@ namespace SolucionKermesseGrupo2.Controllers
         }
 
 
-
-        public ActionResult Index()
-        {
-            return View(db.CategoriaProducto.ToList());
-        }
-
+     
         // GET: CategoriaProductoes/Details/5
         public ActionResult Details(int? id)
         {
