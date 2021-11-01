@@ -1,4 +1,4 @@
-﻿body {
+﻿ody {
     margin: 0;
     text-align: center;
 }
@@ -22,10 +22,10 @@ h2 {
 }
 
 .center {
-    margin: auto;
+    margin:auto;
     position: relative;
-    top: 20px;
-    right: 120px;
+    top: 1px;
+    right: 300px;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
@@ -43,7 +43,7 @@ h2 {
 #BtnCrear {
     position: relative;
     top: 20px;
-    left: 700px;
+    left: 600px;
     text-align: center;
 }
 
@@ -57,15 +57,18 @@ h2 {
 }
 
 #titulopdf {
-    margin-left: 150px;
+    margin-left: 8px;
     color:darkred;
+    bottom:4px;
 }
 #tituloexcel {
-    margin-left: 150px;
+    margin-left: 8px;
     color: darkgreen;
+    bottom: 4px;
 }
 
 #tituloword {
-    margin-left: 150px;
+    margin-left: 8px;
     color: darkblue;
+    bottom:50px;
 }
