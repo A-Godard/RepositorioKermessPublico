@@ -12,6 +12,7 @@ using SolucionKermesseGrupo2.Models;
 
 namespace SolucionKermesseGrupo2.Controllers
 {
+    [Authorize]
     public class CategoriaProductoesController : Controller
     {
         private BDKermesseEntities db = new BDKermesseEntities();
