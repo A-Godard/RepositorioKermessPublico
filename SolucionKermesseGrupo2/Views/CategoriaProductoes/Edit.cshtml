@@ -22,42 +22,60 @@
 {
     @Html.AntiForgeryToken()
 
-    <div class="form-horizontal" id="FomularioCatProd">
+<div class="form-horizontal" id="FomularioCatProd">
 
-        <hr />
-        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        @Html.HiddenFor(model => model.idCatProd)
+    <hr />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <div id="Container">
+        <div class="center">
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            @Html.HiddenFor(model => model.idCatProd)
 
-        <div class="form-group" id="IFormCatProd1">
-            @Html.LabelFor(model => model.nombre, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.nombre, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.nombre, "", new { @class = "text-danger" })
+            <div class="form-group" id="IFormCatProd1">
+                @Html.LabelFor(model => model.nombre, htmlAttributes: new { @class = "control-label col-md-2 , TitleEdit" })
+                <div class="col-md-10" id="FormEdit">
+                    @Html.EditorFor(model => model.nombre, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.nombre, "", new { @class = "text-danger" })
+                </div>
             </div>
-        </div>
 
-        <div class="form-group" id="IFormCatProd2">
-            @Html.LabelFor(model => model.descripcion, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.descripcion, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.descripcion, "", new { @class = "text-danger" })
+            <div class="form-group" id="IFormCatProd2">
+                @Html.LabelFor(model => model.descripcion, htmlAttributes: new { @class = "control-label col-md-2, TitleEdit" })
+                <div class="col-md-10" id="FormEdit">
+                    @Html.EditorFor(model => model.descripcion, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.descripcion, "", new { @class = "text-danger" })
+                </div>
             </div>
-        </div>
 
-        <div class="form-group" id="IFormCatProd3">
-            @Html.LabelFor(model => model.estado, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.estado, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.estado, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Guardar" id="BtnGuardar" class="btn btn-primary" />
+            <div class="form-group" id="IFormCatProd3">
+                @Html.LabelFor(model => model.estado, htmlAttributes: new { @class = "control-label col-md-2, TitleEdit" })
+                <div class="col-md-10" id="FormEdit">
+                    @Html.EditorFor(model => model.estado, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.estado, "", new { @class = "text-danger" })
+                </div>
             </div>
         </div>
     </div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <div id="Container">
+        <div class="center">
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Guardar" id="BtnGuardar" class="btn btn-primary" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 }
 
 <div>
