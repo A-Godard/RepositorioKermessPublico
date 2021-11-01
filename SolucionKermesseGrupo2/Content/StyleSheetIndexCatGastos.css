@@ -3,8 +3,7 @@
     text-align: center;
 }
 
-h2 
-{
+h2 {
     position: relative;
     top: 80px;
     right: 30px;
@@ -26,7 +25,7 @@ h2
     margin: auto;
     position: relative;
     top: 20px;
-    right: 120px;
+    right: 280px;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
@@ -43,8 +42,8 @@ h2
 
 #BtnCrear {
     position: relative;
-    top: 20px;
-    left: 700px;
+    top: 1px;
+    left: 620px;
     text-align: center;
 }
 
@@ -57,16 +56,16 @@ h2
 }
 
 #titulopdf {
-    margin-left: 150px;
+    margin-left: 8px;
     color: darkred;
 }
 
 #tituloexcel {
-    margin-left: 150px;
+    margin-left: 8px;
     color: darkgreen;
 }
 
 #tituloword {
-    margin-left: 150px;
+    margin-left: 8px;
     color: darkblue;
 }
