@@ -11,8 +11,7 @@ namespace SolucionKermesseGrupo2.Models
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-
+    
     public partial class Opcion
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -20,17 +19,9 @@ namespace SolucionKermesseGrupo2.Models
         {
             this.RolOpcion = new HashSet<RolOpcion>();
         }
-
-        [Display(Name = "Codigo")]
+    
         public int idOpcion { get; set; }
-
-        [Display(Name = "Desc Opcion")]
-        [Required]
-        [StringLength(70)]
-        [DataType(DataType.Text)]
         public string opcionDescripcion { get; set; }
-
-        [Display(Name = "Estado Opcion")]
         public int estado { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

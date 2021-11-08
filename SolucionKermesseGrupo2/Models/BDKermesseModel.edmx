@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="BDKermesseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="BDKermesseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="ArqueoCaja">
           <Key>
             <PropertyRef Name="idArqueoCaja" />
@@ -258,6 +258,17 @@
           <Property Name="apellidos" Type="nvarchar" MaxLength="45" Nullable="false" />
           <Property Name="email" Type="nvarchar" MaxLength="45" Nullable="false" />
           <Property Name="estado" Type="int" Nullable="false" />
+        </EntityType>
+        <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'BDKermesse.dbo.ListaPrecioView' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+        <EntityType Name="ListaPrecioView">
+          <Key>
+            <PropertyRef Name="idListaPrecio" />
+          </Key>
+          <Property Name="idListaPrecio" Type="int" Nullable="false" />
+          <Property Name="Nombre Kermesse" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Nombre Precio" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="descripcion" Type="nvarchar" MaxLength="100" Nullable="false" />
         </EntityType>
         <Association Name="FK__ArqueoCaj__arque__6FE99F9F">
           <End Role="ArqueoCaja" Type="Self.ArqueoCaja" Multiplicity="1" />
@@ -727,6 +738,14 @@
           <EntitySet Name="TasaCambio" EntityType="Self.TasaCambio" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TasaCambioDet" EntityType="Self.TasaCambioDet" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Usuario" EntityType="Self.Usuario" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ListaPrecioView" EntityType="Self.ListaPrecioView" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [ListaPrecioView].[idListaPrecio] AS [idListaPrecio], 
+    [ListaPrecioView].[Nombre Kermesse] AS [Nombre Kermesse], 
+    [ListaPrecioView].[Nombre Precio] AS [Nombre Precio], 
+    [ListaPrecioView].[descripcion] AS [descripcion]
+    FROM [dbo].[ListaPrecioView] AS [ListaPrecioView]</DefiningQuery>
+          </EntitySet>
           <AssociationSet Name="FK__ArqueoCaj__arque__6FE99F9F" Association="Self.FK__ArqueoCaj__arque__6FE99F9F">
             <End Role="ArqueoCaja" EntitySet="ArqueoCaja" />
             <End Role="ArqueoCajaDet" EntitySet="ArqueoCajaDet" />
@@ -876,8 +895,7 @@
             <End Role="TasaCambioDet" EntitySet="TasaCambioDet" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="BDKermesseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -1825,7 +1843,17 @@
             <End Role="TasaCambio" EntitySet="TasaCambio" />
             <End Role="TasaCambioDet" EntitySet="TasaCambioDet" />
           </AssociationSet>
+          <EntitySet Name="ListaPrecioView" EntityType="BDKermesseModel.ListaPrecioView" />
         </EntityContainer>
+        <EntityType Name="ListaPrecioView">
+          <Key>
+            <PropertyRef Name="idListaPrecio" />
+          </Key>
+          <Property Name="idListaPrecio" Type="Int32" Nullable="false" />
+          <Property Name="Nombre_Kermesse" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Nombre_Precio" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="descripcion" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -2106,6 +2134,16 @@
                 <ScalarProperty Name="apellidos" ColumnName="apellidos" />
                 <ScalarProperty Name="email" ColumnName="email" />
                 <ScalarProperty Name="estado" ColumnName="estado" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ListaPrecioView">
+            <EntityTypeMapping TypeName="BDKermesseModel.ListaPrecioView">
+              <MappingFragment StoreEntitySet="ListaPrecioView">
+                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+                <ScalarProperty Name="Nombre_Precio" ColumnName="Nombre Precio" />
+                <ScalarProperty Name="Nombre_Kermesse" ColumnName="Nombre Kermesse" />
+                <ScalarProperty Name="idListaPrecio" ColumnName="idListaPrecio" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
