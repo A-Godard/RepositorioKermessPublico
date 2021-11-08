@@ -12,11 +12,26 @@ using SolucionKermesseGrupo2.Models;
 
 namespace SolucionKermesseGrupo2.Controllers
 {
+    [Authorize]
     public class RolsController : Controller
     {
         private BDKermesseEntities db = new BDKermesseEntities();
 
         // GET: Rols
+
+        public ActionResult Index(string ValorBusqued)
+        {
+            var rol = from m in db.Rol
+                          select m;
+
+            if (!String.IsNullOrEmpty(ValorBusqued))
+            {
+
+                rol = rol.Where(s => s.rolDescripcion.Contains(ValorBusqued));
+            }
+
+            return View(rol.ToList());
+        }
         public ActionResult Index()
         {
             return View(db.Rol.ToList());

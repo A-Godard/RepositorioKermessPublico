@@ -1,5 +1,11 @@
-﻿h2 {
+﻿
+
+h2 {
+    position: relative;
+    top: 80px;
+    right: 30px;
     text-align: center;
+    margin-bottom: 100px;
 }
 
 #Container {
@@ -28,12 +34,12 @@
 }
 
 #BtnCrear {
-    
+   
 }
 
 #lblMoneda1, #lblMoneda2, #lblMoneda3, #ModelMoneda1, #ModelMoneda2, #ModelMoneda3
 {
-    text-align: center;
+    text-align: justify;
 }
 
 
@@ -42,17 +48,17 @@
 }
 
 #titulopdf {
-    margin-left: 8px;
+    margin-left: 150px;
     color: darkred;
 }
 
 #tituloexcel {
-    margin-left: 8px;
+    margin-left: 150px;
     color: darkgreen;
 }
 
 #tituloword {
-    margin-left: 8px;
+    margin-left: 150px;
     color: darkblue;
 }
 

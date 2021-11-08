@@ -217,6 +217,9 @@
     <Compile Include="Models\ListaPrecioDet.cs">
       <DependentUpon>BDKermesseModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\ListaPrecioView.cs">
+      <DependentUpon>BDKermesseModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Moneda.cs">
       <DependentUpon>BDKermesseModel.tt</DependentUpon>
     </Compile>

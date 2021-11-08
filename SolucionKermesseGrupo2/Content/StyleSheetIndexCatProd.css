@@ -1,4 +1,8 @@
-﻿h2 {
+﻿
+h2 {
+    position: relative;
+    top: 80px;
+    right: 30px;
     text-align: center;
 }
 
@@ -26,9 +30,29 @@
     border: 3px solid black;
 }
 
-#BtnCrear {
+#BtnCrear 
+{
 }
 
 #lblCatProd1, #lblCatProd2, #lblCatProd3, #ModelCatProd1, #ModelCatProd2, #ModelCatProd3 {
     text-align: center;
+}
+
+#FormBusq {
+    margin-left: 45px;
+}
+
+#titulopdf {
+    margin-left: 150px;
+    color: darkred;
+}
+
+#tituloexcel {
+    margin-left: 150px;
+    color: darkgreen;
+}
+
+#tituloword {
+    margin-left: 150px;
+    color: darkblue;
 }

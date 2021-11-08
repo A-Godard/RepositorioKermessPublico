@@ -12,16 +12,30 @@ using SolucionKermesseGrupo2.Models;
 
 namespace SolucionKermesseGrupo2.Controllers
 {
+    [Authorize]
     public class CategoriaProductoesController : Controller
     {
         private BDKermesseEntities db = new BDKermesseEntities();
 
         // GET: CategoriaProductoes
-        public ActionResult Index()
+
+
+        public ActionResult Index(string ValorBusqued)
         {
-            return View(db.CategoriaProducto.ToList());
+            var catProducto = from m in db.CategoriaProducto
+                          select m;
+
+            if (!String.IsNullOrEmpty(ValorBusqued))
+            {
+
+                catProducto = catProducto.Where(s => s.nombre.Contains(ValorBusqued));
+            }
+
+            return View(catProducto.ToList());
         }
 
+
+     
         // GET: CategoriaProductoes/Details/5
         public ActionResult Details(int? id)
         {

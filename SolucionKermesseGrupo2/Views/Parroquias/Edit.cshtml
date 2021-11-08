@@ -22,67 +22,100 @@
 {
     @Html.AntiForgeryToken()
 
-    <div class="form-horizontal" id="FormularioParroquia">
-        <h4>Parroquia</h4>
-        <hr />
-        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        @Html.HiddenFor(model => model.idParroquia)
-
-        <div class="form-group" id="ItemFormParroquia1">
-            @Html.LabelFor(model => model.nombre, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.nombre, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.nombre, "", new { @class = "text-danger" })
+<div class="form-horizontal" id="FormularioParroquia">
+    <h4>Parroquia</h4>
+    <hr />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    @Html.HiddenFor(model => model.idParroquia)
+    <div id="Container">
+        <div class="center">
+            <div class="form-group" id="ItemFormParroquia1">
+                @Html.LabelFor(model => model.nombre, htmlAttributes: new { @class = "control-label col-md-2, TitleEdit" })
+                <div class="col-md-10" id="FormEdit">
+                    @Html.EditorFor(model => model.nombre, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.nombre, "", new { @class = "text-danger" })
+                </div>
             </div>
-        </div>
 
-        <div class="form-group" id="ItemFormParroquia2">
-            @Html.LabelFor(model => model.direccion, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.direccion, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.direccion, "", new { @class = "text-danger" })
+            <div class="form-group" id="ItemFormParroquia2">
+                @Html.LabelFor(model => model.direccion, htmlAttributes: new { @class = "control-label col-md-2, TitleEdit" })
+                <div class="col-md-10" id="FormEdit">
+                    @Html.EditorFor(model => model.direccion, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.direccion, "", new { @class = "text-danger" })
+                </div>
             </div>
-        </div>
 
-        <div class="form-group" id="ItemFormParroquia3">
-            @Html.LabelFor(model => model.telefono, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.telefono, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.telefono, "", new { @class = "text-danger" })
+            <div class="form-group" id="ItemFormParroquia3">
+                @Html.LabelFor(model => model.telefono, htmlAttributes: new { @class = "control-label col-md-2, TitleEdit" })
+                <div class="col-md-10" id="FormEdit">
+                    @Html.EditorFor(model => model.telefono, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.telefono, "", new { @class = "text-danger" })
+                </div>
             </div>
-        </div>
 
-        <div class="form-group" id="ItemFormParroquia4">
-            @Html.LabelFor(model => model.parroco, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.parroco, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.parroco, "", new { @class = "text-danger" })
+            <div class="form-group" id="ItemFormParroquia4">
+                @Html.LabelFor(model => model.parroco, htmlAttributes: new { @class = "control-label col-md-2, TitleEdit" })
+                <div class="col-md-10" id="FormEdit">
+                    @Html.EditorFor(model => model.parroco, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.parroco, "", new { @class = "text-danger" })
+                </div>
             </div>
-        </div>
 
-        <div class="form-group" id="ItemFormParroquia5">
-            @Html.LabelFor(model => model.logo, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.logo, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.logo, "", new { @class = "text-danger" })
+            <div class="form-group" id="ItemFormParroquia5">
+                @Html.LabelFor(model => model.logo, htmlAttributes: new { @class = "control-label col-md-2, TitleEdit" })
+                <div class="col-md-10" id="FormEdit">
+                    @Html.EditorFor(model => model.logo, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.logo, "", new { @class = "text-danger" })
+                </div>
             </div>
-        </div>
 
-        <div class="form-group" id="ItemFormParroquia6">
-            @Html.LabelFor(model => model.sitioWeb, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.sitioWeb, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.sitioWeb, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Guardar" id="BtnGuardar" class="btn btn-primary" />
+            <div class="form-group" id="ItemFormParroquia6">
+                @Html.LabelFor(model => model.sitioWeb, htmlAttributes: new { @class = "control-label col-md-2, TitleEdit" })
+                <div class="col-md-10" id="FormEdit">
+                    @Html.EditorFor(model => model.sitioWeb, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.sitioWeb, "", new { @class = "text-danger" })
+                </div>
             </div>
         </div>
     </div>
-}
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <div id="Container">
+        <div class="center">
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Guardar" id="BtnGuardar" class="btn btn-primary" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    }
 
 <div>
     @Html.ActionLink("Regresar a la página principal", "Index")
