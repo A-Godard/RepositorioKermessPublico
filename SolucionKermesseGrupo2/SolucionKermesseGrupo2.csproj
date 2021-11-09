@@ -155,6 +155,7 @@
     <Compile Include="Controllers\ComunidadesController.cs" />
     <Compile Include="Controllers\ControlBonoesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\IngresoComunidadesController.cs" />
     <Compile Include="Controllers\MonedasController.cs" />
     <Compile Include="Controllers\OpcionsController.cs" />
     <Compile Include="Controllers\ParroquiasController.cs" />
@@ -314,6 +315,7 @@
     <Content Include="Content\StyleSheetIndexParroquia.css" />
     <Content Include="Content\StyleSheetIndexRol.css" />
     <Content Include="Content\StyleSheetIndexUser.css" />
+    <Content Include="Content\StyleSheetIngresoComunidad.css" />
     <Content Include="Content\StyleSheetLogin.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\fontawesome-webfont.svg" />
@@ -448,6 +450,11 @@
     <Content Include="Views\Comunidades\Edit.cshtml" />
     <Content Include="Views\Comunidades\Index.cshtml" />
     <Content Include="Views\ControlBonoes\VerReporteBonos.cshtml" />
+    <Content Include="Views\IngresoComunidades\Create.cshtml" />
+    <Content Include="Views\IngresoComunidades\Delete.cshtml" />
+    <Content Include="Views\IngresoComunidades\Details.cshtml" />
+    <Content Include="Views\IngresoComunidades\Edit.cshtml" />
+    <Content Include="Views\IngresoComunidades\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

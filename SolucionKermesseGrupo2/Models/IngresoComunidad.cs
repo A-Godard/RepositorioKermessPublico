@@ -11,7 +11,8 @@ namespace SolucionKermesseGrupo2.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class IngresoComunidad
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -19,27 +20,64 @@ namespace SolucionKermesseGrupo2.Models
         {
             this.IngresoComunidadDet = new HashSet<IngresoComunidadDet>();
         }
-    
+
+        [Display(Name = "Codigo")]
         public int idIngresoComunidad { get; set; }
+
+        [Display(Name = "Kermesse")]
         public Nullable<int> kermesse { get; set; }
+
+        [Display(Name = "Comunidad")]
         public Nullable<int> comunidad { get; set; }
+
+        [Display(Name = "Producto")]
         public Nullable<int> producto { get; set; }
+
+        [Display(Name = "Cantidad Producto")]
         public int cantProducto { get; set; }
+
+        [Display(Name = "Total Bonos")]
         public int totalBonos { get; set; }
+
+        [Display(Name = "Usuario Creacion")]
         public int usuarioCreacion { get; set; }
+
+        [Display(Name = "Fecha Creacion")]
+        [DataType(DataType.Date)]
         public System.DateTime fechaCreacion { get; set; }
+
+        [Display(Name = "Usuario Modificacion")]
         public Nullable<int> usuarioModificacion { get; set; }
+
+        [Display(Name = "Fecha Modificacion")]
+        [DataType(DataType.Date)]
         public Nullable<System.DateTime> fechaModificacion { get; set; }
+
+        [Display(Name = "Usuario Eliminacion")]
         public Nullable<int> usuarioEliminacion { get; set; }
+
+        [Display(Name = "Fecha Eliminacion")]
+        [DataType(DataType.Date)]
         public Nullable<System.DateTime> fechaEliminacion { get; set; }
-    
+
+        [Display(Name = "Comunidad")]
         public virtual Comunidad Comunidad1 { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<IngresoComunidadDet> IngresoComunidadDet { get; set; }
+
+        [Display(Name = "Kermesse")]
         public virtual Kermesse Kermesse1 { get; set; }
+
+        [Display(Name = "Producto")]
         public virtual Producto Producto1 { get; set; }
+
+        [Display(Name = "Usuario Creacion")]
         public virtual Usuario Usuario { get; set; }
+
+        [Display(Name = "Usuario Modificacion")]
         public virtual Usuario Usuario1 { get; set; }
+
+        [Display(Name = "Usuario Eliminacion")]
         public virtual Usuario Usuario2 { get; set; }
     }
 }

@@ -1,0 +1,121 @@
+﻿/*INDEX*/
+h2 {
+    text-align: center;
+}
+
+#Container {
+    position: relative;
+    margin: 0 auto;
+    max-width: 1280px;
+    width: 90%;
+    margin: 75px;
+}
+
+.center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+#TblIngresoComunidad {
+    table-layout: fixed;
+    background-color: lightblue;
+    width: 1280px;
+    border-collapse: collapse;
+    border: 3px solid black;
+}
+
+#BtnCrear {
+}
+
+#lblIngresoComunidad {
+    text-align: center;
+}
+
+/*DETAILS*/
+#DetIngresoComunidad {
+    margin-left: 600px;
+    text-align: center;
+    margin-right: 600px;
+}
+
+#BtnsHome {
+    margin-left: 200px;
+}
+
+/*EDIT*/
+#FormEdit {
+    width: 100%
+}
+
+.TitleEdit {
+    margin-bottom: 10px;
+}
+
+#BtnGuardar {
+    margin-top: 30px;
+}
+
+#iconouser {
+    width: 120px;
+    height: 120px;
+    margin-left: 50px;
+}
+
+#FormularioIngresoComunidad {
+    padding: 20px 0px 0px 30px; /* margen con valores: arriba - derecha - abajo - izquierda */
+    font-family: verdana,arial;
+    font-size: 9pt;
+    display: block;
+    text-align: center;
+}
+
+#ItemFormIngresoComunidadMain {
+    width: 500px; /* anchura de campos de formulario */
+    font-size: 13pt; /* tamaño de la letra*/
+    display: inline-block;
+    margin-right: auto;
+    text-align: center;
+}
+
+#ItemFormIngresoComunidad {
+    text-align: center;
+    width: 500px; /* anchura de campos de formulario */
+    font-size: 13pt; /* tamaño de la letra*/
+    margin-top: 30px;
+}
+
+/*DELETE*/
+#NombreIngresoComunidad {
+    margin-left: 600px;
+    text-align: center;
+    margin-right: 600px;
+}
+
+#ModelIngresoComunidad {
+    margin-left: 600px;
+    text-align: center;
+    margin-right: 600px;
+}
+
+#BtnEliminar {
+    margin-left: 630px;
+    text-align: center;
+    margin-right: 600px;
+}
+
+/*CREATE*/
+#Boton {
+    margin-top: 40px;
+    margin-left: 680px;
+}
+
+#lblFormICM {
+    margin-left: 470px;
+    display: block;
+    text-align: center;
+    width: 500px;
+}
