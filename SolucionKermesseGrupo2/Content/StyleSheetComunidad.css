@@ -21,11 +21,12 @@ h2{
 }
 
 #TblComunidad {
-    table-layout: fixed;
     background-color: lightblue;
     width: 1280px;
     border-collapse: collapse;
     border: 3px solid black;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #BtnCrear {

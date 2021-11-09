@@ -12,11 +12,13 @@ namespace SolucionKermesseGrupo2.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class ListaPrecioView
+    public partial class VwIngresoComunidad
     {
-        public int idListaPrecio { get; set; }
-        public string Nombre_Kermesse { get; set; }
-        public string Nombre_Precio { get; set; }
-        public string descripcion { get; set; }
+        public int idIngresoComunidad { get; set; }
+        public string comunidad { get; set; }
+        public string kermesse { get; set; }
+        public string producto { get; set; }
+        public System.DateTime fechaCreacion { get; set; }
+        public string usuarioCreacion { get; set; }
     }
 }

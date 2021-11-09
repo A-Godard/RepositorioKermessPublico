@@ -260,15 +260,17 @@
           <Property Name="estado" Type="int" Nullable="false" />
         </EntityType>
         <!--Errores durante la generación:
-advertencia 6002: La tabla o vista 'BDKermesse.dbo.ListaPrecioView' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
-        <EntityType Name="ListaPrecioView">
+advertencia 6002: La tabla o vista 'BDKermesse.dbo.VwIngresoComunidad' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+        <EntityType Name="VwIngresoComunidad">
           <Key>
-            <PropertyRef Name="idListaPrecio" />
+            <PropertyRef Name="idIngresoComunidad" />
           </Key>
-          <Property Name="idListaPrecio" Type="int" Nullable="false" />
-          <Property Name="Nombre Kermesse" Type="nvarchar" MaxLength="100" Nullable="false" />
-          <Property Name="Nombre Precio" Type="nvarchar" MaxLength="100" Nullable="false" />
-          <Property Name="descripcion" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="idIngresoComunidad" Type="int" Nullable="false" />
+          <Property Name="comunidad" Type="nvarchar" MaxLength="45" Nullable="false" />
+          <Property Name="kermesse" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="producto" Type="nvarchar" MaxLength="45" Nullable="false" />
+          <Property Name="fechaCreacion" Type="datetime" Nullable="false" />
+          <Property Name="usuarioCreacion" Type="nvarchar" MaxLength="40" Nullable="false" />
         </EntityType>
         <Association Name="FK__ArqueoCaj__arque__6FE99F9F">
           <End Role="ArqueoCaja" Type="Self.ArqueoCaja" Multiplicity="1" />
@@ -738,13 +740,15 @@ advertencia 6002: La tabla o vista 'BDKermesse.dbo.ListaPrecioView' no tiene def
           <EntitySet Name="TasaCambio" EntityType="Self.TasaCambio" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TasaCambioDet" EntityType="Self.TasaCambioDet" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Usuario" EntityType="Self.Usuario" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="ListaPrecioView" EntityType="Self.ListaPrecioView" store:Type="Views" store:Schema="dbo">
+          <EntitySet Name="VwIngresoComunidad" EntityType="Self.VwIngresoComunidad" store:Type="Views" store:Schema="dbo">
             <DefiningQuery>SELECT 
-    [ListaPrecioView].[idListaPrecio] AS [idListaPrecio], 
-    [ListaPrecioView].[Nombre Kermesse] AS [Nombre Kermesse], 
-    [ListaPrecioView].[Nombre Precio] AS [Nombre Precio], 
-    [ListaPrecioView].[descripcion] AS [descripcion]
-    FROM [dbo].[ListaPrecioView] AS [ListaPrecioView]</DefiningQuery>
+    [VwIngresoComunidad].[idIngresoComunidad] AS [idIngresoComunidad], 
+    [VwIngresoComunidad].[comunidad] AS [comunidad], 
+    [VwIngresoComunidad].[kermesse] AS [kermesse], 
+    [VwIngresoComunidad].[producto] AS [producto], 
+    [VwIngresoComunidad].[fechaCreacion] AS [fechaCreacion], 
+    [VwIngresoComunidad].[usuarioCreacion] AS [usuarioCreacion]
+    FROM [dbo].[VwIngresoComunidad] AS [VwIngresoComunidad]</DefiningQuery>
           </EntitySet>
           <AssociationSet Name="FK__ArqueoCaj__arque__6FE99F9F" Association="Self.FK__ArqueoCaj__arque__6FE99F9F">
             <End Role="ArqueoCaja" EntitySet="ArqueoCaja" />
@@ -1843,16 +1847,18 @@ advertencia 6002: La tabla o vista 'BDKermesse.dbo.ListaPrecioView' no tiene def
             <End Role="TasaCambio" EntitySet="TasaCambio" />
             <End Role="TasaCambioDet" EntitySet="TasaCambioDet" />
           </AssociationSet>
-          <EntitySet Name="ListaPrecioView" EntityType="BDKermesseModel.ListaPrecioView" />
+          <EntitySet Name="VwIngresoComunidad" EntityType="BDKermesseModel.VwIngresoComunidad" />
         </EntityContainer>
-        <EntityType Name="ListaPrecioView">
+        <EntityType Name="VwIngresoComunidad">
           <Key>
-            <PropertyRef Name="idListaPrecio" />
+            <PropertyRef Name="idIngresoComunidad" />
           </Key>
-          <Property Name="idListaPrecio" Type="Int32" Nullable="false" />
-          <Property Name="Nombre_Kermesse" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="Nombre_Precio" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="descripcion" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="idIngresoComunidad" Type="Int32" Nullable="false" />
+          <Property Name="comunidad" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="true" />
+          <Property Name="kermesse" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="producto" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="true" />
+          <Property Name="fechaCreacion" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="usuarioCreacion" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -2137,13 +2143,15 @@ advertencia 6002: La tabla o vista 'BDKermesse.dbo.ListaPrecioView' no tiene def
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="ListaPrecioView">
-            <EntityTypeMapping TypeName="BDKermesseModel.ListaPrecioView">
-              <MappingFragment StoreEntitySet="ListaPrecioView">
-                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
-                <ScalarProperty Name="Nombre_Precio" ColumnName="Nombre Precio" />
-                <ScalarProperty Name="Nombre_Kermesse" ColumnName="Nombre Kermesse" />
-                <ScalarProperty Name="idListaPrecio" ColumnName="idListaPrecio" />
+          <EntitySetMapping Name="VwIngresoComunidad">
+            <EntityTypeMapping TypeName="BDKermesseModel.VwIngresoComunidad">
+              <MappingFragment StoreEntitySet="VwIngresoComunidad">
+                <ScalarProperty Name="usuarioCreacion" ColumnName="usuarioCreacion" />
+                <ScalarProperty Name="fechaCreacion" ColumnName="fechaCreacion" />
+                <ScalarProperty Name="producto" ColumnName="producto" />
+                <ScalarProperty Name="kermesse" ColumnName="kermesse" />
+                <ScalarProperty Name="comunidad" ColumnName="comunidad" />
+                <ScalarProperty Name="idIngresoComunidad" ColumnName="idIngresoComunidad" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

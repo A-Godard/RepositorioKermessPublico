@@ -28,8 +28,8 @@ namespace SolucionKermesseGrupo2.Controllers
             rpt.ReportPath = ruta;
 
             BDKermesseEntities modelo = new BDKermesseEntities();
-            List<IngresoComunidad> ls = new List<IngresoComunidad>();
-            ls = modelo.IngresoComunidad.ToList();
+            List<VwIngresoComunidad> ls = new List<VwIngresoComunidad>();
+            ls = modelo.VwIngresoComunidad.ToList();
 
 
             ReportDataSource rds = new ReportDataSource("DsIngresoComunidad", ls);

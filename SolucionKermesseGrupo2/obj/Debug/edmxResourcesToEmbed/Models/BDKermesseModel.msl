@@ -278,5 +278,17 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="VwIngresoComunidad">
+      <EntityTypeMapping TypeName="BDKermesseModel.VwIngresoComunidad">
+        <MappingFragment StoreEntitySet="VwIngresoComunidad">
+          <ScalarProperty Name="usuarioCreacion" ColumnName="usuarioCreacion" />
+          <ScalarProperty Name="fechaCreacion" ColumnName="fechaCreacion" />
+          <ScalarProperty Name="producto" ColumnName="producto" />
+          <ScalarProperty Name="kermesse" ColumnName="kermesse" />
+          <ScalarProperty Name="comunidad" ColumnName="comunidad" />
+          <ScalarProperty Name="idIngresoComunidad" ColumnName="idIngresoComunidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

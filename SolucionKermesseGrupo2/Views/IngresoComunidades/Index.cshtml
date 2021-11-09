@@ -34,68 +34,60 @@
     </div>
     <br />
     <br />
-    <div id="Container">
-        <div class="center">
-            <table class="table" id="TblIngresoComunidad">
-                <tr>
-                    <th id="lblIngresoComunidad">
-                        @Html.DisplayNameFor(model => model.comunidad)
-                    </th>
-                    <th id="lblIngresoComunidad">
-                        @Html.DisplayNameFor(model => model.kermesse)
-                    </th>
-                    <th id="lblIngresoComunidad">
-                        @Html.DisplayNameFor(model => model.producto)
-                    </th>
-                    <th id="lblIngresoComunidad">
-                        @Html.DisplayNameFor(model => model.totalBonos)
-                    </th>
-                    <th id="lblIngresoComunidad">
-                        @Html.DisplayNameFor(model => model.fechaCreacion)
-                    </th>
-                    <th id="lblIngresoComunidad">
-                        @Html.DisplayNameFor(model => model.usuarioCreacion)
-                    </th>
-                    <th></th>
-                </tr>
+   
+    <table class="table" id="TblIngresoComunidad">
+        <tr>
+            <th id="lblIngresoComunidad">
+                @Html.DisplayNameFor(model => model.comunidad)
+            </th>
+            <th id="lblIngresoComunidad">
+                @Html.DisplayNameFor(model => model.kermesse)
+            </th>
+            <th id="lblIngresoComunidad">
+                @Html.DisplayNameFor(model => model.producto)
+            </th>
+            <th id="lblIngresoComunidad">
+                @Html.DisplayNameFor(model => model.totalBonos)
+            </th>
+            <th id="lblIngresoComunidad">
+                @Html.DisplayNameFor(model => model.fechaCreacion)
+            </th>
+            <th id="lblIngresoComunidad">
+                @Html.DisplayNameFor(model => model.usuarioCreacion)
+            </th>
+            <th></th>
+        </tr>
 
-                @foreach (var item in Model)
-                {
-                    <tr>
-                        <td id="lblIngresoComunidad">
-                            @Html.DisplayFor(modelItem => item.Comunidad1.nombre)
-                        </td>
-                        <td id="lblIngresoComunidad">
-                            @Html.DisplayNameFor(model => model.Kermesse1.nombre)
-                        </td>
-                        <td id="lblIngresoComunidad">
-                            @Html.DisplayNameFor(model => model.Producto1.nombre)
-                        </td>
-                        <td id="lblIngresoComunidad">
-                            @Html.DisplayFor(modelItem => item.totalBonos)
-                        </td>
-                        <td id="lblIngresoComunidad">
-                            @Html.DisplayFor(modelItem => item.fechaCreacion)
-                        </td>
-                        <td id="lblIngresoComunidad">
-                            @Html.DisplayFor(modelItem => item.Usuario.userName)
-                        </td>
-                        <td>
-                            @Html.ActionLink("Editar", "Edit", new { id = item.idIngresoComunidad }) |
-                            @Html.ActionLink("Detalles", "Details", new { id = item.idIngresoComunidad }) |
-                            @Html.ActionLink("Eliminar", "Delete", new { id = item.idIngresoComunidad })
-                        </td>
-                    </tr>
-                }
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td id="lblIngresoComunidad">
+                    @Html.DisplayFor(modelItem => item.Comunidad1.nombre)
+                </td>
+                <td id="lblIngresoComunidad">
+                    @Html.DisplayFor(modelItem => item.Kermesse1.nombre)
+                </td>
+                <td id="lblIngresoComunidad">
+                    @Html.DisplayFor(modelItem => item.Producto1.nombre)
+                </td>
+                <td id="lblIngresoComunidad">
+                    @Html.DisplayFor(modelItem => item.totalBonos)
+                </td>
+                <td id="lblIngresoComunidad">
+                    @Html.DisplayFor(modelItem => item.fechaCreacion)
+                </td>
+                <td id="lblIngresoComunidad">
+                    @Html.DisplayFor(modelItem => item.Usuario.userName)
+                </td>
+                <td>
+                    @Html.ActionLink("Editar", "Edit", new { id = item.idIngresoComunidad }) |
+                    @Html.ActionLink("Detalles", "Details", new { id = item.idIngresoComunidad }) |
+                    @Html.ActionLink("Eliminar", "Delete", new { id = item.idIngresoComunidad })
+                </td>
+            </tr>
+        }
 
-            </table>
-        </div>
-    </div>
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
+    </table>
     <br />
     <br />
     <br />

@@ -4,7 +4,7 @@ h2{
 }
 
 #Container {
-    position: relative;
+    position: sticky;
     margin: 0 auto;
     max-width: 1280px;
     width: 90%;
@@ -21,11 +21,12 @@ h2{
 }
 
 #TblIngresoComunidad {
-    table-layout: fixed;
     background-color: lightblue;
-    width: 1280px;
+    max-width: 1280px;
     border-collapse: collapse;
     border: 3px solid black;
+    margin-left: auto;
+    margin-right:auto;
 }
 
 #BtnCrear {

@@ -3030,13 +3030,13 @@ namespace SolucionKermesseGrupo2.Reportes.DataSet {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class IngresoComunidadDataTable : global::System.Data.TypedTableBase<IngresoComunidadRow> {
             
+            private global::System.Data.DataColumn columnidIngresoComunidad;
+            
             private global::System.Data.DataColumn columncomunidad;
             
             private global::System.Data.DataColumn columnkermesse;
             
             private global::System.Data.DataColumn columnproducto;
-            
-            private global::System.Data.DataColumn columntotalBonos;
             
             private global::System.Data.DataColumn columnfechaCreacion;
             
@@ -3077,6 +3077,14 @@ namespace SolucionKermesseGrupo2.Reportes.DataSet {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn idIngresoComunidadColumn {
+                get {
+                    return this.columnidIngresoComunidad;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn comunidadColumn {
                 get {
                     return this.columncomunidad;
@@ -3096,14 +3104,6 @@ namespace SolucionKermesseGrupo2.Reportes.DataSet {
             public global::System.Data.DataColumn productoColumn {
                 get {
                     return this.columnproducto;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn totalBonosColumn {
-                get {
-                    return this.columntotalBonos;
                 }
             }
             
@@ -3160,13 +3160,13 @@ namespace SolucionKermesseGrupo2.Reportes.DataSet {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public IngresoComunidadRow AddIngresoComunidadRow(string comunidad, string kermesse, string producto, string totalBonos, string fechaCreacion, string usuarioCreacion) {
+            public IngresoComunidadRow AddIngresoComunidadRow(string idIngresoComunidad, string comunidad, string kermesse, string producto, string fechaCreacion, string usuarioCreacion) {
                 IngresoComunidadRow rowIngresoComunidadRow = ((IngresoComunidadRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
+                        idIngresoComunidad,
                         comunidad,
                         kermesse,
                         producto,
-                        totalBonos,
                         fechaCreacion,
                         usuarioCreacion};
                 rowIngresoComunidadRow.ItemArray = columnValuesArray;
@@ -3191,10 +3191,10 @@ namespace SolucionKermesseGrupo2.Reportes.DataSet {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
+                this.columnidIngresoComunidad = base.Columns["idIngresoComunidad"];
                 this.columncomunidad = base.Columns["comunidad"];
                 this.columnkermesse = base.Columns["kermesse"];
                 this.columnproducto = base.Columns["producto"];
-                this.columntotalBonos = base.Columns["totalBonos"];
                 this.columnfechaCreacion = base.Columns["fechaCreacion"];
                 this.columnusuarioCreacion = base.Columns["usuarioCreacion"];
             }
@@ -3202,14 +3202,14 @@ namespace SolucionKermesseGrupo2.Reportes.DataSet {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             private void InitClass() {
+                this.columnidIngresoComunidad = new global::System.Data.DataColumn("idIngresoComunidad", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnidIngresoComunidad);
                 this.columncomunidad = new global::System.Data.DataColumn("comunidad", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncomunidad);
                 this.columnkermesse = new global::System.Data.DataColumn("kermesse", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnkermesse);
                 this.columnproducto = new global::System.Data.DataColumn("producto", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnproducto);
-                this.columntotalBonos = new global::System.Data.DataColumn("totalBonos", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columntotalBonos);
                 this.columnfechaCreacion = new global::System.Data.DataColumn("fechaCreacion", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnfechaCreacion);
                 this.columnusuarioCreacion = new global::System.Data.DataColumn("usuarioCreacion", typeof(string), null, global::System.Data.MappingType.Element);
@@ -4163,6 +4163,23 @@ namespace SolucionKermesseGrupo2.Reportes.DataSet {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string idIngresoComunidad {
+                get {
+                    try {
+                        return ((string)(this[this.tableIngresoComunidad.idIngresoComunidadColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'idIngresoComunidad\' de la tabla \'IngresoComunidad\' es DBN" +
+                                "ull.", e);
+                    }
+                }
+                set {
+                    this[this.tableIngresoComunidad.idIngresoComunidadColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string comunidad {
                 get {
                     try {
@@ -4211,22 +4228,6 @@ namespace SolucionKermesseGrupo2.Reportes.DataSet {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string totalBonos {
-                get {
-                    try {
-                        return ((string)(this[this.tableIngresoComunidad.totalBonosColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'totalBonos\' de la tabla \'IngresoComunidad\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableIngresoComunidad.totalBonosColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string fechaCreacion {
                 get {
                     try {
@@ -4256,6 +4257,18 @@ namespace SolucionKermesseGrupo2.Reportes.DataSet {
                 set {
                     this[this.tableIngresoComunidad.usuarioCreacionColumn] = value;
                 }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsidIngresoComunidadNull() {
+                return this.IsNull(this.tableIngresoComunidad.idIngresoComunidadColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetidIngresoComunidadNull() {
+                this[this.tableIngresoComunidad.idIngresoComunidadColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4292,18 +4305,6 @@ namespace SolucionKermesseGrupo2.Reportes.DataSet {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetproductoNull() {
                 this[this.tableIngresoComunidad.productoColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IstotalBonosNull() {
-                return this.IsNull(this.tableIngresoComunidad.totalBonosColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SettotalBonosNull() {
-                this[this.tableIngresoComunidad.totalBonosColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

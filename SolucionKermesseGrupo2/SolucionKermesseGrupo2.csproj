@@ -218,9 +218,6 @@
     <Compile Include="Models\ListaPrecioDet.cs">
       <DependentUpon>BDKermesseModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\ListaPrecioView.cs">
-      <DependentUpon>BDKermesseModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="Models\Moneda.cs">
       <DependentUpon>BDKermesseModel.tt</DependentUpon>
     </Compile>
@@ -249,6 +246,9 @@
       <DependentUpon>BDKermesseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Usuario.cs">
+      <DependentUpon>BDKermesseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\VwIngresoComunidad.cs">
       <DependentUpon>BDKermesseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
