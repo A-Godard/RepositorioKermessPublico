@@ -1,5 +1,5 @@
 ﻿/*INDEX*/
-h2 {
+h2{
     text-align: center;
 }
 
@@ -118,4 +118,8 @@ h2 {
     display: block;
     text-align: center;
     width: 500px;
+}
+
+#titleDelete {
+    text-align: center;
 }

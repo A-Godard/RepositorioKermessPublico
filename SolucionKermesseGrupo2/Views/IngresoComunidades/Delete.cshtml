@@ -4,110 +4,128 @@
     ViewBag.Title = "Delete";
     Layout = "~/Views/Shared/_LayoutControladores.cshtml";
 }
+<br />
+<head>
+    @Styles.Render("~/Content/StyleSheetIngresoComunidad.css")
+    @Styles.Render("~/Content/Site.css")
+</head>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<h2>Eliminando</h2>
+<h3 id="titleDelete"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="triangle-exclamation" class="svg-inline--fa fa-triangle-exclamation" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M506.3 417l-213.3-364c-16.33-28-57.54-28-73.98 0l-213.2 364C-10.59 444.9 9.849 480 42.74 480h426.6C502.1 480 522.6 445 506.3 417zM232 168c0-13.25 10.75-24 24-24S280 154.8 280 168v128c0 13.25-10.75 24-23.1 24S232 309.3 232 296V168zM256 416c-17.36 0-31.44-14.08-31.44-31.44c0-17.36 14.07-31.44 31.44-31.44s31.44 14.08 31.44 31.44C287.4 401.9 273.4 416 256 416z"></path></svg> ¿Seguro que deseas eliminar el registro?</h3>
 
-<h2>Delete</h2>
-
-<h3>Are you sure you want to delete this?</h3>
 <div>
-    <h4>IngresoComunidad</h4>
     <hr />
     <dl class="dl-horizontal">
-        <dt>
+        <dt id="NombreIngresoComunidad">
             @Html.DisplayNameFor(model => model.cantProducto)
         </dt>
 
-        <dd>
+        <dd id="ModelIngresoComunidad">
             @Html.DisplayFor(model => model.cantProducto)
         </dd>
 
-        <dt>
+        <dt id="NombreIngresoComunidad">
             @Html.DisplayNameFor(model => model.totalBonos)
         </dt>
 
-        <dd>
+        <dd id="ModelIngresoComunidad">
             @Html.DisplayFor(model => model.totalBonos)
         </dd>
 
-        <dt>
+        <dt id="NombreIngresoComunidad">
             @Html.DisplayNameFor(model => model.fechaCreacion)
         </dt>
 
-        <dd>
+        <dd id="ModelIngresoComunidad">
             @Html.DisplayFor(model => model.fechaCreacion)
         </dd>
 
-        <dt>
+        <dt id="NombreIngresoComunidad">
             @Html.DisplayNameFor(model => model.fechaModificacion)
         </dt>
 
-        <dd>
+        <dd id="ModelIngresoComunidad">
             @Html.DisplayFor(model => model.fechaModificacion)
         </dd>
 
-        <dt>
+        <dt id="NombreIngresoComunidad">
             @Html.DisplayNameFor(model => model.fechaEliminacion)
         </dt>
 
-        <dd>
+        <dd id="ModelIngresoComunidad">
             @Html.DisplayFor(model => model.fechaEliminacion)
         </dd>
 
-        <dt>
+        <dt id="NombreIngresoComunidad">
             @Html.DisplayNameFor(model => model.Comunidad1.nombre)
         </dt>
 
-        <dd>
+        <dd id="ModelIngresoComunidad">
             @Html.DisplayFor(model => model.Comunidad1.nombre)
         </dd>
 
-        <dt>
+        <dt id="NombreIngresoComunidad">
             @Html.DisplayNameFor(model => model.Kermesse1.nombre)
         </dt>
 
-        <dd>
+        <dd id="ModelIngresoComunidad">
             @Html.DisplayFor(model => model.Kermesse1.nombre)
         </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Producto1.nombre)
+        <dt id="NombreIngresoComunidad">
+            @Html.DisplayNameFor(model => model.producto)
         </dt>
 
-        <dd>
+        <dd id="ModelIngresoComunidad">
             @Html.DisplayFor(model => model.Producto1.nombre)
         </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Usuario.userName)
+        <dt id="NombreIngresoComunidad">
+            @Html.DisplayNameFor(model => model.usuarioCreacion)
         </dt>
 
-        <dd>
+        <dd id="ModelIngresoComunidad">
             @Html.DisplayFor(model => model.Usuario.userName)
         </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Usuario1.userName)
+        <dt id="NombreIngresoComunidad">
+            @Html.DisplayNameFor(model => model.usuarioModificacion)
         </dt>
 
-        <dd>
+        <dd id="ModelIngresoComunidad">
             @Html.DisplayFor(model => model.Usuario1.userName)
         </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Usuario2.userName)
+        <dt id="NombreIngresoComunidad">
+            @Html.DisplayNameFor(model => model.usuarioEliminacion)
         </dt>
 
-        <dd>
+        <dd id="ModelIngresoComunidad">
             @Html.DisplayFor(model => model.Usuario2.userName)
         </dd>
 
     </dl>
 
-    @using (Html.BeginForm()) {
+    @using (Html.BeginForm())
+    {
         @Html.AntiForgeryToken()
 
         <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to List", "Index")
+            <input type="submit" value="Eliminar" class="btn btn-primary" id="BtnEliminar" />
+            @Html.ActionLink("Regresar a la página principal", "Index")
         </div>
     }
 </div>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />

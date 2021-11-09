@@ -4,13 +4,23 @@
     ViewBag.Title = "Details";
     Layout = "~/Views/Shared/_LayoutControladores.cshtml";
 }
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<h2>Detalles Ingreso</h2>
 
-<h2>Details</h2>
-
+<head>
+    @Styles.Render("~/Content/StyleSheetIngresoComunidad.css")
+    @Styles.Render("~/Content/Site.css")
+</head>
 <div>
-    <h4>IngresoComunidad</h4>
+
     <hr />
-    <dl class="dl-horizontal">
+    <dl class="dl-horizontal" id="DetIngresoComunidad">
         <dt>
             @Html.DisplayNameFor(model => model.cantProducto)
         </dt>
@@ -50,15 +60,6 @@
         <dd>
             @Html.DisplayFor(model => model.fechaEliminacion)
         </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Comunidad1.nombre)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Comunidad1.nombre)
-        </dd>
-
         <dt>
             @Html.DisplayNameFor(model => model.Kermesse1.nombre)
         </dt>
@@ -68,7 +69,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Producto1.nombre)
+            @Html.DisplayNameFor(model => model.producto)
         </dt>
 
         <dd>
@@ -76,7 +77,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Usuario.userName)
+            @Html.DisplayNameFor(model => model.usuarioCreacion)
         </dt>
 
         <dd>
@@ -84,7 +85,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Usuario1.userName)
+            @Html.DisplayNameFor(model => model.usuarioModificacion)
         </dt>
 
         <dd>
@@ -92,7 +93,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Usuario2.userName)
+            @Html.DisplayNameFor(model => model.usuarioEliminacion)
         </dt>
 
         <dd>
@@ -102,6 +103,6 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.idIngresoComunidad }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Editar", "Edit", new { id = Model.idIngresoComunidad }) |
+    @Html.ActionLink("Regresar a la página principal", "Index")
 </p>

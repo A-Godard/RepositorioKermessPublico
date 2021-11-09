@@ -476,10 +476,12 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Reportes\Report1.rdlc" />
     <EmbeddedResource Include="Reportes\RptCategoriaGasto.rdlc" />
     <EmbeddedResource Include="Reportes\RptCategoriaProducto.rdlc" />
     <EmbeddedResource Include="Reportes\RptComunidad.rdlc" />
     <EmbeddedResource Include="Reportes\RptControlBono.rdlc" />
+    <EmbeddedResource Include="Reportes\RptIngresoComunidad.rdlc" />
     <EmbeddedResource Include="Reportes\RptMoneda.rdlc" />
     <EmbeddedResource Include="Reportes\RptOpcion.rdlc" />
     <EmbeddedResource Include="Reportes\RptParroquia.rdlc" />
