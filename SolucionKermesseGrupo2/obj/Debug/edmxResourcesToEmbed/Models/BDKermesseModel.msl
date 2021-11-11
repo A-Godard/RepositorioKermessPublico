@@ -278,6 +278,37 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="VwRolOpciones">
+      <EntityTypeMapping TypeName="BDKermesseModel.VwRolOpciones">
+        <MappingFragment StoreEntitySet="VwRolOpciones">
+          <ScalarProperty Name="Opc_Desc" ColumnName="Opc Desc" />
+          <ScalarProperty Name="Rol_Desc" ColumnName="Rol Desc" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VwGasto">
+      <EntityTypeMapping TypeName="BDKermesseModel.VwGasto">
+        <MappingFragment StoreEntitySet="VwGasto">
+          <ScalarProperty Name="Usuario" ColumnName="Usuario" />
+          <ScalarProperty Name="monto" ColumnName="monto" />
+          <ScalarProperty Name="concepto" ColumnName="concepto" />
+          <ScalarProperty Name="fechGasto" ColumnName="fechGasto" />
+          <ScalarProperty Name="nombreCategoria" ColumnName="nombreCategoria" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="idGasto" ColumnName="idGasto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VwRolUsuario">
+      <EntityTypeMapping TypeName="BDKermesseModel.VwRolUsuario">
+        <MappingFragment StoreEntitySet="VwRolUsuario">
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Usuario" ColumnName="Usuario" />
+          <ScalarProperty Name="idRolUsuario" ColumnName="idRolUsuario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="VwIngresoComunidad">
       <EntityTypeMapping TypeName="BDKermesseModel.VwIngresoComunidad">
         <MappingFragment StoreEntitySet="VwIngresoComunidad">

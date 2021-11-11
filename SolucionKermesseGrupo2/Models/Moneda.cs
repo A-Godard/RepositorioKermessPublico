@@ -11,8 +11,7 @@ namespace SolucionKermesseGrupo2.Models
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-
+    
     public partial class Moneda
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -23,23 +22,10 @@ namespace SolucionKermesseGrupo2.Models
             this.TasaCambio = new HashSet<TasaCambio>();
             this.TasaCambio1 = new HashSet<TasaCambio>();
         }
-
-        [Display(Name = "Codigo")]
+    
         public int idMoneda { get; set; }
-
-        [Display(Name = "Nombre de Moneda")]
-        [Required]
-        [StringLength(45)]
-        [DataType(DataType.Text)]
         public string nombre { get; set; }
-
-        [Display(Name = "Simbolo de Moneda")]
-        [Required]
-        [StringLength(45)]
-        [DataType(DataType.Text)]
         public string simbolo { get; set; }
-
-        [Display(Name = "Estado Moneda")]
         public int estado { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

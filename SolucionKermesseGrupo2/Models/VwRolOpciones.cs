@@ -12,16 +12,10 @@ namespace SolucionKermesseGrupo2.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class IngresoComunidadDet
+    public partial class VwRolOpciones
     {
-        public int idIngresoComunidadDet { get; set; }
-        public int ingresoComunidad { get; set; }
-        public int bono { get; set; }
-        public string denominacion { get; set; }
-        public int cantidad { get; set; }
-        public double subTotalBono { get; set; }
-    
-        public virtual ControlBono ControlBono { get; set; }
-        public virtual IngresoComunidad IngresoComunidad1 { get; set; }
+        public int Id { get; set; }
+        public string Rol_Desc { get; set; }
+        public string Opc_Desc { get; set; }
     }
 }

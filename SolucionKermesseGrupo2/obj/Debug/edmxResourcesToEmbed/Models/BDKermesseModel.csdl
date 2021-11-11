@@ -944,9 +944,40 @@
       <End Role="TasaCambio" EntitySet="TasaCambio" />
       <End Role="TasaCambioDet" EntitySet="TasaCambioDet" />
     </AssociationSet>
+    <EntitySet Name="VwRolOpciones" EntityType="BDKermesseModel.VwRolOpciones" />
+    <EntitySet Name="VwGasto" EntityType="BDKermesseModel.VwGasto" />
+    <EntitySet Name="VwRolUsuario" EntityType="BDKermesseModel.VwRolUsuario" />
     <EntitySet Name="VwIngresoComunidad" EntityType="BDKermesseModel.VwIngresoComunidad" />
     <EntitySet Name="vwIngresoComunidadDetalle" EntityType="BDKermesseModel.vwIngresoComunidadDetalle" />
   </EntityContainer>
+  <EntityType Name="VwRolOpciones">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Rol_Desc" Type="String" Nullable="false" MaxLength="70" FixedLength="false" Unicode="true" />
+    <Property Name="Opc_Desc" Type="String" Nullable="false" MaxLength="70" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="VwGasto">
+    <Key>
+      <PropertyRef Name="idGasto" />
+    </Key>
+    <Property Name="idGasto" Type="Int32" Nullable="false" />
+    <Property Name="nombre" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="nombreCategoria" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="true" />
+    <Property Name="fechGasto" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="concepto" Type="String" Nullable="false" MaxLength="70" FixedLength="false" Unicode="true" />
+    <Property Name="monto" Type="Double" Nullable="false" />
+    <Property Name="Usuario" Type="String" Nullable="false" MaxLength="91" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="VwRolUsuario">
+    <Key>
+      <PropertyRef Name="idRolUsuario" />
+    </Key>
+    <Property Name="idRolUsuario" Type="Int32" Nullable="false" />
+    <Property Name="Usuario" Type="String" Nullable="false" MaxLength="91" FixedLength="false" Unicode="true" />
+    <Property Name="Descripcion" Type="String" Nullable="false" MaxLength="70" FixedLength="false" Unicode="true" />
+  </EntityType>
   <EntityType Name="VwIngresoComunidad">
     <Key>
       <PropertyRef Name="idIngresoComunidad" />
@@ -961,11 +992,6 @@
   <EntityType Name="vwIngresoComunidadDetalle">
     <Key>
       <PropertyRef Name="idIngresoComunidadDet" />
-      <PropertyRef Name="ControlBono" />
-      <PropertyRef Name="IngresoComunidad1" />
-      <PropertyRef Name="denominacion" />
-      <PropertyRef Name="cantidad" />
-      <PropertyRef Name="subTotalBono" />
     </Key>
     <Property Name="idIngresoComunidadDet" Type="Int32" Nullable="false" />
     <Property Name="ControlBono" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="true" />

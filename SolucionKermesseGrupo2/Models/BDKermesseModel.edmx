@@ -260,15 +260,30 @@
           <Property Name="estado" Type="int" Nullable="false" />
         </EntityType>
         <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'BDKermesse.dbo.VwGasto' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+        <EntityType Name="VwGasto">
+          <Key>
+            <PropertyRef Name="idGasto" />
+            
+            
+            
+            
+            
+            
+          </Key>
+          <Property Name="idGasto" Type="int" Nullable="false" />
+          <Property Name="nombre" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="nombreCategoria" Type="nvarchar" MaxLength="45" Nullable="false" />
+          <Property Name="fechGasto" Type="datetime" Nullable="false" />
+          <Property Name="concepto" Type="nvarchar" MaxLength="70" Nullable="false" />
+          <Property Name="monto" Type="float" Nullable="false" />
+          <Property Name="Usuario" Type="nvarchar" MaxLength="91" Nullable="false" />
+        </EntityType>
+        <!--Errores durante la generación:
 advertencia 6002: La tabla o vista 'BDKermesse.dbo.VwIngresoComunidad' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
         <EntityType Name="VwIngresoComunidad">
           <Key>
             <PropertyRef Name="idIngresoComunidad" />
-            
-            
-            
-            
-            
           </Key>
           <Property Name="idIngresoComunidad" Type="int" Nullable="false" />
           <Property Name="comunidad" Type="nvarchar" MaxLength="45" Nullable="false" />
@@ -282,11 +297,6 @@ advertencia 6002: La tabla o vista 'BDKermesse.dbo.vwIngresoComunidadDetalle' no
         <EntityType Name="vwIngresoComunidadDetalle">
           <Key>
             <PropertyRef Name="idIngresoComunidadDet" />
-            <PropertyRef Name="ControlBono" />
-            <PropertyRef Name="IngresoComunidad1" />
-            <PropertyRef Name="denominacion" />
-            <PropertyRef Name="cantidad" />
-            <PropertyRef Name="subTotalBono" />
           </Key>
           <Property Name="idIngresoComunidadDet" Type="int" Nullable="false" />
           <Property Name="ControlBono" Type="nvarchar" MaxLength="45" Nullable="false" />
@@ -294,6 +304,30 @@ advertencia 6002: La tabla o vista 'BDKermesse.dbo.vwIngresoComunidadDetalle' no
           <Property Name="denominacion" Type="nvarchar" MaxLength="45" Nullable="false" />
           <Property Name="cantidad" Type="int" Nullable="false" />
           <Property Name="subTotalBono" Type="float" Nullable="false" />
+        </EntityType>
+        <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'BDKermesse.dbo.VwRolOpciones' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+        <EntityType Name="VwRolOpciones">
+          <Key>
+            <PropertyRef Name="Id" />
+            
+            
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Rol Desc" Type="nvarchar" MaxLength="70" Nullable="false" />
+          <Property Name="Opc Desc" Type="nvarchar" MaxLength="70" Nullable="false" />
+        </EntityType>
+        <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'BDKermesse.dbo.VwRolUsuario' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+        <EntityType Name="VwRolUsuario">
+          <Key>
+            <PropertyRef Name="idRolUsuario" />
+            
+            
+          </Key>
+          <Property Name="idRolUsuario" Type="int" Nullable="false" />
+          <Property Name="Usuario" Type="nvarchar" MaxLength="91" Nullable="false" />
+          <Property Name="Descripcion" Type="nvarchar" MaxLength="70" Nullable="false" />
         </EntityType>
         <Association Name="FK__ArqueoCaj__arque__6FE99F9F">
           <End Role="ArqueoCaja" Type="Self.ArqueoCaja" Multiplicity="1" />
@@ -763,6 +797,17 @@ advertencia 6002: La tabla o vista 'BDKermesse.dbo.vwIngresoComunidadDetalle' no
           <EntitySet Name="TasaCambio" EntityType="Self.TasaCambio" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TasaCambioDet" EntityType="Self.TasaCambioDet" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Usuario" EntityType="Self.Usuario" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="VwGasto" EntityType="Self.VwGasto" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [VwGasto].[idGasto] AS [idGasto], 
+    [VwGasto].[nombre] AS [nombre], 
+    [VwGasto].[nombreCategoria] AS [nombreCategoria], 
+    [VwGasto].[fechGasto] AS [fechGasto], 
+    [VwGasto].[concepto] AS [concepto], 
+    [VwGasto].[monto] AS [monto], 
+    [VwGasto].[Usuario] AS [Usuario]
+    FROM [dbo].[VwGasto] AS [VwGasto]</DefiningQuery>
+          </EntitySet>
           <EntitySet Name="VwIngresoComunidad" EntityType="Self.VwIngresoComunidad" store:Type="Views" store:Schema="dbo">
             <DefiningQuery>SELECT 
     [VwIngresoComunidad].[idIngresoComunidad] AS [idIngresoComunidad], 
@@ -782,6 +827,20 @@ advertencia 6002: La tabla o vista 'BDKermesse.dbo.vwIngresoComunidadDetalle' no
     [vwIngresoComunidadDetalle].[cantidad] AS [cantidad], 
     [vwIngresoComunidadDetalle].[subTotalBono] AS [subTotalBono]
     FROM [dbo].[vwIngresoComunidadDetalle] AS [vwIngresoComunidadDetalle]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="VwRolOpciones" EntityType="Self.VwRolOpciones" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [VwRolOpciones].[Id] AS [Id], 
+    [VwRolOpciones].[Rol Desc] AS [Rol Desc], 
+    [VwRolOpciones].[Opc Desc] AS [Opc Desc]
+    FROM [dbo].[VwRolOpciones] AS [VwRolOpciones]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="VwRolUsuario" EntityType="Self.VwRolUsuario" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [VwRolUsuario].[idRolUsuario] AS [idRolUsuario], 
+    [VwRolUsuario].[Usuario] AS [Usuario], 
+    [VwRolUsuario].[Descripcion] AS [Descripcion]
+    FROM [dbo].[VwRolUsuario] AS [VwRolUsuario]</DefiningQuery>
           </EntitySet>
           <AssociationSet Name="FK__ArqueoCaj__arque__6FE99F9F" Association="Self.FK__ArqueoCaj__arque__6FE99F9F">
             <End Role="ArqueoCaja" EntitySet="ArqueoCaja" />
@@ -1880,9 +1939,40 @@ advertencia 6002: La tabla o vista 'BDKermesse.dbo.vwIngresoComunidadDetalle' no
             <End Role="TasaCambio" EntitySet="TasaCambio" />
             <End Role="TasaCambioDet" EntitySet="TasaCambioDet" />
           </AssociationSet>
+          <EntitySet Name="VwRolOpciones" EntityType="BDKermesseModel.VwRolOpciones" />
+          <EntitySet Name="VwGasto" EntityType="BDKermesseModel.VwGasto" />
+          <EntitySet Name="VwRolUsuario" EntityType="BDKermesseModel.VwRolUsuario" />
           <EntitySet Name="VwIngresoComunidad" EntityType="BDKermesseModel.VwIngresoComunidad" />
           <EntitySet Name="vwIngresoComunidadDetalle" EntityType="BDKermesseModel.vwIngresoComunidadDetalle" />
         </EntityContainer>
+        <EntityType Name="VwRolOpciones">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Rol_Desc" Type="String" Nullable="false" MaxLength="70" FixedLength="false" Unicode="true" />
+          <Property Name="Opc_Desc" Type="String" Nullable="false" MaxLength="70" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="VwGasto">
+          <Key>
+            <PropertyRef Name="idGasto" />
+          </Key>
+          <Property Name="idGasto" Type="Int32" Nullable="false" />
+          <Property Name="nombre" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="nombreCategoria" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="true" />
+          <Property Name="fechGasto" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="concepto" Type="String" Nullable="false" MaxLength="70" FixedLength="false" Unicode="true" />
+          <Property Name="monto" Type="Double" Nullable="false" />
+          <Property Name="Usuario" Type="String" Nullable="false" MaxLength="91" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="VwRolUsuario">
+          <Key>
+            <PropertyRef Name="idRolUsuario" />
+          </Key>
+          <Property Name="idRolUsuario" Type="Int32" Nullable="false" />
+          <Property Name="Usuario" Type="String" Nullable="false" MaxLength="91" FixedLength="false" Unicode="true" />
+          <Property Name="Descripcion" Type="String" Nullable="false" MaxLength="70" FixedLength="false" Unicode="true" />
+        </EntityType>
         <EntityType Name="VwIngresoComunidad">
           <Key>
             <PropertyRef Name="idIngresoComunidad" />
@@ -1897,11 +1987,6 @@ advertencia 6002: La tabla o vista 'BDKermesse.dbo.vwIngresoComunidadDetalle' no
         <EntityType Name="vwIngresoComunidadDetalle">
           <Key>
             <PropertyRef Name="idIngresoComunidadDet" />
-            <PropertyRef Name="ControlBono" />
-            <PropertyRef Name="IngresoComunidad1" />
-            <PropertyRef Name="denominacion" />
-            <PropertyRef Name="cantidad" />
-            <PropertyRef Name="subTotalBono" />
           </Key>
           <Property Name="idIngresoComunidadDet" Type="Int32" Nullable="false" />
           <Property Name="ControlBono" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="true" />
@@ -2193,6 +2278,37 @@ advertencia 6002: La tabla o vista 'BDKermesse.dbo.vwIngresoComunidadDetalle' no
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="VwRolOpciones">
+            <EntityTypeMapping TypeName="BDKermesseModel.VwRolOpciones">
+              <MappingFragment StoreEntitySet="VwRolOpciones">
+                <ScalarProperty Name="Opc_Desc" ColumnName="Opc Desc" />
+                <ScalarProperty Name="Rol_Desc" ColumnName="Rol Desc" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VwGasto">
+            <EntityTypeMapping TypeName="BDKermesseModel.VwGasto">
+              <MappingFragment StoreEntitySet="VwGasto">
+                <ScalarProperty Name="Usuario" ColumnName="Usuario" />
+                <ScalarProperty Name="monto" ColumnName="monto" />
+                <ScalarProperty Name="concepto" ColumnName="concepto" />
+                <ScalarProperty Name="fechGasto" ColumnName="fechGasto" />
+                <ScalarProperty Name="nombreCategoria" ColumnName="nombreCategoria" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="idGasto" ColumnName="idGasto" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VwRolUsuario">
+            <EntityTypeMapping TypeName="BDKermesseModel.VwRolUsuario">
+              <MappingFragment StoreEntitySet="VwRolUsuario">
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="Usuario" ColumnName="Usuario" />
+                <ScalarProperty Name="idRolUsuario" ColumnName="idRolUsuario" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="VwIngresoComunidad">
             <EntityTypeMapping TypeName="BDKermesseModel.VwIngresoComunidad">
               <MappingFragment StoreEntitySet="VwIngresoComunidad">
@@ -2217,7 +2333,7 @@ advertencia 6002: La tabla o vista 'BDKermesse.dbo.vwIngresoComunidadDetalle' no
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-        </EntityContainerMapping>
+          </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
   </edmx:Runtime>
