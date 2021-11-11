@@ -264,6 +264,11 @@ advertencia 6002: La tabla o vista 'BDKermesse.dbo.VwIngresoComunidad' no tiene 
         <EntityType Name="VwIngresoComunidad">
           <Key>
             <PropertyRef Name="idIngresoComunidad" />
+            
+            
+            
+            
+            
           </Key>
           <Property Name="idIngresoComunidad" Type="int" Nullable="false" />
           <Property Name="comunidad" Type="nvarchar" MaxLength="45" Nullable="false" />

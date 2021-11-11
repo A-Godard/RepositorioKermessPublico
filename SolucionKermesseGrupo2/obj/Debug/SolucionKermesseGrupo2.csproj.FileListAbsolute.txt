@@ -2065,3 +2065,4 @@ C:\Users\Jorge\Desktop\Proyecto Kermesse 81121\RepositorioKermessPublico\Solucio
 C:\Users\Jorge\Desktop\Proyecto Kermesse 81121\RepositorioKermessPublico\SolucionKermesseGrupo2\obj\Debug\SolucionKermesseGrupo2.csproj.CopyComplete
 C:\Users\Jorge\Desktop\Proyecto Kermesse 81121\RepositorioKermessPublico\SolucionKermesseGrupo2\obj\Debug\SolucionKermesseGrupo2.dll
 C:\Users\Jorge\Desktop\Proyecto Kermesse 81121\RepositorioKermessPublico\SolucionKermesseGrupo2\obj\Debug\SolucionKermesseGrupo2.pdb
+C:\Users\Jorge\Desktop\Proyecto Kermesse 81121\RepositorioKermessPublico\SolucionKermesseGrupo2\obj\Debug\SolucionKermesseGrupo2.csprojAssemblyReference.cache

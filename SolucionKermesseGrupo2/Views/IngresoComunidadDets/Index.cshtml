@@ -1,0 +1,85 @@
+﻿@model IEnumerable<SolucionKermesseGrupo2.Models.IngresoComunidadDet>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutControladores.cshtml";
+}
+
+<head>
+    @Styles.Render("~/Content/StyleSheetIngresoComunidad.css")
+    @Styles.Render("~/Content/Site.css")
+    @Styles.Render("~/Content/StyleSheetIcon.css")
+</head>
+<br />
+<br />
+<body>
+
+
+    <br />
+    <br />
+    <br />
+    <br />
+
+    <h2 id="tituloCom">Ingreso Comunidad Detalle</h2>
+    <div id="Container">
+        <div class="center">
+            <div class="BtnCrear">
+                <a class="btn btn-primary" id="BtnCrear" href="@Url.Action("Create")" role="button">Crear nuevo</a>
+            </div>
+        </div>
+    </div>
+    <br />
+    <br />
+    <table class="table" id="TblIngresoComunidad">
+        <tr>
+            <th id="lblIngresoComunidad">
+                @Html.DisplayNameFor(model => model.denominacion)
+            </th>
+            <th id="lblIngresoComunidad">
+                @Html.DisplayNameFor(model => model.cantidad)
+            </th>
+            <th id="lblIngresoComunidad">
+                @Html.DisplayNameFor(model => model.subTotalBono)
+            </th>
+            <th id="lblIngresoComunidad">
+                @Html.DisplayNameFor(model => model.ControlBono.nombre)
+            </th>
+            <th id="lblIngresoComunidad">
+                @Html.DisplayNameFor(model => model.IngresoComunidad1.idIngresoComunidad)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td id="lblIngresoComunidad">
+                    @Html.DisplayFor(modelItem => item.denominacion)
+                </td>
+                <td id="lblIngresoComunidad">
+                    @Html.DisplayFor(modelItem => item.cantidad)
+                </td>
+                <td id="lblIngresoComunidad">
+                    @Html.DisplayFor(modelItem => item.subTotalBono)
+                </td>
+                <td id="lblIngresoComunidad">
+                    @Html.DisplayFor(modelItem => item.ControlBono.nombre)
+                </td>
+                <td id="lblIngresoComunidad">
+                    @Html.DisplayFor(modelItem => item.IngresoComunidad1.idIngresoComunidad)
+                </td>
+                <td>
+                    @Html.ActionLink("Editar", "Edit", new { id = item.idIngresoComunidadDet }) |
+                    @Html.ActionLink("Detalles", "Details", new { id = item.idIngresoComunidadDet }) |
+                    @Html.ActionLink("Eliminar", "Delete", new { id = item.idIngresoComunidadDet })
+                </td>
+            </tr>
+        }
+
+    </table>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+</body>

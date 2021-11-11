@@ -155,6 +155,7 @@
     <Compile Include="Controllers\ComunidadesController.cs" />
     <Compile Include="Controllers\ControlBonoesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\IngresoComunidadDetsController.cs" />
     <Compile Include="Controllers\IngresoComunidadesController.cs" />
     <Compile Include="Controllers\MonedasController.cs" />
     <Compile Include="Controllers\OpcionsController.cs" />
@@ -455,6 +456,11 @@
     <Content Include="Views\IngresoComunidades\Details.cshtml" />
     <Content Include="Views\IngresoComunidades\Edit.cshtml" />
     <Content Include="Views\IngresoComunidades\Index.cshtml" />
+    <Content Include="Views\IngresoComunidadDets\Create.cshtml" />
+    <Content Include="Views\IngresoComunidadDets\Delete.cshtml" />
+    <Content Include="Views\IngresoComunidadDets\Details.cshtml" />
+    <Content Include="Views\IngresoComunidadDets\Edit.cshtml" />
+    <Content Include="Views\IngresoComunidadDets\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
