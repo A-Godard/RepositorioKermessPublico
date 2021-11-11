@@ -12,20 +12,14 @@ namespace SolucionKermesseGrupo2.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class CategoriaProducto
+    public partial class VwProducto
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public CategoriaProducto()
-        {
-            this.Producto = new HashSet<Producto>();
-        }
-    
-        public int idCatProd { get; set; }
-        public string nombre { get; set; }
+        public int idProducto { get; set; }
+        public string Comunidad { get; set; }
+        public string Categoria { get; set; }
+        public string Producto { get; set; }
         public string descripcion { get; set; }
-        public int estado { get; set; }
-    
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Producto> Producto { get; set; }
+        public Nullable<int> cantidad { get; set; }
+        public double precioVSugerido { get; set; }
     }
 }

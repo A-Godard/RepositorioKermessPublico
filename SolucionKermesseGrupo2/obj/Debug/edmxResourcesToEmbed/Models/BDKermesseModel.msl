@@ -278,5 +278,31 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="VwProducto">
+      <EntityTypeMapping TypeName="BDKermesseModel.VwProducto">
+        <MappingFragment StoreEntitySet="VwProducto">
+          <ScalarProperty Name="precioVSugerido" ColumnName="precioVSugerido" />
+          <ScalarProperty Name="cantidad" ColumnName="cantidad" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="Producto" ColumnName="Producto" />
+          <ScalarProperty Name="Categoria" ColumnName="Categoria" />
+          <ScalarProperty Name="Comunidad" ColumnName="Comunidad" />
+          <ScalarProperty Name="idProducto" ColumnName="idProducto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VwListaPrecio">
+      <EntityTypeMapping TypeName="BDKermesseModel.VwListaPrecio">
+        <MappingFragment StoreEntitySet="VwListaPrecio">
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="Lista" ColumnName="Lista" />
+          <ScalarProperty Name="listaPrecio" ColumnName="listaPrecio" />
+          <ScalarProperty Name="Usuario" ColumnName="Usuario" />
+          <ScalarProperty Name="Parroquia" ColumnName="Parroquia" />
+          <ScalarProperty Name="Kermesse" ColumnName="Kermesse" />
+          <ScalarProperty Name="idListaPrecio" ColumnName="idListaPrecio" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

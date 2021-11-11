@@ -944,5 +944,31 @@
       <End Role="TasaCambio" EntitySet="TasaCambio" />
       <End Role="TasaCambioDet" EntitySet="TasaCambioDet" />
     </AssociationSet>
+    <EntitySet Name="VwProducto" EntityType="BDKermesseModel.VwProducto" />
+    <EntitySet Name="VwListaPrecio" EntityType="BDKermesseModel.VwListaPrecio" />
   </EntityContainer>
+  <EntityType Name="VwProducto">
+    <Key>
+      <PropertyRef Name="idProducto" />
+    </Key>
+    <Property Name="idProducto" Type="Int32" Nullable="false" />
+    <Property Name="Comunidad" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="true" />
+    <Property Name="Categoria" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="true" />
+    <Property Name="Producto" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="true" />
+    <Property Name="descripcion" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="cantidad" Type="Int32" />
+    <Property Name="precioVSugerido" Type="Double" Nullable="false" />
+  </EntityType>
+  <EntityType Name="VwListaPrecio">
+    <Key>
+      <PropertyRef Name="idListaPrecio" />
+    </Key>
+    <Property Name="idListaPrecio" Type="Int32" Nullable="false" />
+    <Property Name="Kermesse" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Parroquia" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Usuario" Type="String" Nullable="false" MaxLength="91" FixedLength="false" Unicode="true" />
+    <Property Name="listaPrecio" Type="Int32" Nullable="false" />
+    <Property Name="Lista" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="descripcion" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
 </Schema>
