@@ -11,7 +11,8 @@ namespace SolucionKermesseGrupo2.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class IngresoComunidad
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -19,18 +20,56 @@ namespace SolucionKermesseGrupo2.Models
         {
             this.IngresoComunidadDet = new HashSet<IngresoComunidadDet>();
         }
-    
+
+        [Display(Name = "Codigo")]
         public int idIngresoComunidad { get; set; }
+
+        [Display(Name = "Kermesse")]
+        [Required]
         public Nullable<int> kermesse { get; set; }
+
+        [Display(Name = "Comunidad")]
+        [Required]
         public Nullable<int> comunidad { get; set; }
+
+        [Display(Name = "Producto")]
+        [Required]
         public Nullable<int> producto { get; set; }
+
+        [Display(Name = "Cantidad producto")]
+        [Required]
         public int cantProducto { get; set; }
+
+        [Display(Name = "Total Bono")]
+        [Required]
         public int totalBonos { get; set; }
+
+        [Display(Name = "Usuario Creacion")]
+        [Required]
         public int usuarioCreacion { get; set; }
+
+        [Display(Name = "Fecha Creacion")]
+        [Required]
+        [DataType(DataType.Date)]
         public System.DateTime fechaCreacion { get; set; }
+
+        [Display(Name = "Usuario Modifacion")]
+        [Required]
         public Nullable<int> usuarioModificacion { get; set; }
+        
+        
+        [Display(Name = "Fecha Modificacion")]
+        [Required]
+        [DataType(DataType.Date)]
         public Nullable<System.DateTime> fechaModificacion { get; set; }
+
+        [Display(Name = "Usuario Eliminacion")]
+        [Required]
         public Nullable<int> usuarioEliminacion { get; set; }
+
+        [Display(Name = "Fecha Eliminacion")]
+        [Required]
+        [DataType(DataType.Date)]
         public Nullable<System.DateTime> fechaEliminacion { get; set; }
     
         public virtual Comunidad Comunidad1 { get; set; }

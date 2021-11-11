@@ -11,7 +11,8 @@ namespace SolucionKermesseGrupo2.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class CategoriaProducto
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -19,10 +20,23 @@ namespace SolucionKermesseGrupo2.Models
         {
             this.Producto = new HashSet<Producto>();
         }
-    
+
+        [Display(Name = "Codigo")]
         public int idCatProd { get; set; }
+
+        [Display(Name = "Nombre de Categoria")]
+        [Required]
+        [StringLength(45)]
+        [DataType(DataType.Text)]
         public string nombre { get; set; }
+
+        [Display(Name = "Desc Categoria")]
+        [Required]
+        [StringLength(100)]
+        [DataType(DataType.Text)]
         public string descripcion { get; set; }
+
+        [Display(Name = "Estado Categoria")]
         public int estado { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

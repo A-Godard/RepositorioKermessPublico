@@ -11,35 +11,14 @@ namespace SolucionKermesseGrupo2.Models
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-
-    public partial class IngresoComunidadDet
-    {
-        [Display(Name = "Codigo")]
-        public int idIngresoComunidadDet { get; set; }
-
-        [Display(Name = "Codigo Ingreso")]
-        [Required]
-        public int ingresoComunidad { get; set; }
-
-        [Display(Name = "Bono")]
-        [Required]
-        public int bono { get; set; }
-
-        [Display(Name = "Denominacion")]
-        [Required]
-        [StringLength(45)]
-        public string denominacion { get; set; }
-
-        [Display(Name = "Cantidad")]
-        [Required]
-        public int cantidad { get; set; }
-
-        [Display(Name = "Subtotal del Bono")]
-        [Required]
-        public double subTotalBono { get; set; }
     
-        public virtual ControlBono ControlBono { get; set; }
-        public virtual IngresoComunidad IngresoComunidad1 { get; set; }
+    public partial class vwIngresoComunidadDetalle
+    {
+        public int idIngresoComunidadDet { get; set; }
+        public string ControlBono { get; set; }
+        public int IngresoComunidad1 { get; set; }
+        public string denominacion { get; set; }
+        public int cantidad { get; set; }
+        public double subTotalBono { get; set; }
     }
 }

@@ -290,5 +290,17 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="vwIngresoComunidadDetalle">
+      <EntityTypeMapping TypeName="BDKermesseModel.vwIngresoComunidadDetalle">
+        <MappingFragment StoreEntitySet="vwIngresoComunidadDetalle">
+          <ScalarProperty Name="subTotalBono" ColumnName="subTotalBono" />
+          <ScalarProperty Name="cantidad" ColumnName="cantidad" />
+          <ScalarProperty Name="denominacion" ColumnName="denominacion" />
+          <ScalarProperty Name="IngresoComunidad1" ColumnName="IngresoComunidad1" />
+          <ScalarProperty Name="ControlBono" ColumnName="ControlBono" />
+          <ScalarProperty Name="idIngresoComunidadDet" ColumnName="idIngresoComunidadDet" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

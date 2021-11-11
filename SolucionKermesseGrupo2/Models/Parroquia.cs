@@ -11,7 +11,8 @@ namespace SolucionKermesseGrupo2.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Parroquia
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -19,13 +20,43 @@ namespace SolucionKermesseGrupo2.Models
         {
             this.Kermesse = new HashSet<Kermesse>();
         }
-    
+
+        [Display(Name = "Codigo")]
         public int idParroquia { get; set; }
+
+        [Display(Name = "Nombre Parroquia")]
+        [Required]
+        [StringLength(100)]
+        [DataType(DataType.Text)]
         public string nombre { get; set; }
+
+        [Display(Name = "Dirección")]
+        [Required]
+        [StringLength(100)]
+        [DataType(DataType.Text)]
         public string direccion { get; set; }
+
+        [Display(Name = "Telefono")]
+        [Required]
+        [StringLength(15)]
+        [DataType(DataType.PhoneNumber)]
         public string telefono { get; set; }
+
+        [Display(Name = "Parroco")]
+        [Required]
+        [StringLength(100)]
+        [DataType(DataType.Text)]
         public string parroco { get; set; }
+
+        [Display(Name = "Logo")]
+        [Required]
+        [StringLength(100)]
+        [DataType(DataType.ImageUrl)]
         public string logo { get; set; }
+
+        [Display(Name = "Sitio Web")]
+        [StringLength(50)]
+        [DataType(DataType.Url)]
         public string sitioWeb { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

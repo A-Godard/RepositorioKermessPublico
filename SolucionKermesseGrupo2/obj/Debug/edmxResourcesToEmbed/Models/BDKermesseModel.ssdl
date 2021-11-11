@@ -267,6 +267,24 @@ advertencia 6002: La tabla o vista 'BDKermesse.dbo.VwIngresoComunidad' no tiene 
     <Property Name="fechaCreacion" Type="datetime" Nullable="false" />
     <Property Name="usuarioCreacion" Type="nvarchar" MaxLength="40" Nullable="false" />
   </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'BDKermesse.dbo.vwIngresoComunidadDetalle' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="vwIngresoComunidadDetalle">
+    <Key>
+      <PropertyRef Name="idIngresoComunidadDet" />
+      <PropertyRef Name="ControlBono" />
+      <PropertyRef Name="IngresoComunidad1" />
+      <PropertyRef Name="denominacion" />
+      <PropertyRef Name="cantidad" />
+      <PropertyRef Name="subTotalBono" />
+    </Key>
+    <Property Name="idIngresoComunidadDet" Type="int" Nullable="false" />
+    <Property Name="ControlBono" Type="nvarchar" MaxLength="45" Nullable="false" />
+    <Property Name="IngresoComunidad1" Type="int" Nullable="false" />
+    <Property Name="denominacion" Type="nvarchar" MaxLength="45" Nullable="false" />
+    <Property Name="cantidad" Type="int" Nullable="false" />
+    <Property Name="subTotalBono" Type="float" Nullable="false" />
+  </EntityType>
   <Association Name="FK__ArqueoCaj__arque__6FE99F9F">
     <End Role="ArqueoCaja" Type="Self.ArqueoCaja" Multiplicity="1" />
     <End Role="ArqueoCajaDet" Type="Self.ArqueoCajaDet" Multiplicity="*" />
@@ -744,6 +762,16 @@ advertencia 6002: La tabla o vista 'BDKermesse.dbo.VwIngresoComunidad' no tiene 
     [VwIngresoComunidad].[fechaCreacion] AS [fechaCreacion], 
     [VwIngresoComunidad].[usuarioCreacion] AS [usuarioCreacion]
     FROM [dbo].[VwIngresoComunidad] AS [VwIngresoComunidad]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vwIngresoComunidadDetalle" EntityType="Self.vwIngresoComunidadDetalle" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [vwIngresoComunidadDetalle].[idIngresoComunidadDet] AS [idIngresoComunidadDet], 
+    [vwIngresoComunidadDetalle].[ControlBono] AS [ControlBono], 
+    [vwIngresoComunidadDetalle].[IngresoComunidad1] AS [IngresoComunidad1], 
+    [vwIngresoComunidadDetalle].[denominacion] AS [denominacion], 
+    [vwIngresoComunidadDetalle].[cantidad] AS [cantidad], 
+    [vwIngresoComunidadDetalle].[subTotalBono] AS [subTotalBono]
+    FROM [dbo].[vwIngresoComunidadDetalle] AS [vwIngresoComunidadDetalle]</DefiningQuery>
     </EntitySet>
     <AssociationSet Name="FK__ArqueoCaj__arque__6FE99F9F" Association="Self.FK__ArqueoCaj__arque__6FE99F9F">
       <End Role="ArqueoCaja" EntitySet="ArqueoCaja" />

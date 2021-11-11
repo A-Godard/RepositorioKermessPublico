@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using Microsoft.Reporting.WebForms;
 using SolucionKermesseGrupo2.Models;
 
 namespace SolucionKermesseGrupo2.Controllers
@@ -13,6 +15,30 @@ namespace SolucionKermesseGrupo2.Controllers
     public class IngresoComunidadDetsController : Controller
     {
         private BDKermesseEntities db = new BDKermesseEntities();
+
+        public ActionResult verReporte(string tipo)
+        {
+            LocalReport rpt = new LocalReport();
+            string mt, enc, f;
+            string[] s;
+            Warning[] w;
+
+
+            string ruta = Path.Combine(Server.MapPath("~/Reportes"), "RptIngresoComunidadDet.rdlc");
+            rpt.ReportPath = ruta;
+
+            BDKermesseEntities modelo = new BDKermesseEntities();
+            List<vwIngresoComunidadDetalle> ls = new List<vwIngresoComunidadDetalle>();
+            ls = modelo.vwIngresoComunidadDetalle.ToList();
+
+
+            ReportDataSource rds = new ReportDataSource("DsIngresoComunidadDet", ls);
+            rpt.DataSources.Add(rds);
+
+            byte[] b = rpt.Render(tipo, null, out mt, out enc, out f, out s, out w);
+
+            return File(b, mt);
+        }
 
         // GET: IngresoComunidadDets
         public ActionResult Index()
