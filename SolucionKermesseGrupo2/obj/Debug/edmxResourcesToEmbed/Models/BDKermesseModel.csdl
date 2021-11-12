@@ -278,16 +278,6 @@
     <NavigationProperty Name="Rol1" Relationship="Self.FK__RolUsuario__rol__300424B4" FromRole="RolUsuario" ToRole="Rol" />
     <NavigationProperty Name="Usuario1" Relationship="Self.FK__RolUsuari__usuar__2F10007B" FromRole="RolUsuario" ToRole="Usuario" />
   </EntityType>
-  <EntityType Name="sysdiagrams">
-    <Key>
-      <PropertyRef Name="diagram_id" />
-    </Key>
-    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="principal_id" Type="Int32" Nullable="false" />
-    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="version" Type="Int32" />
-    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
-  </EntityType>
   <EntityType Name="TasaCambio">
     <Key>
       <PropertyRef Name="idTasaCambio" />
@@ -337,23 +327,6 @@
     <NavigationProperty Name="Kermesse1" Relationship="Self.FK__Kermesse__usuari__36B12243" FromRole="Usuario" ToRole="Kermesse" />
     <NavigationProperty Name="Kermesse2" Relationship="Self.FK__Kermesse__usuari__37A5467C" FromRole="Usuario" ToRole="Kermesse" />
     <NavigationProperty Name="RolUsuario" Relationship="Self.FK__RolUsuari__usuar__2F10007B" FromRole="Usuario" ToRole="RolUsuario" />
-  </EntityType>
-  <EntityType Name="VwProducto">
-    <Key>
-      <PropertyRef Name="idProducto" />
-      <PropertyRef Name="Comunidad" />
-      <PropertyRef Name="Categoria" />
-      <PropertyRef Name="Producto" />
-      <PropertyRef Name="descripcion" />
-      <PropertyRef Name="precioVSugerido" />
-    </Key>
-    <Property Name="idProducto" Type="Int32" Nullable="false" />
-    <Property Name="Comunidad" Type="String" MaxLength="45" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="Categoria" Type="String" MaxLength="45" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="Producto" Type="String" MaxLength="45" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="descripcion" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="cantidad" Type="Int32" />
-    <Property Name="precioVSugerido" Type="Double" Nullable="false" />
   </EntityType>
   <Association Name="FK__ArqueoCaj__arque__6FE99F9F">
     <End Role="ArqueoCaja" Type="Self.ArqueoCaja" Multiplicity="1" />
@@ -820,11 +793,9 @@
     <EntitySet Name="Rol" EntityType="Self.Rol" />
     <EntitySet Name="RolOpcion" EntityType="Self.RolOpcion" />
     <EntitySet Name="RolUsuario" EntityType="Self.RolUsuario" />
-    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
     <EntitySet Name="TasaCambio" EntityType="Self.TasaCambio" />
     <EntitySet Name="TasaCambioDet" EntityType="Self.TasaCambioDet" />
     <EntitySet Name="Usuario" EntityType="Self.Usuario" />
-    <EntitySet Name="VwProducto" EntityType="Self.VwProducto" />
     <AssociationSet Name="FK__ArqueoCaj__arque__6FE99F9F" Association="Self.FK__ArqueoCaj__arque__6FE99F9F">
       <End Role="ArqueoCaja" EntitySet="ArqueoCaja" />
       <End Role="ArqueoCajaDet" EntitySet="ArqueoCajaDet" />
@@ -973,14 +944,30 @@
       <End Role="TasaCambio" EntitySet="TasaCambio" />
       <End Role="TasaCambioDet" EntitySet="TasaCambioDet" />
     </AssociationSet>
+    <EntitySet Name="VwProducto" EntityType="BDKermesseModel.VwProducto" />
     <EntitySet Name="VwListaPrecio" EntityType="BDKermesseModel.VwListaPrecio" />
   </EntityContainer>
+  <EntityType Name="VwProducto">
+    <Key>
+      <PropertyRef Name="idProducto" />
+    </Key>
+    <Property Name="idProducto" Type="Int32" Nullable="false" />
+    <Property Name="Comunidad" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="true" />
+    <Property Name="Categoria" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="true" />
+    <Property Name="Producto" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="true" />
+    <Property Name="descripcion" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="cantidad" Type="Int32" />
+    <Property Name="precioVSugerido" Type="Double" Nullable="false" />
+  </EntityType>
   <EntityType Name="VwListaPrecio">
     <Key>
       <PropertyRef Name="idListaPrecio" />
     </Key>
     <Property Name="idListaPrecio" Type="Int32" Nullable="false" />
     <Property Name="Kermesse" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Parroquia" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Usuario" Type="String" Nullable="false" MaxLength="91" FixedLength="false" Unicode="true" />
+    <Property Name="listaPrecio" Type="Int32" Nullable="false" />
     <Property Name="Lista" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="descripcion" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
   </EntityType>

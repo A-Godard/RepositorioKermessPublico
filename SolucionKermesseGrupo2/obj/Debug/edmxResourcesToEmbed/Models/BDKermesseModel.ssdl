@@ -221,16 +221,6 @@
     <Property Name="usuario" Type="int" Nullable="false" />
     <Property Name="rol" Type="int" Nullable="false" />
   </EntityType>
-  <EntityType Name="sysdiagrams">
-    <Key>
-      <PropertyRef Name="diagram_id" />
-    </Key>
-    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
-    <Property Name="principal_id" Type="int" Nullable="false" />
-    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="version" Type="int" />
-    <Property Name="definition" Type="varbinary(max)" />
-  </EntityType>
   <EntityType Name="TasaCambio">
     <Key>
       <PropertyRef Name="idTasaCambio" />
@@ -272,6 +262,9 @@ advertencia 6002: La tabla o vista 'BDKermesse.dbo.VwListaPrecio' no tiene defin
     </Key>
     <Property Name="idListaPrecio" Type="int" Nullable="false" />
     <Property Name="Kermesse" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Parroquia" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Usuario" Type="nvarchar" MaxLength="91" Nullable="false" />
+    <Property Name="listaPrecio" Type="int" Nullable="false" />
     <Property Name="Lista" Type="nvarchar" MaxLength="100" Nullable="false" />
     <Property Name="descripcion" Type="nvarchar" MaxLength="100" Nullable="false" />
   </EntityType>
@@ -280,11 +273,6 @@ advertencia 6002: La tabla o vista 'BDKermesse.dbo.VwProducto' no tiene definida
   <EntityType Name="VwProducto">
     <Key>
       <PropertyRef Name="idProducto" />
-      <PropertyRef Name="Comunidad" />
-      <PropertyRef Name="Categoria" />
-      <PropertyRef Name="Producto" />
-      <PropertyRef Name="descripcion" />
-      <PropertyRef Name="precioVSugerido" />
     </Key>
     <Property Name="idProducto" Type="int" Nullable="false" />
     <Property Name="Comunidad" Type="nvarchar" MaxLength="45" Nullable="false" />
@@ -759,7 +747,6 @@ advertencia 6002: La tabla o vista 'BDKermesse.dbo.VwProducto' no tiene definida
     <EntitySet Name="Rol" EntityType="Self.Rol" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="RolOpcion" EntityType="Self.RolOpcion" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="RolUsuario" EntityType="Self.RolUsuario" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TasaCambio" EntityType="Self.TasaCambio" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TasaCambioDet" EntityType="Self.TasaCambioDet" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Usuario" EntityType="Self.Usuario" Schema="dbo" store:Type="Tables" />
@@ -767,6 +754,9 @@ advertencia 6002: La tabla o vista 'BDKermesse.dbo.VwProducto' no tiene definida
       <DefiningQuery>SELECT 
     [VwListaPrecio].[idListaPrecio] AS [idListaPrecio], 
     [VwListaPrecio].[Kermesse] AS [Kermesse], 
+    [VwListaPrecio].[Parroquia] AS [Parroquia], 
+    [VwListaPrecio].[Usuario] AS [Usuario], 
+    [VwListaPrecio].[listaPrecio] AS [listaPrecio], 
     [VwListaPrecio].[Lista] AS [Lista], 
     [VwListaPrecio].[descripcion] AS [descripcion]
     FROM [dbo].[VwListaPrecio] AS [VwListaPrecio]</DefiningQuery>
