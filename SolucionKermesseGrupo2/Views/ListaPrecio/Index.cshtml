@@ -5,11 +5,12 @@
     Layout = "~/Views/Shared/_LayoutControladores.cshtml";
 }
 
+<head>
+    @Styles.Render("~/Content/StyleSheetIndexUser.css")
+    @Styles.Render("~/Content/Site.css")
+</head>
+
 <body>
-    <head>
-        @Styles.Render("~/Content/StyleSheetIndexUser.css")
-        @Styles.Render("~/Content/Site.css")
-    </head>
 
     <div id="Container">
 
@@ -30,15 +31,6 @@
                         @Html.DisplayNameFor(model => model.Kermesse)
                     </th>
                     <th>
-                        @Html.DisplayNameFor(model => model.Parroquia)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => model.Usuario)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => model.listaPrecio)
-                    </th>
-                    <th>
                         @Html.DisplayNameFor(model => model.Lista)
                     </th>
                     <th>
@@ -54,15 +46,6 @@
                             @Html.DisplayFor(modelItem => item.Kermesse)
                         </td>
                         <td>
-                            @Html.DisplayFor(modelItem => item.Parroquia)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Usuario)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.listaPrecio)
-                        </td>
-                        <td>
                             @Html.DisplayFor(modelItem => item.Lista)
                         </td>
                         <td>
@@ -71,7 +54,8 @@
                         <td>
                             @Html.ActionLink("Edit", "Edit", new { id = item.idListaPrecio }) |
                             @Html.ActionLink("Details", "Details", new { id = item.idListaPrecio }) |
-                            @Html.ActionLink("Delete", "Delete", new { id = item.idListaPrecio })
+                            @Html.ActionLink("Delete", "Delete", new { id = item.idListaPrecio }) |
+                            @Html.ActionLink("Reporte", "VerReporteLista1", new { id = item.idListaPrecio })
                         </td>
                     </tr>
                 }

@@ -16,9 +16,6 @@ namespace SolucionKermesseGrupo2.Models
     {
         public int idListaPrecio { get; set; }
         public string Kermesse { get; set; }
-        public string Parroquia { get; set; }
-        public string Usuario { get; set; }
-        public int listaPrecio { get; set; }
         public string Lista { get; set; }
         public string descripcion { get; set; }
     }

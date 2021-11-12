@@ -75,6 +75,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
@@ -219,9 +220,6 @@
     <Compile Include="Models\ListaPrecioDet.cs">
       <DependentUpon>BDKermesseModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\ListaPrecioView.cs">
-      <DependentUpon>BDKermesseModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="Models\Moneda.cs">
       <DependentUpon>BDKermesseModel.tt</DependentUpon>
     </Compile>
@@ -241,6 +239,9 @@
       <DependentUpon>BDKermesseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\RolUsuario.cs">
+      <DependentUpon>BDKermesseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sysdiagrams.cs">
       <DependentUpon>BDKermesseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TasaCambio.cs">
@@ -330,8 +331,8 @@
     <Content Include="Content\Site.css" />
     <Content Include="Models\BDKermesseModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>BDKermesseModel.Context.cs</LastGenOutput>
       <DependentUpon>BDKermesseModel.edmx</DependentUpon>
+      <LastGenOutput>BDKermesseModel.Context.cs</LastGenOutput>
     </Content>
     <Content Include="Models\BDKermesseModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -340,13 +341,6 @@
     </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <EntityDeploy Include="Models\BDKermesseModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>BDKermesseModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Models\BDKermesseModel.edmx.diagram">
-      <DependentUpon>BDKermesseModel.edmx</DependentUpon>
-    </Content>
     <Content Include="fonts\fontawesome-webfont.eot" />
     <Content Include="fonts\fontawesome-webfont.ttf" />
     <Content Include="fonts\fontawesome-webfont.woff" />
@@ -354,6 +348,13 @@
     <Content Include="fonts\FontAwesome.otf" />
     <Content Include="Reportes\DataSet\DSReportes.xsc">
       <DependentUpon>DSReportes.xsd</DependentUpon>
+    </Content>
+    <EntityDeploy Include="Models\BDKermesseModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>BDKermesseModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\BDKermesseModel.edmx.diagram">
+      <DependentUpon>BDKermesseModel.edmx</DependentUpon>
     </Content>
     <None Include="Reportes\DataSet\DSReportes.xsd">
       <SubType>Designer</SubType>
@@ -456,12 +457,16 @@
     <Content Include="Views\Comunidades\Edit.cshtml" />
     <Content Include="Views\Comunidades\Index.cshtml" />
     <Content Include="Views\ControlBonoes\VerReporteBonos.cshtml" />
-    <Content Include="Views\Producto\Crear.cshtml" />
     <Content Include="Views\Producto\Index.cshtml" />
     <Content Include="Views\Producto\Details.cshtml" />
     <Content Include="Views\ListaPrecio\Index.cshtml" />
     <Content Include="Views\ListaPrecio\Details.cshtml" />
+    <Content Include="Views\Producto\Crear.cshtml" />
     <Content Include="Views\ListaPrecio\Crear.cshtml" />
+    <Content Include="Views\Producto\Edit.cshtml" />
+    <Content Include="Views\Producto\Delete.cshtml" />
+    <Content Include="Views\ListaPrecio\Edit.cshtml" />
+    <Content Include="Views\ListaPrecio\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -488,6 +493,7 @@
     <EmbeddedResource Include="Reportes\RptComunidad.rdlc" />
     <EmbeddedResource Include="Reportes\RptControlBono.rdlc" />
     <EmbeddedResource Include="Reportes\RptListaPrecio.rdlc" />
+    <EmbeddedResource Include="Reportes\RptListaPrecio2.rdlc" />
     <EmbeddedResource Include="Reportes\RptMoneda.rdlc" />
     <EmbeddedResource Include="Reportes\RptOpcion.rdlc" />
     <EmbeddedResource Include="Reportes\RptParroquia.rdlc" />

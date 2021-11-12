@@ -47,39 +47,26 @@ namespace SolucionKermesseGrupo2.Controllers
         public ActionResult Crear()
         {
             ViewBag.kermesse = new SelectList(db.Kermesse, "idKermesse", "nombre");
-            ViewBag.parroquia = new SelectList(db.Parroquia, "idParroquia", "nombre");
-            ViewBag.usuario = new SelectList(db.Usuario, "idUsuario", "nombres" + "apellidos");
             return View();
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
 
-        public ActionResult Crear(ListaPrecio listaPrecio, ListaPrecioDet listaPrecioDet, Kermesse kermesse, Usuario usuario)
+        public ActionResult Crear(ListaPrecio listaPrecio)
         {
             if (ModelState.IsValid)
             {
                 ListaPrecio l = new ListaPrecio();
-                ListaPrecioDet ld = new ListaPrecioDet();
-                Kermesse k = new Kermesse();
-                Usuario u = new Usuario();
                 l.kermesse = listaPrecio.kermesse;
-                k.parroquia = kermesse.parroquia;
-                u.nombres = usuario.nombres;
-                ld.listaPrecio = listaPrecioDet.listaPrecio;
                 l.nombre = listaPrecio.nombre;
                 l.descripcion = listaPrecio.descripcion;
-                
-
 
                 db.ListaPrecio.Add(l);
                 db.SaveChanges();
                 ModelState.Clear();
-
-                ViewBag.kermesse = new SelectList(db.Kermesse, "idKermesse", "nombre");
-                ViewBag.parroquia = new SelectList(db.Parroquia, "idParroquia", "nombre");
-                ViewBag.usuario = new SelectList(db.Usuario, "idUsuario", "nombres" + "apellidos");
             }
+            ViewBag.kermesse = new SelectList(db.Kermesse, "idKermesse", "nombre");
 
             return View("Crear");
         }
@@ -103,6 +90,99 @@ namespace SolucionKermesseGrupo2.Controllers
 
             var b = rpt.Render(tipo, null, out mt, out enc, out f, out s, out w);
             return new FileContentResult(b, mt);
+        }
+
+        public ActionResult VerReporteLista1(int id)
+        {
+            LocalReport rpt = new LocalReport();
+            string mt, enc, f;
+            string[] s;
+            Warning[] w;
+
+            var listaPrecios = from m in db.ListaPrecio select m;
+            if (id != null)
+            {
+                ListaPrecio lista = db.ListaPrecio.Find(id);
+
+            }
+
+            string ruta = Path.Combine(Server.MapPath("~/Reportes"), "RptListaPrecio2.rdlc");
+            rpt.ReportPath = ruta;
+
+            BDKermesseEntities modelo = new BDKermesseEntities();
+            List<ListaPrecio> ls = new List<ListaPrecio>();
+            ls = modelo.ListaPrecio.ToList();
+
+
+            ReportDataSource rds = new ReportDataSource("DSListaPrecio", ls);
+            rpt.DataSources.Add(rds);
+
+            byte[] b = rpt.Render("PDF", null, out mt, out enc, out f, out s, out w);
+
+
+            return File(b, mt);
+        }
+
+
+        public ActionResult Edit(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            ListaPrecio lista = db.ListaPrecio.Find(id);
+            if (lista == null)
+            {
+                return HttpNotFound();
+            }
+            return View(lista);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit([Bind(Include = "idListaPrecio, kermesse, nombre, descripcion, estado")] ListaPrecio lista)
+        {
+            if (ModelState.IsValid)
+            {
+                db.Entry(lista).State = System.Data.Entity.EntityState.Modified;
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return View(lista);
+        }
+
+        public ActionResult Delete(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            ListaPrecio lista = db.ListaPrecio.Find(id);
+            if (lista == null)
+            {
+                return HttpNotFound();
+            }
+            return View(lista);
+        }
+
+
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeleteConfirmed(int id)
+        {
+            ListaPrecio lista = db.ListaPrecio.Find(id);
+            db.ListaPrecio.Remove(lista);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                db.Dispose();
+            }
+            base.Dispose(disposing);
         }
     }
 }

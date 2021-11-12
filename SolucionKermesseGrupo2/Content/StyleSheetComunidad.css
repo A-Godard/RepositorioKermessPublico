@@ -1,5 +1,5 @@
 ﻿/*INDEX*/
-h2{
+h2, h3 {
     text-align: center;
 }
 
@@ -31,7 +31,7 @@ h2{
 #BtnCrear {
 }
 
-#lblComunidad {
+#lblComunidad{
     text-align: center;
 }
 
@@ -47,14 +47,13 @@ h2{
 }
 
 /*EDIT*/
-#FormEdit {
+#FormEdit{
     width: 100%
 }
 
-.TitleEdit {
-    margin-bottom: 10px;
+.TitleEdit{
+    margin-bottom:10px;
 }
-
 #BtnGuardar {
     margin-top: 30px;
 }
@@ -89,13 +88,13 @@ h2{
 }
 
 /*DELETE*/
-#NombreComunidad {
+#NombreComunidad{
     margin-left: 600px;
     text-align: center;
     margin-right: 600px;
 }
 
-#ModelComunidad {
+#ModelComunidad{
     margin-left: 600px;
     text-align: center;
     margin-right: 600px;
@@ -113,7 +112,7 @@ h2{
     margin-left: 680px;
 }
 
-#lblFormCM {
+#lblFormCM{
     margin-left: 470px;
     display: block;
     text-align: center;

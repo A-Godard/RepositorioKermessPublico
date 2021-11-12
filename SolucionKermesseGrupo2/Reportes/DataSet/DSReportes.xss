@@ -16,7 +16,7 @@
     <Shape ID="DesignTable:Rol" ZOrder="4" X="155" Y="264" Height="48" Width="150" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="44" />
     <Shape ID="DesignTable:ControlBono" ZOrder="3" X="0" Y="0" Height="90" Width="158" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="0" />
     <Shape ID="DesignTable:Producto" ZOrder="2" X="236" Y="432" Height="255" Width="228" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="251" />
-    <Shape ID="DesignTable:ListaPrecio" ZOrder="1" X="1090" Y="562" Height="255" Width="228" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="251" />
+    <Shape ID="DesignTable:ListaPrecio" ZOrder="1" X="1086" Y="540" Height="150" Width="228" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="146" />
   </Shapes>
   <Connectors />
 </DiagramLayout>
