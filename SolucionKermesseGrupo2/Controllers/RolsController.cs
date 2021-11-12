@@ -12,6 +12,7 @@ using SolucionKermesseGrupo2.Models;
 
 namespace SolucionKermesseGrupo2.Controllers
 {
+    [Authorize]
     public class RolsController : Controller
     {
         private BDKermesseEntities db = new BDKermesseEntities();

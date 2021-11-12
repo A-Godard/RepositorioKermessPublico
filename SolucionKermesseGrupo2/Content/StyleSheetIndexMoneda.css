@@ -1,7 +1,4 @@
-﻿body {
-    margin: 0;
-    text-align: center;
-}
+﻿
 
 h2 {
     position: relative;
@@ -13,27 +10,23 @@ h2 {
 
 #Container {
     position: relative;
-    top: 100px;
-    right: 20px;
-    margin: auto;
+    margin: 0 auto;
     max-width: 1280px;
     width: 90%;
     margin: 75px;
 }
 
 .center {
-    margin: auto;
-    position: relative;
-    top: 20px;
-    right: 120px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
 
 #TablaMoneda {
-    position: relative;
-    left: 900px;
-    table-layout: auto;
+    table-layout: fixed;
     background-color: lightblue;
     width: 1280px;
     border-collapse: collapse;
@@ -41,10 +34,7 @@ h2 {
 }
 
 #BtnCrear {
-    position: relative;
-    top: 20px;
-    left: 700px;
-    text-align: center;
+   
 }
 
 #lblMoneda1, #lblMoneda2, #lblMoneda3, #ModelMoneda1, #ModelMoneda2, #ModelMoneda3
