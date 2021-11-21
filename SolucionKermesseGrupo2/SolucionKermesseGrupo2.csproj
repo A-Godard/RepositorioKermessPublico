@@ -155,13 +155,21 @@
     <Compile Include="Controllers\CategoriaProductoesController.cs" />
     <Compile Include="Controllers\ComunidadesController.cs" />
     <Compile Include="Controllers\ControlBonoesController.cs" />
+    <Compile Include="Controllers\GastoesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ListaPrecioController.cs" />
     <Compile Include="Controllers\MonedasController.cs" />
     <Compile Include="Controllers\OpcionsController.cs" />
     <Compile Include="Controllers\ParroquiasController.cs" />
     <Compile Include="Controllers\ProductoController.cs" />
+    <Compile Include="Controllers\IngresoComunidadDetsController.cs" />
+    <Compile Include="Controllers\IngresoComunidadesController.cs" />
+    <Compile Include="Controllers\MonedasController.cs" />
+    <Compile Include="Controllers\OpcionsController.cs" />
+    <Compile Include="Controllers\ParroquiasController.cs" />
+    <Compile Include="Controllers\RolOpcionsController.cs" />
     <Compile Include="Controllers\RolsController.cs" />
+    <Compile Include="Controllers\RolUsuariosController.cs" />
     <Compile Include="Controllers\UsuariosController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -257,6 +265,19 @@
       <DependentUpon>BDKermesseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\VwProducto.cs">
+    <Compile Include="Models\VwGasto.cs">
+      <DependentUpon>BDKermesseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\VwIngresoComunidad.cs">
+      <DependentUpon>BDKermesseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vwIngresoComunidadDetalle.cs">
+      <DependentUpon>BDKermesseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\VwRolOpciones.cs">
+      <DependentUpon>BDKermesseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\VwRolUsuario.cs">
       <DependentUpon>BDKermesseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -319,10 +340,12 @@
     <Content Include="Content\StyleSheetIndexBonos.css" />
     <Content Include="Content\StyleSheetIndexCatGastos.css" />
     <Content Include="Content\StyleSheetIndexCatProd.css" />
+    <Content Include="Content\StyleSheetIndexGasto.css" />
     <Content Include="Content\StyleSheetIndexMoneda.css" />
     <Content Include="Content\StyleSheetIndexParroquia.css" />
     <Content Include="Content\StyleSheetIndexRol.css" />
     <Content Include="Content\StyleSheetIndexUser.css" />
+    <Content Include="Content\StyleSheetIngresoComunidad.css" />
     <Content Include="Content\StyleSheetLogin.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\fontawesome-webfont.svg" />
@@ -467,6 +490,31 @@
     <Content Include="Views\Producto\Delete.cshtml" />
     <Content Include="Views\ListaPrecio\Edit.cshtml" />
     <Content Include="Views\ListaPrecio\Delete.cshtml" />
+    <Content Include="Views\IngresoComunidades\Create.cshtml" />
+    <Content Include="Views\IngresoComunidades\Delete.cshtml" />
+    <Content Include="Views\IngresoComunidades\Details.cshtml" />
+    <Content Include="Views\IngresoComunidades\Edit.cshtml" />
+    <Content Include="Views\IngresoComunidades\Index.cshtml" />
+    <Content Include="Views\IngresoComunidadDets\Create.cshtml" />
+    <Content Include="Views\IngresoComunidadDets\Delete.cshtml" />
+    <Content Include="Views\IngresoComunidadDets\Details.cshtml" />
+    <Content Include="Views\IngresoComunidadDets\Edit.cshtml" />
+    <Content Include="Views\IngresoComunidadDets\Index.cshtml" />
+    <Content Include="Views\Gastoes\Create.cshtml" />
+    <Content Include="Views\Gastoes\Delete.cshtml" />
+    <Content Include="Views\Gastoes\Details.cshtml" />
+    <Content Include="Views\Gastoes\Edit.cshtml" />
+    <Content Include="Views\Gastoes\Index.cshtml" />
+    <Content Include="Views\RolUsuarios\Create.cshtml" />
+    <Content Include="Views\RolUsuarios\Delete.cshtml" />
+    <Content Include="Views\RolUsuarios\Details.cshtml" />
+    <Content Include="Views\RolUsuarios\Edit.cshtml" />
+    <Content Include="Views\RolUsuarios\Index.cshtml" />
+    <Content Include="Views\RolOpcions\Create.cshtml" />
+    <Content Include="Views\RolOpcions\Delete.cshtml" />
+    <Content Include="Views\RolOpcions\Details.cshtml" />
+    <Content Include="Views\RolOpcions\Edit.cshtml" />
+    <Content Include="Views\RolOpcions\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -488,12 +536,15 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Reportes\Report1.rdlc" />
     <EmbeddedResource Include="Reportes\RptCategoriaGasto.rdlc" />
     <EmbeddedResource Include="Reportes\RptCategoriaProducto.rdlc" />
     <EmbeddedResource Include="Reportes\RptComunidad.rdlc" />
     <EmbeddedResource Include="Reportes\RptControlBono.rdlc" />
     <EmbeddedResource Include="Reportes\RptListaPrecio.rdlc" />
     <EmbeddedResource Include="Reportes\RptListaPrecio2.rdlc" />
+    <EmbeddedResource Include="Reportes\RptIngresoComunidad.rdlc" />
+    <EmbeddedResource Include="Reportes\RptIngresoComunidadDet.rdlc" />
     <EmbeddedResource Include="Reportes\RptMoneda.rdlc" />
     <EmbeddedResource Include="Reportes\RptOpcion.rdlc" />
     <EmbeddedResource Include="Reportes\RptParroquia.rdlc" />
