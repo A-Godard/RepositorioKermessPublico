@@ -1,10 +1,10 @@
 ﻿/*INDEX*/
-h2, h3 {
+h2{
     text-align: center;
 }
 
 #Container {
-    position: relative;
+    position: sticky;
     margin: 0 auto;
     max-width: 1280px;
     width: 90%;
@@ -20,24 +20,24 @@ h2, h3 {
     transform: translate(-50%, -50%);
 }
 
-#TblComunidad {
+#TblIngresoComunidad {
     background-color: lightblue;
-    width: 1280px;
+    max-width: 1280px;
     border-collapse: collapse;
     border: 3px solid black;
     margin-left: auto;
-    margin-right: auto;
+    margin-right:auto;
 }
 
 #BtnCrear {
 }
 
-#lblComunidad{
+#lblIngresoComunidad {
     text-align: center;
 }
 
 /*DETAILS*/
-#DetComunidad {
+#DetIngresoComunidad {
     margin-left: 600px;
     text-align: center;
     margin-right: 600px;
@@ -48,13 +48,14 @@ h2, h3 {
 }
 
 /*EDIT*/
-#FormEdit{
+#FormEdit {
     width: 100%
 }
 
-.TitleEdit{
-    margin-bottom:10px;
+.TitleEdit {
+    margin-bottom: 10px;
 }
+
 #BtnGuardar {
     margin-top: 30px;
 }
@@ -65,7 +66,7 @@ h2, h3 {
     margin-left: 50px;
 }
 
-#FormularioComunidad {
+#FormularioIngresoComunidad {
     padding: 20px 0px 0px 30px; /* margen con valores: arriba - derecha - abajo - izquierda */
     font-family: verdana,arial;
     font-size: 9pt;
@@ -73,7 +74,7 @@ h2, h3 {
     text-align: center;
 }
 
-#ItemFormComunidadMain {
+#ItemFormIngresoComunidadMain {
     width: 500px; /* anchura de campos de formulario */
     font-size: 13pt; /* tamaño de la letra*/
     display: inline-block;
@@ -81,7 +82,7 @@ h2, h3 {
     text-align: center;
 }
 
-#ItemFormComunidad {
+#ItemFormIngresoComunidad {
     text-align: center;
     width: 500px; /* anchura de campos de formulario */
     font-size: 13pt; /* tamaño de la letra*/
@@ -89,13 +90,13 @@ h2, h3 {
 }
 
 /*DELETE*/
-#NombreComunidad{
+#NombreIngresoComunidad {
     margin-left: 600px;
     text-align: center;
     margin-right: 600px;
 }
 
-#ModelComunidad{
+#ModelIngresoComunidad {
     margin-left: 600px;
     text-align: center;
     margin-right: 600px;
@@ -113,9 +114,13 @@ h2, h3 {
     margin-left: 680px;
 }
 
-#lblFormCM{
+#lblFormICM {
     margin-left: 470px;
     display: block;
     text-align: center;
     width: 500px;
+}
+
+#titleDelete {
+    text-align: center;
 }
