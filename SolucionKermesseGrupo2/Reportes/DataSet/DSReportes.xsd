@@ -110,35 +110,10 @@
               <xs:element name="kermesse" msprop:Generator_ColumnVarNameInTable="columnkermesse" msprop:Generator_ColumnPropNameInRow="kermesse" msprop:Generator_ColumnPropNameInTable="kermesseColumn" msprop:Generator_UserColumnName="kermesse" type="xs:string" minOccurs="0" />
               <xs:element name="nombre" msprop:Generator_ColumnVarNameInTable="columnnombre" msprop:Generator_ColumnPropNameInRow="nombre" msprop:Generator_ColumnPropNameInTable="nombreColumn" msprop:Generator_UserColumnName="nombre" type="xs:string" minOccurs="0" />
               <xs:element name="descripcion" msprop:Generator_ColumnVarNameInTable="columndescripcion" msprop:Generator_ColumnPropNameInRow="descripcion" msprop:Generator_ColumnPropNameInTable="descripcionColumn" msprop:Generator_UserColumnName="descripcion" type="xs:string" minOccurs="0" />
-        <xs:element name="IngresoComunidad" msprop:Generator_TableClassName="IngresoComunidadDataTable" msprop:Generator_TableVarName="tableIngresoComunidad" msprop:Generator_TablePropName="IngresoComunidad" msprop:Generator_RowDeletingName="IngresoComunidadRowDeleting" msprop:Generator_RowChangingName="IngresoComunidadRowChanging" msprop:Generator_RowEvHandlerName="IngresoComunidadRowChangeEventHandler" msprop:Generator_RowDeletedName="IngresoComunidadRowDeleted" msprop:Generator_UserTableName="IngresoComunidad" msprop:Generator_RowChangedName="IngresoComunidadRowChanged" msprop:Generator_RowEvArgName="IngresoComunidadRowChangeEvent" msprop:Generator_RowClassName="IngresoComunidadRow">
-          <xs:complexType>
-            <xs:sequence>
-              <xs:element name="idIngresoComunidad" msprop:Generator_ColumnVarNameInTable="columnidIngresoComunidad" msprop:Generator_ColumnPropNameInRow="idIngresoComunidad" msprop:Generator_ColumnPropNameInTable="idIngresoComunidadColumn" msprop:Generator_UserColumnName="idIngresoComunidad" type="xs:string" minOccurs="0" />
-              <xs:element name="comunidad" msprop:Generator_ColumnVarNameInTable="columncomunidad" msprop:Generator_ColumnPropNameInRow="comunidad" msprop:Generator_ColumnPropNameInTable="comunidadColumn" msprop:Generator_UserColumnName="comunidad" type="xs:string" minOccurs="0" />
-              <xs:element name="kermesse" msprop:Generator_ColumnVarNameInTable="columnkermesse" msprop:Generator_ColumnPropNameInRow="kermesse" msprop:Generator_ColumnPropNameInTable="kermesseColumn" msprop:Generator_UserColumnName="kermesse" type="xs:string" minOccurs="0" />
-              <xs:element name="producto" msprop:Generator_ColumnVarNameInTable="columnproducto" msprop:Generator_ColumnPropNameInRow="producto" msprop:Generator_ColumnPropNameInTable="productoColumn" msprop:Generator_UserColumnName="producto" type="xs:string" minOccurs="0" />
-              <xs:element name="fechaCreacion" msprop:Generator_ColumnVarNameInTable="columnfechaCreacion" msprop:Generator_ColumnPropNameInRow="fechaCreacion" msprop:Generator_ColumnPropNameInTable="fechaCreacionColumn" msprop:Generator_UserColumnName="fechaCreacion" type="xs:string" minOccurs="0" />
-              <xs:element name="usuarioCreacion" msprop:Generator_ColumnVarNameInTable="columnusuarioCreacion" msprop:Generator_ColumnPropNameInRow="usuarioCreacion" msprop:Generator_ColumnPropNameInTable="usuarioCreacionColumn" msprop:Generator_UserColumnName="usuarioCreacion" type="xs:string" minOccurs="0" />
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
-        <xs:element name="IngresoComunidadDet" msprop:Generator_TableClassName="IngresoComunidadDetDataTable" msprop:Generator_TableVarName="tableIngresoComunidadDet" msprop:Generator_TablePropName="IngresoComunidadDet" msprop:Generator_RowDeletingName="IngresoComunidadDetRowDeleting" msprop:Generator_RowChangingName="IngresoComunidadDetRowChanging" msprop:Generator_RowEvHandlerName="IngresoComunidadDetRowChangeEventHandler" msprop:Generator_RowDeletedName="IngresoComunidadDetRowDeleted" msprop:Generator_UserTableName="IngresoComunidadDet" msprop:Generator_RowChangedName="IngresoComunidadDetRowChanged" msprop:Generator_RowEvArgName="IngresoComunidadDetRowChangeEvent" msprop:Generator_RowClassName="IngresoComunidadDetRow">
-          <xs:complexType>
-            <xs:sequence>
-              <xs:element name="idIngresoComunidadDet" msprop:Generator_ColumnVarNameInTable="columnidIngresoComunidadDet" msprop:Generator_ColumnPropNameInRow="idIngresoComunidadDet" msprop:Generator_ColumnPropNameInTable="idIngresoComunidadDetColumn" msprop:Generator_UserColumnName="idIngresoComunidadDet" type="xs:string" minOccurs="0" />
-              <xs:element name="ControlBono" msprop:Generator_ColumnVarNameInTable="columnControlBono" msprop:Generator_ColumnPropNameInRow="ControlBono" msprop:Generator_ColumnPropNameInTable="ControlBonoColumn" msprop:Generator_UserColumnName="ControlBono" type="xs:string" minOccurs="0" />
-              <xs:element name="IngresoComunidad1" msprop:Generator_ColumnVarNameInTable="columnIngresoComunidad1" msprop:Generator_ColumnPropNameInRow="IngresoComunidad1" msprop:Generator_ColumnPropNameInTable="IngresoComunidad1Column" msprop:Generator_UserColumnName="IngresoComunidad1" type="xs:string" minOccurs="0" />
-              <xs:element name="denominacion" msprop:Generator_ColumnVarNameInTable="columndenominacion" msprop:Generator_ColumnPropNameInRow="denominacion" msprop:Generator_ColumnPropNameInTable="denominacionColumn" msprop:Generator_UserColumnName="denominacion" type="xs:string" minOccurs="0" />
-              <xs:element name="cantidad" msprop:Generator_ColumnVarNameInTable="columncantidad" msprop:Generator_ColumnPropNameInRow="cantidad" msprop:Generator_ColumnPropNameInTable="cantidadColumn" msprop:Generator_UserColumnName="cantidad" type="xs:string" minOccurs="0" />
-              <xs:element name="subTotalBono" msprop:Generator_ColumnVarNameInTable="columnsubTotalBono" msprop:Generator_ColumnPropNameInRow="subTotalBono" msprop:Generator_ColumnPropNameInTable="subTotalBonoColumn" msprop:Generator_UserColumnName="subTotalBono" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
       </xs:choice>
     </xs:complexType>
-    <xs:unique name="Constraint1">
-      <xs:selector xpath=".//mstns:Comunidad" />
-      <xs:field xpath="mstns:nombre" />
-    </xs:unique>
   </xs:element>
 </xs:schema>
