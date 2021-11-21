@@ -90,7 +90,7 @@ namespace SolucionKermesseGrupo2.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Entry(opcion).State = System.Data.Entity.EntityState.Modified;
+                db.Entry(opcion).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }

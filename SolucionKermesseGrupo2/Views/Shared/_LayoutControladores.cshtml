@@ -3,6 +3,7 @@
 <head>
     @Styles.Render("~/Content/StyleSheetCarrousel.css")
 
+    @RenderBody()
     @Styles.Render("~/Content/Site.css")
 
     @Scripts.Render("~/bundles/modernizr")
@@ -34,21 +35,20 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto">
-                    @*           <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#">Imagenes</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#about">About</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#contact">Contact</a></li>*@
+         @*           <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#">Imagenes</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#about">About</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#contact">Contact</a></li>*@
                 </ul>
             </div>
         </div>
     </nav>
-    @RenderBody()
     <!-- Footer-->
-<footer class="footer position-fixed bottom-0 left 0 w-100" style="padding-top: 50px; padding-bottom:50px">
-    <div class="copyright py-4 text-center text-white bottom-0">
+    <footer class="footer text-center">
+        @RenderSection("Scripts", required: false)
+    </footer>
+    <!-- Copyright Section-->
+    <div class="copyright py-4 text-center text-white">
         <div class="container"><small>Copyright &copy; Todos los derechos Reservados</small></div>
     </div>
-    @RenderSection("Scripts", required: false)
-    <!-- Copyright Section-->
-</footer>
 </body>
 </html>

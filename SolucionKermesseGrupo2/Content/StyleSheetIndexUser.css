@@ -8,7 +8,8 @@
 h2
 {
     position: relative;
-    top: 10px;
+    top: 80px;
+    right: 30px;
     text-align:center;
     margin-bottom:100px;
 }
@@ -16,20 +17,25 @@ h2
 #Container {
     position: relative;
     top: 100px;
+    right: 20px;
     margin: auto;
     max-width: 1280px;
+    width: 90%;
+    margin: 75px;
 }
 
 .center {
-    position: relative;
-    top: 10px;
     margin: auto;
+    position: relative;
+    top: 20px;
+    right: 120px;
     -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }
 
 #TablaUsers {
     position: relative;
-    top: 10px;
+    left: 900px;
     table-layout: auto;
     background-color: lightblue;
     width: 1280px;
@@ -45,9 +51,9 @@ h2
 #BtnCrearUser
 {
     position: relative;
-    top: 30px;
-    left: 550px;
-    text-align: justify;
+    top: 20px;
+    left: 700px;
+    text-align: center;
 }
 
 #Contenedit
@@ -60,20 +66,17 @@ h2
 }
 
 #titulopdf {
-    position: relative;
-    top: 50px;
+    margin-left: 150px;
     color: darkred;
 }
 
 #tituloexcel {
-    position: relative;
-    top: 50px;
+    margin-left: 150px;
     color: darkgreen;
 }
 
 #tituloword {
-    position: relative;
-    top: 50px;
+    margin-left: 150px;
     color: darkblue;
 }
 

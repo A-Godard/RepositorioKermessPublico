@@ -96,7 +96,7 @@ namespace SolucionKermesseGrupo2.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Entry(usuario).State = System.Data.Entity.EntityState.Modified;
+                db.Entry(usuario).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
