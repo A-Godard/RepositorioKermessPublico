@@ -12,19 +12,12 @@ namespace SolucionKermesseGrupo2.Models
     using System;
     using System.Collections.Generic;
     
-<<<<<<< HEAD:SolucionKermesseGrupo2/Models/VwListaPrecio.cs
-    public partial class VwListaPrecio
+    public partial class sysdiagrams
     {
-        public int idListaPrecio { get; set; }
-        public string Kermesse { get; set; }
-        public string Lista { get; set; }
-        public string descripcion { get; set; }
-=======
-    public partial class VwRolOpciones
-    {
-        public int Id { get; set; }
-        public string Rol_Desc { get; set; }
-        public string Opc_Desc { get; set; }
->>>>>>> master:SolucionKermesseGrupo2/Models/VwRolOpciones.cs
+        public string name { get; set; }
+        public int principal_id { get; set; }
+        public int diagram_id { get; set; }
+        public Nullable<int> version { get; set; }
+        public byte[] definition { get; set; }
     }
 }

@@ -6,8 +6,9 @@
     "\\SolucionKermesseGrupo2\\Reportes",
     "\\SolucionKermesseGrupo2\\Views",
     "\\SolucionKermesseGrupo2\\Views\\Home",
-    "\\SolucionKermesseGrupo2\\Views\\Parroquias"
+    "\\SolucionKermesseGrupo2\\Views\\Parroquias",
+    "\\SolucionKermesseGrupo2\\Views\\Usuarios"
   ],
-  "SelectedNode": "\\SolucionKermesseGrupo2\\SolucionKermesseGrupo2.csproj",
+  "SelectedNode": "\\SolucionKermesseGrupo2.sln",
   "PreviewInSolutionExplorer": false
 }
