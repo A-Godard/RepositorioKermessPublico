@@ -12,19 +12,14 @@ namespace SolucionKermesseGrupo2.Models
     using System;
     using System.Collections.Generic;
     
-<<<<<<< HEAD:SolucionKermesseGrupo2/Models/VwListaPrecio.cs
-    public partial class VwListaPrecio
+    public partial class VwProducto
     {
-        public int idListaPrecio { get; set; }
-        public string Kermesse { get; set; }
-        public string Lista { get; set; }
+        public int idProducto { get; set; }
+        public string Comunidad { get; set; }
+        public string Categoria { get; set; }
+        public string Producto { get; set; }
         public string descripcion { get; set; }
-=======
-    public partial class VwRolOpciones
-    {
-        public int Id { get; set; }
-        public string Rol_Desc { get; set; }
-        public string Opc_Desc { get; set; }
->>>>>>> master:SolucionKermesseGrupo2/Models/VwRolOpciones.cs
+        public Nullable<int> cantidad { get; set; }
+        public double precioVSugerido { get; set; }
     }
 }
