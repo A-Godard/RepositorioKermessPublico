@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="a3bfbc02fe3a45dd8cf9085a918c0669" Name="Diagram1" ZoomLevel="80">
+      <Diagram DiagramId="a3bfbc02fe3a45dd8cf9085a918c0669" Name="Diagram1">
         <EntityTypeShape EntityType="BDKermesseModel.ArqueoCaja" Width="1.5" PointX="3" PointY="12.875" IsExpanded="true" />
         <EntityTypeShape EntityType="BDKermesseModel.ArqueoCajaDet" Width="1.5" PointX="8.25" PointY="13.5" IsExpanded="true" />
         <EntityTypeShape EntityType="BDKermesseModel.CategoriaGasto" Width="1.5" PointX="3.75" PointY="32.875" IsExpanded="true" />
@@ -67,11 +67,6 @@
         <AssociationConnector Association="BDKermesseModel.FK__TasaCambi__tasaC__571DF1D5" ManuallyRouted="false" />
         <EntityTypeShape EntityType="BDKermesseModel.VwProducto" Width="1.5" PointX="8.25" PointY="2.625" />
         <EntityTypeShape EntityType="BDKermesseModel.VwListaPrecio" Width="1.5" PointX="10" PointY="2.625" />
-        <EntityTypeShape EntityType="BDKermesseModel.VwRolOpciones" Width="1.5" PointX="10.25" PointY="1.125" />
-        <EntityTypeShape EntityType="BDKermesseModel.VwGasto" Width="1.5" PointX="10.5" PointY="3.5" />
-        <EntityTypeShape EntityType="BDKermesseModel.VwRolUsuario" Width="1.5" PointX="8.75" PointY="3.75" />
-        <EntityTypeShape EntityType="BDKermesseModel.VwIngresoComunidad" Width="1.5" PointX="7.375" PointY="6.75" />
-        <EntityTypeShape EntityType="BDKermesseModel.vwIngresoComunidadDetalle" Width="1.5" PointX="9.375" PointY="6.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
