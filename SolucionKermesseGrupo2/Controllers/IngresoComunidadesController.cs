@@ -39,13 +39,25 @@ namespace SolucionKermesseGrupo2.Controllers
 
             return File(b, mt);
         }
+
         // GET: IngresoComunidades
-        public ActionResult Index()
+
+        public ActionResult Index(string ValorBusqued)
+        {
+            var IngresoComunidad = from m in db.IngresoComunidad select m;
+            if (!String.IsNullOrEmpty(ValorBusqued))
+            {
+                IngresoComunidad = IngresoComunidad.Where(s => s.Comunidad1.nombre.Contains(ValorBusqued));
+            }
+            return View(IngresoComunidad.ToList());
+        }
+        // busqueda
+        /*public ActionResult Index()
         {
             var ingresoComunidad = db.IngresoComunidad.Include(i => i.Comunidad1).Include(i => i.Kermesse1).Include(i => i.Producto1).Include(i => i.Usuario).Include(i => i.Usuario1).Include(i => i.Usuario2);
             return View(ingresoComunidad.ToList());
         }
-
+        */
         // GET: IngresoComunidades/Details/5
         public ActionResult Details(int? id)
         {

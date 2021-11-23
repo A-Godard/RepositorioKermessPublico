@@ -41,5 +41,7 @@ namespace SolucionKermesseGrupo2.Models
     
         public virtual ControlBono ControlBono { get; set; }
         public virtual IngresoComunidad IngresoComunidad1 { get; set; }
+
+        public virtual Comunidad Comunidad1 { get; set; }
     }
 }

@@ -34,7 +34,14 @@
     </div>
     <br />
     <br />
-   
+
+    <form asp-controller="IngresoComunidades" asp-action="Index" id="FormBusq">
+        <p id="pbusq">
+            Buscar: <input type="text" name="ValorBusqued" />
+            <input type="submit" value="Aceptar" id="BtnBusq" />
+        </p>
+    </form>
+
     <table class="table" id="TblIngresoComunidad">
         <tr>
             <th id="lblIngresoComunidad">
@@ -48,12 +55,6 @@
             </th>
             <th id="lblIngresoComunidad">
                 @Html.DisplayNameFor(model => model.totalBonos)
-            </th>
-            <th id="lblIngresoComunidad">
-                @Html.DisplayNameFor(model => model.fechaCreacion)
-            </th>
-            <th id="lblIngresoComunidad">
-                @Html.DisplayNameFor(model => model.usuarioCreacion)
             </th>
             <th></th>
         </tr>
@@ -72,12 +73,6 @@
                 </td>
                 <td id="lblIngresoComunidad">
                     @Html.DisplayFor(modelItem => item.totalBonos)
-                </td>
-                <td id="lblIngresoComunidad">
-                    @Html.DisplayFor(modelItem => item.fechaCreacion)
-                </td>
-                <td id="lblIngresoComunidad">
-                    @Html.DisplayFor(modelItem => item.Usuario.userName)
                 </td>
                 <td>
                     @Html.ActionLink("Editar", "Edit", new { id = item.idIngresoComunidad }) |

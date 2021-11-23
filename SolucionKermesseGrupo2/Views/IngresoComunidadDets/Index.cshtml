@@ -32,11 +32,16 @@
     </div>
     <br />
     <br />
+
+    <form asp-controller="IngresoComunidadDets" asp-action="Index" id="FormBusq">
+        <p id="pbusq">
+            Buscar: <input type="text" name="ValorBusqued" />
+            <input type="submit" value="Aceptar" id="BtnBusq" />
+        </p>
+    </form>
+
     <table class="table" id="TblIngresoComunidad">
         <tr>
-            <th id="lblIngresoComunidad">
-                @Html.DisplayNameFor(model => model.IngresoComunidad1.idIngresoComunidad)
-            </th>
             <th id="lblIngresoComunidad">
                 @Html.DisplayNameFor(model => model.denominacion)
             </th>
@@ -56,9 +61,6 @@
         @foreach (var item in Model)
         {
             <tr>
-                <td id="lblIngresoComunidad">
-                    @Html.DisplayFor(modelItem => item.IngresoComunidad1.idIngresoComunidad)
-                </td>
                 <td id="lblIngresoComunidad">
                     @Html.DisplayFor(modelItem => item.denominacion)
                 </td>
