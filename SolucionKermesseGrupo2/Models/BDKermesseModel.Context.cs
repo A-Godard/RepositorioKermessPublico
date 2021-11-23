@@ -50,5 +50,7 @@ namespace SolucionKermesseGrupo2.Models
         public virtual DbSet<Usuario> Usuario { get; set; }
         public virtual DbSet<VwProducto> VwProducto { get; set; }
         public virtual DbSet<VwListaPrecio> VwListaPrecio { get; set; }
+        public virtual DbSet<VwIngresoComunidad> VwIngresoComunidad { get; set; }
+        public virtual DbSet<vwIngresoComunidadDetalle> vwIngresoComunidadDetalle { get; set; }
     }
 }

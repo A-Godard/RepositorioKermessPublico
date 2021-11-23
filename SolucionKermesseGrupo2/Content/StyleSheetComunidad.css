@@ -21,6 +21,9 @@ h2, h3 {
 }
 
 #TblComunidad {
+    max-width: 1280px;
+    width: 90%;
+    margin: 35px;
     table-layout: fixed;
     background-color: lightblue;
     width: 1280px;

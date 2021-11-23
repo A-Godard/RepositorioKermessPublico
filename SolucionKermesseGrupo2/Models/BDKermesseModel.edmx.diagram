@@ -67,6 +67,8 @@
         <AssociationConnector Association="BDKermesseModel.FK__TasaCambi__tasaC__571DF1D5" ManuallyRouted="false" />
         <EntityTypeShape EntityType="BDKermesseModel.VwProducto" Width="1.5" PointX="8.25" PointY="2.625" />
         <EntityTypeShape EntityType="BDKermesseModel.VwListaPrecio" Width="1.5" PointX="10" PointY="2.625" />
+        <EntityTypeShape EntityType="BDKermesseModel.VwIngresoComunidad" Width="1.5" PointX="7.375" PointY="5.75" />
+        <EntityTypeShape EntityType="BDKermesseModel.vwIngresoComunidadDetalle" Width="1.5" PointX="8.375" PointY="8.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

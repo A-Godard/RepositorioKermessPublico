@@ -156,6 +156,7 @@
     <Compile Include="Controllers\ComunidadesController.cs" />
     <Compile Include="Controllers\ControlBonoesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\IngresoComunidadsController.cs" />
     <Compile Include="Controllers\ListaPrecioController.cs" />
     <Compile Include="Controllers\MonedasController.cs" />
     <Compile Include="Controllers\OpcionsController.cs" />
@@ -241,9 +242,6 @@
     <Compile Include="Models\RolUsuario.cs">
       <DependentUpon>BDKermesseModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\sysdiagrams.cs">
-      <DependentUpon>BDKermesseModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="Models\TasaCambio.cs">
       <DependentUpon>BDKermesseModel.tt</DependentUpon>
     </Compile>
@@ -251,6 +249,12 @@
       <DependentUpon>BDKermesseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Usuario.cs">
+      <DependentUpon>BDKermesseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\VwIngresoComunidad.cs">
+      <DependentUpon>BDKermesseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vwIngresoComunidadDetalle.cs">
       <DependentUpon>BDKermesseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\VwListaPrecio.cs">
@@ -467,6 +471,11 @@
     <Content Include="Views\Producto\Delete.cshtml" />
     <Content Include="Views\ListaPrecio\Edit.cshtml" />
     <Content Include="Views\ListaPrecio\Delete.cshtml" />
+    <Content Include="Views\IngresoComunidads\Create.cshtml" />
+    <Content Include="Views\IngresoComunidads\Delete.cshtml" />
+    <Content Include="Views\IngresoComunidads\Details.cshtml" />
+    <Content Include="Views\IngresoComunidads\Edit.cshtml" />
+    <Content Include="Views\IngresoComunidads\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -492,6 +501,7 @@
     <EmbeddedResource Include="Reportes\RptCategoriaProducto.rdlc" />
     <EmbeddedResource Include="Reportes\RptComunidad.rdlc" />
     <EmbeddedResource Include="Reportes\RptControlBono.rdlc" />
+    <EmbeddedResource Include="Reportes\RptIngresoComunidad.rdlc" />
     <EmbeddedResource Include="Reportes\RptListaPrecio.rdlc" />
     <EmbeddedResource Include="Reportes\RptListaPrecio2.rdlc" />
     <EmbeddedResource Include="Reportes\RptMoneda.rdlc" />

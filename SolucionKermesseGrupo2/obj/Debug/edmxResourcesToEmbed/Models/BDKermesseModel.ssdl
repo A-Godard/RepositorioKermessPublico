@@ -255,18 +255,32 @@
     <Property Name="estado" Type="int" Nullable="false" />
   </EntityType>
   <!--Errores durante la generación:
-advertencia 6002: La tabla o vista 'BDKermesse.dbo.VwListaPrecio' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
-  <EntityType Name="VwListaPrecio">
+advertencia 6002: La tabla o vista 'BDKermesse.dbo.ListaPrecioView' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'BDKermesse.dbo.VwIngresoComunidad' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="VwIngresoComunidad">
     <Key>
-      <PropertyRef Name="idListaPrecio" />
+      <PropertyRef Name="idIngresoComunidad" />
     </Key>
-    <Property Name="idListaPrecio" Type="int" Nullable="false" />
-    <Property Name="Kermesse" Type="nvarchar" MaxLength="100" Nullable="false" />
-    <Property Name="Parroquia" Type="nvarchar" MaxLength="100" Nullable="false" />
-    <Property Name="Usuario" Type="nvarchar" MaxLength="91" Nullable="false" />
-    <Property Name="listaPrecio" Type="int" Nullable="false" />
-    <Property Name="Lista" Type="nvarchar" MaxLength="100" Nullable="false" />
-    <Property Name="descripcion" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="idIngresoComunidad" Type="int" Nullable="false" />
+    <Property Name="comunidad" Type="nvarchar" MaxLength="45" Nullable="false" />
+    <Property Name="kermesse" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="producto" Type="nvarchar" MaxLength="45" Nullable="false" />
+    <Property Name="fechaCreacion" Type="datetime" Nullable="false" />
+    <Property Name="usuarioCreacion" Type="nvarchar" MaxLength="40" Nullable="false" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'BDKermesse.dbo.vwIngresoComunidadDetalle' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="vwIngresoComunidadDetalle">
+    <Key>
+      <PropertyRef Name="idIngresoComunidadDet" />
+    </Key>
+    <Property Name="idIngresoComunidadDet" Type="int" Nullable="false" />
+    <Property Name="ControlBono" Type="nvarchar" MaxLength="45" Nullable="false" />
+    <Property Name="IngresoComunidad1" Type="int" Nullable="false" />
+    <Property Name="denominacion" Type="nvarchar" MaxLength="45" Nullable="false" />
+    <Property Name="cantidad" Type="int" Nullable="false" />
+    <Property Name="subTotalBono" Type="float" Nullable="false" />
   </EntityType>
   <!--Errores durante la generación:
 advertencia 6002: La tabla o vista 'BDKermesse.dbo.VwProducto' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
@@ -750,16 +764,25 @@ advertencia 6002: La tabla o vista 'BDKermesse.dbo.VwProducto' no tiene definida
     <EntitySet Name="TasaCambio" EntityType="Self.TasaCambio" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TasaCambioDet" EntityType="Self.TasaCambioDet" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Usuario" EntityType="Self.Usuario" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="VwListaPrecio" EntityType="Self.VwListaPrecio" store:Type="Views" store:Schema="dbo">
+    <EntitySet Name="VwIngresoComunidad" EntityType="Self.VwIngresoComunidad" store:Type="Views" store:Schema="dbo">
       <DefiningQuery>SELECT 
-    [VwListaPrecio].[idListaPrecio] AS [idListaPrecio], 
-    [VwListaPrecio].[Kermesse] AS [Kermesse], 
-    [VwListaPrecio].[Parroquia] AS [Parroquia], 
-    [VwListaPrecio].[Usuario] AS [Usuario], 
-    [VwListaPrecio].[listaPrecio] AS [listaPrecio], 
-    [VwListaPrecio].[Lista] AS [Lista], 
-    [VwListaPrecio].[descripcion] AS [descripcion]
-    FROM [dbo].[VwListaPrecio] AS [VwListaPrecio]</DefiningQuery>
+    [VwIngresoComunidad].[idIngresoComunidad] AS [idIngresoComunidad], 
+    [VwIngresoComunidad].[comunidad] AS [comunidad], 
+    [VwIngresoComunidad].[kermesse] AS [kermesse], 
+    [VwIngresoComunidad].[producto] AS [producto], 
+    [VwIngresoComunidad].[fechaCreacion] AS [fechaCreacion], 
+    [VwIngresoComunidad].[usuarioCreacion] AS [usuarioCreacion]
+    FROM [dbo].[VwIngresoComunidad] AS [VwIngresoComunidad]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vwIngresoComunidadDetalle" EntityType="Self.vwIngresoComunidadDetalle" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [vwIngresoComunidadDetalle].[idIngresoComunidadDet] AS [idIngresoComunidadDet], 
+    [vwIngresoComunidadDetalle].[ControlBono] AS [ControlBono], 
+    [vwIngresoComunidadDetalle].[IngresoComunidad1] AS [IngresoComunidad1], 
+    [vwIngresoComunidadDetalle].[denominacion] AS [denominacion], 
+    [vwIngresoComunidadDetalle].[cantidad] AS [cantidad], 
+    [vwIngresoComunidadDetalle].[subTotalBono] AS [subTotalBono]
+    FROM [dbo].[vwIngresoComunidadDetalle] AS [vwIngresoComunidadDetalle]</DefiningQuery>
     </EntitySet>
     <EntitySet Name="VwProducto" EntityType="Self.VwProducto" store:Type="Views" store:Schema="dbo">
       <DefiningQuery>SELECT 
