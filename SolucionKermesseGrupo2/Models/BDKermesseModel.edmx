@@ -260,40 +260,37 @@
           <Property Name="estado" Type="int" Nullable="false" />
         </EntityType>
         <!--Errores durante la generación:
-advertencia 6002: La tabla o vista 'BDKermesse.dbo.VwIngresoComunidad' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
-        <EntityType Name="VwIngresoComunidad">
+advertencia 6002: La tabla o vista 'BDKermesse.dbo.VwListaPrecio' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+        <EntityType Name="VwListaPrecio">
           <Key>
-            <PropertyRef Name="idIngresoComunidad" />
-            
-            
-            
-            
-            
+            <PropertyRef Name="idListaPrecio" />
           </Key>
-          <Property Name="idIngresoComunidad" Type="int" Nullable="false" />
-          <Property Name="comunidad" Type="nvarchar" MaxLength="45" Nullable="false" />
-          <Property Name="kermesse" Type="nvarchar" MaxLength="100" Nullable="false" />
-          <Property Name="producto" Type="nvarchar" MaxLength="45" Nullable="false" />
-          <Property Name="fechaCreacion" Type="datetime" Nullable="false" />
-          <Property Name="usuarioCreacion" Type="nvarchar" MaxLength="40" Nullable="false" />
+          <Property Name="idListaPrecio" Type="int" Nullable="false" />
+          <Property Name="Kermesse" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Parroquia" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Usuario" Type="nvarchar" MaxLength="91" Nullable="false" />
+          <Property Name="listaPrecio" Type="int" Nullable="false" />
+          <Property Name="Lista" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="descripcion" Type="nvarchar" MaxLength="100" Nullable="false" />
         </EntityType>
         <!--Errores durante la generación:
-advertencia 6002: La tabla o vista 'BDKermesse.dbo.vwIngresoComunidadDetalle' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
-        <EntityType Name="vwIngresoComunidadDetalle">
+advertencia 6002: La tabla o vista 'BDKermesse.dbo.VwProducto' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+        <EntityType Name="VwProducto">
           <Key>
-            <PropertyRef Name="idIngresoComunidadDet" />
-            <PropertyRef Name="ControlBono" />
-            <PropertyRef Name="IngresoComunidad1" />
-            <PropertyRef Name="denominacion" />
-            <PropertyRef Name="cantidad" />
-            <PropertyRef Name="subTotalBono" />
+            <PropertyRef Name="idProducto" />
+            
+            
+            
+            
+            
           </Key>
-          <Property Name="idIngresoComunidadDet" Type="int" Nullable="false" />
-          <Property Name="ControlBono" Type="nvarchar" MaxLength="45" Nullable="false" />
-          <Property Name="IngresoComunidad1" Type="int" Nullable="false" />
-          <Property Name="denominacion" Type="nvarchar" MaxLength="45" Nullable="false" />
-          <Property Name="cantidad" Type="int" Nullable="false" />
-          <Property Name="subTotalBono" Type="float" Nullable="false" />
+          <Property Name="idProducto" Type="int" Nullable="false" />
+          <Property Name="Comunidad" Type="nvarchar" MaxLength="45" Nullable="false" />
+          <Property Name="Categoria" Type="nvarchar" MaxLength="45" Nullable="false" />
+          <Property Name="Producto" Type="nvarchar" MaxLength="45" Nullable="false" />
+          <Property Name="descripcion" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="cantidad" Type="int" />
+          <Property Name="precioVSugerido" Type="float" Nullable="false" />
         </EntityType>
         <Association Name="FK__ArqueoCaj__arque__6FE99F9F">
           <End Role="ArqueoCaja" Type="Self.ArqueoCaja" Multiplicity="1" />
@@ -763,25 +760,27 @@ advertencia 6002: La tabla o vista 'BDKermesse.dbo.vwIngresoComunidadDetalle' no
           <EntitySet Name="TasaCambio" EntityType="Self.TasaCambio" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TasaCambioDet" EntityType="Self.TasaCambioDet" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Usuario" EntityType="Self.Usuario" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="VwIngresoComunidad" EntityType="Self.VwIngresoComunidad" store:Type="Views" store:Schema="dbo">
+          <EntitySet Name="VwListaPrecio" EntityType="Self.VwListaPrecio" store:Type="Views" store:Schema="dbo">
             <DefiningQuery>SELECT 
-    [VwIngresoComunidad].[idIngresoComunidad] AS [idIngresoComunidad], 
-    [VwIngresoComunidad].[comunidad] AS [comunidad], 
-    [VwIngresoComunidad].[kermesse] AS [kermesse], 
-    [VwIngresoComunidad].[producto] AS [producto], 
-    [VwIngresoComunidad].[fechaCreacion] AS [fechaCreacion], 
-    [VwIngresoComunidad].[usuarioCreacion] AS [usuarioCreacion]
-    FROM [dbo].[VwIngresoComunidad] AS [VwIngresoComunidad]</DefiningQuery>
+    [VwListaPrecio].[idListaPrecio] AS [idListaPrecio], 
+    [VwListaPrecio].[Kermesse] AS [Kermesse], 
+    [VwListaPrecio].[Parroquia] AS [Parroquia], 
+    [VwListaPrecio].[Usuario] AS [Usuario], 
+    [VwListaPrecio].[listaPrecio] AS [listaPrecio], 
+    [VwListaPrecio].[Lista] AS [Lista], 
+    [VwListaPrecio].[descripcion] AS [descripcion]
+    FROM [dbo].[VwListaPrecio] AS [VwListaPrecio]</DefiningQuery>
           </EntitySet>
-          <EntitySet Name="vwIngresoComunidadDetalle" EntityType="Self.vwIngresoComunidadDetalle" store:Type="Views" store:Schema="dbo">
+          <EntitySet Name="VwProducto" EntityType="Self.VwProducto" store:Type="Views" store:Schema="dbo">
             <DefiningQuery>SELECT 
-    [vwIngresoComunidadDetalle].[idIngresoComunidadDet] AS [idIngresoComunidadDet], 
-    [vwIngresoComunidadDetalle].[ControlBono] AS [ControlBono], 
-    [vwIngresoComunidadDetalle].[IngresoComunidad1] AS [IngresoComunidad1], 
-    [vwIngresoComunidadDetalle].[denominacion] AS [denominacion], 
-    [vwIngresoComunidadDetalle].[cantidad] AS [cantidad], 
-    [vwIngresoComunidadDetalle].[subTotalBono] AS [subTotalBono]
-    FROM [dbo].[vwIngresoComunidadDetalle] AS [vwIngresoComunidadDetalle]</DefiningQuery>
+    [VwProducto].[idProducto] AS [idProducto], 
+    [VwProducto].[Comunidad] AS [Comunidad], 
+    [VwProducto].[Categoria] AS [Categoria], 
+    [VwProducto].[Producto] AS [Producto], 
+    [VwProducto].[descripcion] AS [descripcion], 
+    [VwProducto].[cantidad] AS [cantidad], 
+    [VwProducto].[precioVSugerido] AS [precioVSugerido]
+    FROM [dbo].[VwProducto] AS [VwProducto]</DefiningQuery>
           </EntitySet>
           <AssociationSet Name="FK__ArqueoCaj__arque__6FE99F9F" Association="Self.FK__ArqueoCaj__arque__6FE99F9F">
             <End Role="ArqueoCaja" EntitySet="ArqueoCaja" />
@@ -1880,35 +1879,32 @@ advertencia 6002: La tabla o vista 'BDKermesse.dbo.vwIngresoComunidadDetalle' no
             <End Role="TasaCambio" EntitySet="TasaCambio" />
             <End Role="TasaCambioDet" EntitySet="TasaCambioDet" />
           </AssociationSet>
-          <EntitySet Name="VwIngresoComunidad" EntityType="BDKermesseModel.VwIngresoComunidad" />
-          <EntitySet Name="vwIngresoComunidadDetalle" EntityType="BDKermesseModel.vwIngresoComunidadDetalle" />
+          <EntitySet Name="VwProducto" EntityType="BDKermesseModel.VwProducto" />
+          <EntitySet Name="VwListaPrecio" EntityType="BDKermesseModel.VwListaPrecio" />
         </EntityContainer>
-        <EntityType Name="VwIngresoComunidad">
+        <EntityType Name="VwProducto">
           <Key>
-            <PropertyRef Name="idIngresoComunidad" />
+            <PropertyRef Name="idProducto" />
           </Key>
-          <Property Name="idIngresoComunidad" Type="Int32" Nullable="false" />
-          <Property Name="comunidad" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="true" />
-          <Property Name="kermesse" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="producto" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="true" />
-          <Property Name="fechaCreacion" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="usuarioCreacion" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Name="idProducto" Type="Int32" Nullable="false" />
+          <Property Name="Comunidad" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="true" />
+          <Property Name="Categoria" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="true" />
+          <Property Name="Producto" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="true" />
+          <Property Name="descripcion" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="cantidad" Type="Int32" />
+          <Property Name="precioVSugerido" Type="Double" Nullable="false" />
         </EntityType>
-        <EntityType Name="vwIngresoComunidadDetalle">
+        <EntityType Name="VwListaPrecio">
           <Key>
-            <PropertyRef Name="idIngresoComunidadDet" />
-            <PropertyRef Name="ControlBono" />
-            <PropertyRef Name="IngresoComunidad1" />
-            <PropertyRef Name="denominacion" />
-            <PropertyRef Name="cantidad" />
-            <PropertyRef Name="subTotalBono" />
+            <PropertyRef Name="idListaPrecio" />
           </Key>
-          <Property Name="idIngresoComunidadDet" Type="Int32" Nullable="false" />
-          <Property Name="ControlBono" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="true" />
-          <Property Name="IngresoComunidad1" Type="Int32" Nullable="false" />
-          <Property Name="denominacion" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="true" />
-          <Property Name="cantidad" Type="Int32" Nullable="false" />
-          <Property Name="subTotalBono" Type="Double" Nullable="false" />
+          <Property Name="idListaPrecio" Type="Int32" Nullable="false" />
+          <Property Name="Kermesse" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Parroquia" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Usuario" Type="String" Nullable="false" MaxLength="91" FixedLength="false" Unicode="true" />
+          <Property Name="listaPrecio" Type="Int32" Nullable="false" />
+          <Property Name="Lista" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="descripcion" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -2193,27 +2189,29 @@ advertencia 6002: La tabla o vista 'BDKermesse.dbo.vwIngresoComunidadDetalle' no
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="VwIngresoComunidad">
-            <EntityTypeMapping TypeName="BDKermesseModel.VwIngresoComunidad">
-              <MappingFragment StoreEntitySet="VwIngresoComunidad">
-                <ScalarProperty Name="usuarioCreacion" ColumnName="usuarioCreacion" />
-                <ScalarProperty Name="fechaCreacion" ColumnName="fechaCreacion" />
-                <ScalarProperty Name="producto" ColumnName="producto" />
-                <ScalarProperty Name="kermesse" ColumnName="kermesse" />
-                <ScalarProperty Name="comunidad" ColumnName="comunidad" />
-                <ScalarProperty Name="idIngresoComunidad" ColumnName="idIngresoComunidad" />
+          <EntitySetMapping Name="VwProducto">
+            <EntityTypeMapping TypeName="BDKermesseModel.VwProducto">
+              <MappingFragment StoreEntitySet="VwProducto">
+                <ScalarProperty Name="precioVSugerido" ColumnName="precioVSugerido" />
+                <ScalarProperty Name="cantidad" ColumnName="cantidad" />
+                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+                <ScalarProperty Name="Producto" ColumnName="Producto" />
+                <ScalarProperty Name="Categoria" ColumnName="Categoria" />
+                <ScalarProperty Name="Comunidad" ColumnName="Comunidad" />
+                <ScalarProperty Name="idProducto" ColumnName="idProducto" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="vwIngresoComunidadDetalle">
-            <EntityTypeMapping TypeName="BDKermesseModel.vwIngresoComunidadDetalle">
-              <MappingFragment StoreEntitySet="vwIngresoComunidadDetalle">
-                <ScalarProperty Name="subTotalBono" ColumnName="subTotalBono" />
-                <ScalarProperty Name="cantidad" ColumnName="cantidad" />
-                <ScalarProperty Name="denominacion" ColumnName="denominacion" />
-                <ScalarProperty Name="IngresoComunidad1" ColumnName="IngresoComunidad1" />
-                <ScalarProperty Name="ControlBono" ColumnName="ControlBono" />
-                <ScalarProperty Name="idIngresoComunidadDet" ColumnName="idIngresoComunidadDet" />
+          <EntitySetMapping Name="VwListaPrecio">
+            <EntityTypeMapping TypeName="BDKermesseModel.VwListaPrecio">
+              <MappingFragment StoreEntitySet="VwListaPrecio">
+                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+                <ScalarProperty Name="Lista" ColumnName="Lista" />
+                <ScalarProperty Name="listaPrecio" ColumnName="listaPrecio" />
+                <ScalarProperty Name="Usuario" ColumnName="Usuario" />
+                <ScalarProperty Name="Parroquia" ColumnName="Parroquia" />
+                <ScalarProperty Name="Kermesse" ColumnName="Kermesse" />
+                <ScalarProperty Name="idListaPrecio" ColumnName="idListaPrecio" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

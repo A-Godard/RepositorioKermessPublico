@@ -42,9 +42,9 @@ namespace SolucionKermesseGrupo2.Reportes.DataSet {
         
         private ControlBonoDataTable tableControlBono;
         
-        private IngresoComunidadDataTable tableIngresoComunidad;
+        private ProductoDataTable tableProducto;
         
-        private IngresoComunidadDetDataTable tableIngresoComunidadDet;
+        private ListaPrecioDataTable tableListaPrecio;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -101,11 +101,11 @@ namespace SolucionKermesseGrupo2.Reportes.DataSet {
                 if ((ds.Tables["ControlBono"] != null)) {
                     base.Tables.Add(new ControlBonoDataTable(ds.Tables["ControlBono"]));
                 }
-                if ((ds.Tables["IngresoComunidad"] != null)) {
-                    base.Tables.Add(new IngresoComunidadDataTable(ds.Tables["IngresoComunidad"]));
+                if ((ds.Tables["Producto"] != null)) {
+                    base.Tables.Add(new ProductoDataTable(ds.Tables["Producto"]));
                 }
-                if ((ds.Tables["IngresoComunidadDet"] != null)) {
-                    base.Tables.Add(new IngresoComunidadDetDataTable(ds.Tables["IngresoComunidadDet"]));
+                if ((ds.Tables["ListaPrecio"] != null)) {
+                    base.Tables.Add(new ListaPrecioDataTable(ds.Tables["ListaPrecio"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -219,9 +219,9 @@ namespace SolucionKermesseGrupo2.Reportes.DataSet {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public IngresoComunidadDataTable IngresoComunidad {
+        public ProductoDataTable Producto {
             get {
-                return this.tableIngresoComunidad;
+                return this.tableProducto;
             }
         }
         
@@ -229,9 +229,9 @@ namespace SolucionKermesseGrupo2.Reportes.DataSet {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public IngresoComunidadDetDataTable IngresoComunidadDet {
+        public ListaPrecioDataTable ListaPrecio {
             get {
-                return this.tableIngresoComunidadDet;
+                return this.tableListaPrecio;
             }
         }
         
@@ -329,11 +329,11 @@ namespace SolucionKermesseGrupo2.Reportes.DataSet {
                 if ((ds.Tables["ControlBono"] != null)) {
                     base.Tables.Add(new ControlBonoDataTable(ds.Tables["ControlBono"]));
                 }
-                if ((ds.Tables["IngresoComunidad"] != null)) {
-                    base.Tables.Add(new IngresoComunidadDataTable(ds.Tables["IngresoComunidad"]));
+                if ((ds.Tables["Producto"] != null)) {
+                    base.Tables.Add(new ProductoDataTable(ds.Tables["Producto"]));
                 }
-                if ((ds.Tables["IngresoComunidadDet"] != null)) {
-                    base.Tables.Add(new IngresoComunidadDetDataTable(ds.Tables["IngresoComunidadDet"]));
+                if ((ds.Tables["ListaPrecio"] != null)) {
+                    base.Tables.Add(new ListaPrecioDataTable(ds.Tables["ListaPrecio"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -422,16 +422,16 @@ namespace SolucionKermesseGrupo2.Reportes.DataSet {
                     this.tableControlBono.InitVars();
                 }
             }
-            this.tableIngresoComunidad = ((IngresoComunidadDataTable)(base.Tables["IngresoComunidad"]));
+            this.tableProducto = ((ProductoDataTable)(base.Tables["Producto"]));
             if ((initTable == true)) {
-                if ((this.tableIngresoComunidad != null)) {
-                    this.tableIngresoComunidad.InitVars();
+                if ((this.tableProducto != null)) {
+                    this.tableProducto.InitVars();
                 }
             }
-            this.tableIngresoComunidadDet = ((IngresoComunidadDetDataTable)(base.Tables["IngresoComunidadDet"]));
+            this.tableListaPrecio = ((ListaPrecioDataTable)(base.Tables["ListaPrecio"]));
             if ((initTable == true)) {
-                if ((this.tableIngresoComunidadDet != null)) {
-                    this.tableIngresoComunidadDet.InitVars();
+                if ((this.tableListaPrecio != null)) {
+                    this.tableListaPrecio.InitVars();
                 }
             }
         }
@@ -462,10 +462,10 @@ namespace SolucionKermesseGrupo2.Reportes.DataSet {
             base.Tables.Add(this.tableRol);
             this.tableControlBono = new ControlBonoDataTable();
             base.Tables.Add(this.tableControlBono);
-            this.tableIngresoComunidad = new IngresoComunidadDataTable();
-            base.Tables.Add(this.tableIngresoComunidad);
-            this.tableIngresoComunidadDet = new IngresoComunidadDetDataTable();
-            base.Tables.Add(this.tableIngresoComunidadDet);
+            this.tableProducto = new ProductoDataTable();
+            base.Tables.Add(this.tableProducto);
+            this.tableListaPrecio = new ListaPrecioDataTable();
+            base.Tables.Add(this.tableListaPrecio);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -524,13 +524,13 @@ namespace SolucionKermesseGrupo2.Reportes.DataSet {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private bool ShouldSerializeIngresoComunidad() {
+        private bool ShouldSerializeProducto() {
             return false;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private bool ShouldSerializeIngresoComunidadDet() {
+        private bool ShouldSerializeListaPrecio() {
             return false;
         }
         
@@ -617,10 +617,10 @@ namespace SolucionKermesseGrupo2.Reportes.DataSet {
         public delegate void ControlBonoRowChangeEventHandler(object sender, ControlBonoRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public delegate void IngresoComunidadRowChangeEventHandler(object sender, IngresoComunidadRowChangeEvent e);
+        public delegate void ProductoRowChangeEventHandler(object sender, ProductoRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public delegate void IngresoComunidadDetRowChangeEventHandler(object sender, IngresoComunidadDetRowChangeEvent e);
+        public delegate void ListaPrecioRowChangeEventHandler(object sender, ListaPrecioRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -2421,9 +2421,6 @@ namespace SolucionKermesseGrupo2.Reportes.DataSet {
                 base.Columns.Add(this.columnresponsble);
                 this.columndescContribucion = new global::System.Data.DataColumn("descContribucion", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndescContribucion);
-                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnnombre}, false));
-                this.columnnombre.Unique = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3063,24 +3060,24 @@ namespace SolucionKermesseGrupo2.Reportes.DataSet {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class IngresoComunidadDataTable : global::System.Data.TypedTableBase<IngresoComunidadRow> {
+        public partial class ProductoDataTable : global::System.Data.TypedTableBase<ProductoRow> {
             
-            private global::System.Data.DataColumn columnidIngresoComunidad;
+            private global::System.Data.DataColumn columnComunidad;
             
-            private global::System.Data.DataColumn columncomunidad;
+            private global::System.Data.DataColumn columnCategoria;
             
-            private global::System.Data.DataColumn columnkermesse;
+            private global::System.Data.DataColumn columnProducto;
             
-            private global::System.Data.DataColumn columnproducto;
+            private global::System.Data.DataColumn columndescripcion;
             
-            private global::System.Data.DataColumn columnfechaCreacion;
+            private global::System.Data.DataColumn columncantidad;
             
-            private global::System.Data.DataColumn columnusuarioCreacion;
+            private global::System.Data.DataColumn columnprecioVSugerido;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public IngresoComunidadDataTable() {
-                this.TableName = "IngresoComunidad";
+            public ProductoDataTable() {
+                this.TableName = "Producto";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -3088,7 +3085,7 @@ namespace SolucionKermesseGrupo2.Reportes.DataSet {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal IngresoComunidadDataTable(global::System.Data.DataTable table) {
+            internal ProductoDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -3105,56 +3102,56 @@ namespace SolucionKermesseGrupo2.Reportes.DataSet {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected IngresoComunidadDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected ProductoDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn idIngresoComunidadColumn {
+            public global::System.Data.DataColumn ComunidadColumn {
                 get {
-                    return this.columnidIngresoComunidad;
+                    return this.columnComunidad;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn comunidadColumn {
+            public global::System.Data.DataColumn CategoriaColumn {
                 get {
-                    return this.columncomunidad;
+                    return this.columnCategoria;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn kermesseColumn {
+            public global::System.Data.DataColumn ProductoColumn {
                 get {
-                    return this.columnkermesse;
+                    return this.columnProducto;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn productoColumn {
+            public global::System.Data.DataColumn descripcionColumn {
                 get {
-                    return this.columnproducto;
+                    return this.columndescripcion;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn fechaCreacionColumn {
+            public global::System.Data.DataColumn cantidadColumn {
                 get {
-                    return this.columnfechaCreacion;
+                    return this.columncantidad;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn usuarioCreacionColumn {
+            public global::System.Data.DataColumn precioVSugeridoColumn {
                 get {
-                    return this.columnusuarioCreacion;
+                    return this.columnprecioVSugerido;
                 }
             }
             
@@ -3169,50 +3166,50 @@ namespace SolucionKermesseGrupo2.Reportes.DataSet {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public IngresoComunidadRow this[int index] {
+            public ProductoRow this[int index] {
                 get {
-                    return ((IngresoComunidadRow)(this.Rows[index]));
+                    return ((ProductoRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event IngresoComunidadRowChangeEventHandler IngresoComunidadRowChanging;
+            public event ProductoRowChangeEventHandler ProductoRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event IngresoComunidadRowChangeEventHandler IngresoComunidadRowChanged;
+            public event ProductoRowChangeEventHandler ProductoRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event IngresoComunidadRowChangeEventHandler IngresoComunidadRowDeleting;
+            public event ProductoRowChangeEventHandler ProductoRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event IngresoComunidadRowChangeEventHandler IngresoComunidadRowDeleted;
+            public event ProductoRowChangeEventHandler ProductoRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void AddIngresoComunidadRow(IngresoComunidadRow row) {
+            public void AddProductoRow(ProductoRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public IngresoComunidadRow AddIngresoComunidadRow(string idIngresoComunidad, string comunidad, string kermesse, string producto, string fechaCreacion, string usuarioCreacion) {
-                IngresoComunidadRow rowIngresoComunidadRow = ((IngresoComunidadRow)(this.NewRow()));
+            public ProductoRow AddProductoRow(string Comunidad, string Categoria, string Producto, string descripcion, int cantidad, double precioVSugerido) {
+                ProductoRow rowProductoRow = ((ProductoRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        idIngresoComunidad,
-                        comunidad,
-                        kermesse,
-                        producto,
-                        fechaCreacion,
-                        usuarioCreacion};
-                rowIngresoComunidadRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowIngresoComunidadRow);
-                return rowIngresoComunidadRow;
+                        Comunidad,
+                        Categoria,
+                        Producto,
+                        descripcion,
+                        cantidad,
+                        precioVSugerido};
+                rowProductoRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowProductoRow);
+                return rowProductoRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                IngresoComunidadDataTable cln = ((IngresoComunidadDataTable)(base.Clone()));
+                ProductoDataTable cln = ((ProductoDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -3220,61 +3217,61 @@ namespace SolucionKermesseGrupo2.Reportes.DataSet {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new IngresoComunidadDataTable();
+                return new ProductoDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
-                this.columnidIngresoComunidad = base.Columns["idIngresoComunidad"];
-                this.columncomunidad = base.Columns["comunidad"];
-                this.columnkermesse = base.Columns["kermesse"];
-                this.columnproducto = base.Columns["producto"];
-                this.columnfechaCreacion = base.Columns["fechaCreacion"];
-                this.columnusuarioCreacion = base.Columns["usuarioCreacion"];
+                this.columnComunidad = base.Columns["Comunidad"];
+                this.columnCategoria = base.Columns["Categoria"];
+                this.columnProducto = base.Columns["Producto"];
+                this.columndescripcion = base.Columns["descripcion"];
+                this.columncantidad = base.Columns["cantidad"];
+                this.columnprecioVSugerido = base.Columns["precioVSugerido"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             private void InitClass() {
-                this.columnidIngresoComunidad = new global::System.Data.DataColumn("idIngresoComunidad", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnidIngresoComunidad);
-                this.columncomunidad = new global::System.Data.DataColumn("comunidad", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columncomunidad);
-                this.columnkermesse = new global::System.Data.DataColumn("kermesse", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnkermesse);
-                this.columnproducto = new global::System.Data.DataColumn("producto", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnproducto);
-                this.columnfechaCreacion = new global::System.Data.DataColumn("fechaCreacion", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnfechaCreacion);
-                this.columnusuarioCreacion = new global::System.Data.DataColumn("usuarioCreacion", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnusuarioCreacion);
+                this.columnComunidad = new global::System.Data.DataColumn("Comunidad", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnComunidad);
+                this.columnCategoria = new global::System.Data.DataColumn("Categoria", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCategoria);
+                this.columnProducto = new global::System.Data.DataColumn("Producto", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnProducto);
+                this.columndescripcion = new global::System.Data.DataColumn("descripcion", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndescripcion);
+                this.columncantidad = new global::System.Data.DataColumn("cantidad", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncantidad);
+                this.columnprecioVSugerido = new global::System.Data.DataColumn("precioVSugerido", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnprecioVSugerido);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public IngresoComunidadRow NewIngresoComunidadRow() {
-                return ((IngresoComunidadRow)(this.NewRow()));
+            public ProductoRow NewProductoRow() {
+                return ((ProductoRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new IngresoComunidadRow(builder);
+                return new ProductoRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(IngresoComunidadRow);
+                return typeof(ProductoRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.IngresoComunidadRowChanged != null)) {
-                    this.IngresoComunidadRowChanged(this, new IngresoComunidadRowChangeEvent(((IngresoComunidadRow)(e.Row)), e.Action));
+                if ((this.ProductoRowChanged != null)) {
+                    this.ProductoRowChanged(this, new ProductoRowChangeEvent(((ProductoRow)(e.Row)), e.Action));
                 }
             }
             
@@ -3282,8 +3279,8 @@ namespace SolucionKermesseGrupo2.Reportes.DataSet {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.IngresoComunidadRowChanging != null)) {
-                    this.IngresoComunidadRowChanging(this, new IngresoComunidadRowChangeEvent(((IngresoComunidadRow)(e.Row)), e.Action));
+                if ((this.ProductoRowChanging != null)) {
+                    this.ProductoRowChanging(this, new ProductoRowChangeEvent(((ProductoRow)(e.Row)), e.Action));
                 }
             }
             
@@ -3291,8 +3288,8 @@ namespace SolucionKermesseGrupo2.Reportes.DataSet {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.IngresoComunidadRowDeleted != null)) {
-                    this.IngresoComunidadRowDeleted(this, new IngresoComunidadRowChangeEvent(((IngresoComunidadRow)(e.Row)), e.Action));
+                if ((this.ProductoRowDeleted != null)) {
+                    this.ProductoRowDeleted(this, new ProductoRowChangeEvent(((ProductoRow)(e.Row)), e.Action));
                 }
             }
             
@@ -3300,14 +3297,14 @@ namespace SolucionKermesseGrupo2.Reportes.DataSet {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.IngresoComunidadRowDeleting != null)) {
-                    this.IngresoComunidadRowDeleting(this, new IngresoComunidadRowChangeEvent(((IngresoComunidadRow)(e.Row)), e.Action));
+                if ((this.ProductoRowDeleting != null)) {
+                    this.ProductoRowDeleting(this, new ProductoRowChangeEvent(((ProductoRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void RemoveIngresoComunidadRow(IngresoComunidadRow row) {
+            public void RemoveProductoRow(ProductoRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -3334,7 +3331,7 @@ namespace SolucionKermesseGrupo2.Reportes.DataSet {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "IngresoComunidadDataTable";
+                attribute2.FixedValue = "ProductoDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -3380,24 +3377,18 @@ namespace SolucionKermesseGrupo2.Reportes.DataSet {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class IngresoComunidadDetDataTable : global::System.Data.TypedTableBase<IngresoComunidadDetRow> {
+        public partial class ListaPrecioDataTable : global::System.Data.TypedTableBase<ListaPrecioRow> {
             
-            private global::System.Data.DataColumn columnidIngresoComunidadDet;
+            private global::System.Data.DataColumn columnkermesse;
             
-            private global::System.Data.DataColumn columnControlBono;
+            private global::System.Data.DataColumn columnnombre;
             
-            private global::System.Data.DataColumn columnIngresoComunidad1;
-            
-            private global::System.Data.DataColumn columndenominacion;
-            
-            private global::System.Data.DataColumn columncantidad;
-            
-            private global::System.Data.DataColumn columnsubTotalBono;
+            private global::System.Data.DataColumn columndescripcion;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public IngresoComunidadDetDataTable() {
-                this.TableName = "IngresoComunidadDet";
+            public ListaPrecioDataTable() {
+                this.TableName = "ListaPrecio";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -3405,7 +3396,7 @@ namespace SolucionKermesseGrupo2.Reportes.DataSet {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal IngresoComunidadDetDataTable(global::System.Data.DataTable table) {
+            internal ListaPrecioDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -3422,56 +3413,32 @@ namespace SolucionKermesseGrupo2.Reportes.DataSet {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected IngresoComunidadDetDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected ListaPrecioDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn idIngresoComunidadDetColumn {
+            public global::System.Data.DataColumn kermesseColumn {
                 get {
-                    return this.columnidIngresoComunidadDet;
+                    return this.columnkermesse;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn ControlBonoColumn {
+            public global::System.Data.DataColumn nombreColumn {
                 get {
-                    return this.columnControlBono;
+                    return this.columnnombre;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn IngresoComunidad1Column {
+            public global::System.Data.DataColumn descripcionColumn {
                 get {
-                    return this.columnIngresoComunidad1;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn denominacionColumn {
-                get {
-                    return this.columndenominacion;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn cantidadColumn {
-                get {
-                    return this.columncantidad;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn subTotalBonoColumn {
-                get {
-                    return this.columnsubTotalBono;
+                    return this.columndescripcion;
                 }
             }
             
@@ -3486,50 +3453,47 @@ namespace SolucionKermesseGrupo2.Reportes.DataSet {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public IngresoComunidadDetRow this[int index] {
+            public ListaPrecioRow this[int index] {
                 get {
-                    return ((IngresoComunidadDetRow)(this.Rows[index]));
+                    return ((ListaPrecioRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event IngresoComunidadDetRowChangeEventHandler IngresoComunidadDetRowChanging;
+            public event ListaPrecioRowChangeEventHandler ListaPrecioRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event IngresoComunidadDetRowChangeEventHandler IngresoComunidadDetRowChanged;
+            public event ListaPrecioRowChangeEventHandler ListaPrecioRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event IngresoComunidadDetRowChangeEventHandler IngresoComunidadDetRowDeleting;
+            public event ListaPrecioRowChangeEventHandler ListaPrecioRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event IngresoComunidadDetRowChangeEventHandler IngresoComunidadDetRowDeleted;
+            public event ListaPrecioRowChangeEventHandler ListaPrecioRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void AddIngresoComunidadDetRow(IngresoComunidadDetRow row) {
+            public void AddListaPrecioRow(ListaPrecioRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public IngresoComunidadDetRow AddIngresoComunidadDetRow(string idIngresoComunidadDet, string ControlBono, string IngresoComunidad1, string denominacion, string cantidad, string subTotalBono) {
-                IngresoComunidadDetRow rowIngresoComunidadDetRow = ((IngresoComunidadDetRow)(this.NewRow()));
+            public ListaPrecioRow AddListaPrecioRow(string kermesse, string nombre, string descripcion) {
+                ListaPrecioRow rowListaPrecioRow = ((ListaPrecioRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        idIngresoComunidadDet,
-                        ControlBono,
-                        IngresoComunidad1,
-                        denominacion,
-                        cantidad,
-                        subTotalBono};
-                rowIngresoComunidadDetRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowIngresoComunidadDetRow);
-                return rowIngresoComunidadDetRow;
+                        kermesse,
+                        nombre,
+                        descripcion};
+                rowListaPrecioRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowListaPrecioRow);
+                return rowListaPrecioRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                IngresoComunidadDetDataTable cln = ((IngresoComunidadDetDataTable)(base.Clone()));
+                ListaPrecioDataTable cln = ((ListaPrecioDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -3537,61 +3501,52 @@ namespace SolucionKermesseGrupo2.Reportes.DataSet {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new IngresoComunidadDetDataTable();
+                return new ListaPrecioDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
-                this.columnidIngresoComunidadDet = base.Columns["idIngresoComunidadDet"];
-                this.columnControlBono = base.Columns["ControlBono"];
-                this.columnIngresoComunidad1 = base.Columns["IngresoComunidad1"];
-                this.columndenominacion = base.Columns["denominacion"];
-                this.columncantidad = base.Columns["cantidad"];
-                this.columnsubTotalBono = base.Columns["subTotalBono"];
+                this.columnkermesse = base.Columns["kermesse"];
+                this.columnnombre = base.Columns["nombre"];
+                this.columndescripcion = base.Columns["descripcion"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             private void InitClass() {
-                this.columnidIngresoComunidadDet = new global::System.Data.DataColumn("idIngresoComunidadDet", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnidIngresoComunidadDet);
-                this.columnControlBono = new global::System.Data.DataColumn("ControlBono", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnControlBono);
-                this.columnIngresoComunidad1 = new global::System.Data.DataColumn("IngresoComunidad1", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnIngresoComunidad1);
-                this.columndenominacion = new global::System.Data.DataColumn("denominacion", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columndenominacion);
-                this.columncantidad = new global::System.Data.DataColumn("cantidad", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columncantidad);
-                this.columnsubTotalBono = new global::System.Data.DataColumn("subTotalBono", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnsubTotalBono);
+                this.columnkermesse = new global::System.Data.DataColumn("kermesse", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnkermesse);
+                this.columnnombre = new global::System.Data.DataColumn("nombre", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnombre);
+                this.columndescripcion = new global::System.Data.DataColumn("descripcion", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndescripcion);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public IngresoComunidadDetRow NewIngresoComunidadDetRow() {
-                return ((IngresoComunidadDetRow)(this.NewRow()));
+            public ListaPrecioRow NewListaPrecioRow() {
+                return ((ListaPrecioRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new IngresoComunidadDetRow(builder);
+                return new ListaPrecioRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(IngresoComunidadDetRow);
+                return typeof(ListaPrecioRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.IngresoComunidadDetRowChanged != null)) {
-                    this.IngresoComunidadDetRowChanged(this, new IngresoComunidadDetRowChangeEvent(((IngresoComunidadDetRow)(e.Row)), e.Action));
+                if ((this.ListaPrecioRowChanged != null)) {
+                    this.ListaPrecioRowChanged(this, new ListaPrecioRowChangeEvent(((ListaPrecioRow)(e.Row)), e.Action));
                 }
             }
             
@@ -3599,8 +3554,8 @@ namespace SolucionKermesseGrupo2.Reportes.DataSet {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.IngresoComunidadDetRowChanging != null)) {
-                    this.IngresoComunidadDetRowChanging(this, new IngresoComunidadDetRowChangeEvent(((IngresoComunidadDetRow)(e.Row)), e.Action));
+                if ((this.ListaPrecioRowChanging != null)) {
+                    this.ListaPrecioRowChanging(this, new ListaPrecioRowChangeEvent(((ListaPrecioRow)(e.Row)), e.Action));
                 }
             }
             
@@ -3608,8 +3563,8 @@ namespace SolucionKermesseGrupo2.Reportes.DataSet {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.IngresoComunidadDetRowDeleted != null)) {
-                    this.IngresoComunidadDetRowDeleted(this, new IngresoComunidadDetRowChangeEvent(((IngresoComunidadDetRow)(e.Row)), e.Action));
+                if ((this.ListaPrecioRowDeleted != null)) {
+                    this.ListaPrecioRowDeleted(this, new ListaPrecioRowChangeEvent(((ListaPrecioRow)(e.Row)), e.Action));
                 }
             }
             
@@ -3617,14 +3572,14 @@ namespace SolucionKermesseGrupo2.Reportes.DataSet {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.IngresoComunidadDetRowDeleting != null)) {
-                    this.IngresoComunidadDetRowDeleting(this, new IngresoComunidadDetRowChangeEvent(((IngresoComunidadDetRow)(e.Row)), e.Action));
+                if ((this.ListaPrecioRowDeleting != null)) {
+                    this.ListaPrecioRowDeleting(this, new ListaPrecioRowChangeEvent(((ListaPrecioRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void RemoveIngresoComunidadDetRow(IngresoComunidadDetRow row) {
+            public void RemoveListaPrecioRow(ListaPrecioRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -3651,7 +3606,7 @@ namespace SolucionKermesseGrupo2.Reportes.DataSet {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "IngresoComunidadDetDataTable";
+                attribute2.FixedValue = "ListaPrecioDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -4502,48 +4457,198 @@ namespace SolucionKermesseGrupo2.Reportes.DataSet {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class IngresoComunidadRow : global::System.Data.DataRow {
+        public partial class ProductoRow : global::System.Data.DataRow {
             
-            private IngresoComunidadDataTable tableIngresoComunidad;
+            private ProductoDataTable tableProducto;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal IngresoComunidadRow(global::System.Data.DataRowBuilder rb) : 
+            internal ProductoRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableIngresoComunidad = ((IngresoComunidadDataTable)(this.Table));
+                this.tableProducto = ((ProductoDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string idIngresoComunidad {
+            public string Comunidad {
                 get {
                     try {
-                        return ((string)(this[this.tableIngresoComunidad.idIngresoComunidadColumn]));
+                        return ((string)(this[this.tableProducto.ComunidadColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'idIngresoComunidad\' de la tabla \'IngresoComunidad\' es DBN" +
-                                "ull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Comunidad\' de la tabla \'Producto\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableIngresoComunidad.idIngresoComunidadColumn] = value;
+                    this[this.tableProducto.ComunidadColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string comunidad {
+            public string Categoria {
                 get {
                     try {
-                        return ((string)(this[this.tableIngresoComunidad.comunidadColumn]));
+                        return ((string)(this[this.tableProducto.CategoriaColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'comunidad\' de la tabla \'IngresoComunidad\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Categoria\' de la tabla \'Producto\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableIngresoComunidad.comunidadColumn] = value;
+                    this[this.tableProducto.CategoriaColumn] = value;
                 }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Producto {
+                get {
+                    try {
+                        return ((string)(this[this.tableProducto.ProductoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Producto\' de la tabla \'Producto\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProducto.ProductoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string descripcion {
+                get {
+                    try {
+                        return ((string)(this[this.tableProducto.descripcionColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'descripcion\' de la tabla \'Producto\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProducto.descripcionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int cantidad {
+                get {
+                    try {
+                        return ((int)(this[this.tableProducto.cantidadColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'cantidad\' de la tabla \'Producto\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProducto.cantidadColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public double precioVSugerido {
+                get {
+                    try {
+                        return ((double)(this[this.tableProducto.precioVSugeridoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'precioVSugerido\' de la tabla \'Producto\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProducto.precioVSugeridoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsComunidadNull() {
+                return this.IsNull(this.tableProducto.ComunidadColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetComunidadNull() {
+                this[this.tableProducto.ComunidadColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsCategoriaNull() {
+                return this.IsNull(this.tableProducto.CategoriaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetCategoriaNull() {
+                this[this.tableProducto.CategoriaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsProductoNull() {
+                return this.IsNull(this.tableProducto.ProductoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetProductoNull() {
+                this[this.tableProducto.ProductoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsdescripcionNull() {
+                return this.IsNull(this.tableProducto.descripcionColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetdescripcionNull() {
+                this[this.tableProducto.descripcionColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IscantidadNull() {
+                return this.IsNull(this.tableProducto.cantidadColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetcantidadNull() {
+                this[this.tableProducto.cantidadColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsprecioVSugeridoNull() {
+                return this.IsNull(this.tableProducto.precioVSugeridoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetprecioVSugeridoNull() {
+                this[this.tableProducto.precioVSugeridoColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class ListaPrecioRow : global::System.Data.DataRow {
+            
+            private ListaPrecioDataTable tableListaPrecio;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal ListaPrecioRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableListaPrecio = ((ListaPrecioDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4551,324 +4656,83 @@ namespace SolucionKermesseGrupo2.Reportes.DataSet {
             public string kermesse {
                 get {
                     try {
-                        return ((string)(this[this.tableIngresoComunidad.kermesseColumn]));
+                        return ((string)(this[this.tableListaPrecio.kermesseColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'kermesse\' de la tabla \'IngresoComunidad\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'kermesse\' de la tabla \'ListaPrecio\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableIngresoComunidad.kermesseColumn] = value;
+                    this[this.tableListaPrecio.kermesseColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string producto {
+            public string nombre {
                 get {
                     try {
-                        return ((string)(this[this.tableIngresoComunidad.productoColumn]));
+                        return ((string)(this[this.tableListaPrecio.nombreColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'producto\' de la tabla \'IngresoComunidad\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'nombre\' de la tabla \'ListaPrecio\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableIngresoComunidad.productoColumn] = value;
+                    this[this.tableListaPrecio.nombreColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string fechaCreacion {
+            public string descripcion {
                 get {
                     try {
-                        return ((string)(this[this.tableIngresoComunidad.fechaCreacionColumn]));
+                        return ((string)(this[this.tableListaPrecio.descripcionColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'fechaCreacion\' de la tabla \'IngresoComunidad\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'descripcion\' de la tabla \'ListaPrecio\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableIngresoComunidad.fechaCreacionColumn] = value;
+                    this[this.tableListaPrecio.descripcionColumn] = value;
                 }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string usuarioCreacion {
-                get {
-                    try {
-                        return ((string)(this[this.tableIngresoComunidad.usuarioCreacionColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'usuarioCreacion\' de la tabla \'IngresoComunidad\' es DBNull" +
-                                ".", e);
-                    }
-                }
-                set {
-                    this[this.tableIngresoComunidad.usuarioCreacionColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsidIngresoComunidadNull() {
-                return this.IsNull(this.tableIngresoComunidad.idIngresoComunidadColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetidIngresoComunidadNull() {
-                this[this.tableIngresoComunidad.idIngresoComunidadColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IscomunidadNull() {
-                return this.IsNull(this.tableIngresoComunidad.comunidadColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetcomunidadNull() {
-                this[this.tableIngresoComunidad.comunidadColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IskermesseNull() {
-                return this.IsNull(this.tableIngresoComunidad.kermesseColumn);
+                return this.IsNull(this.tableListaPrecio.kermesseColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetkermesseNull() {
-                this[this.tableIngresoComunidad.kermesseColumn] = global::System.Convert.DBNull;
+                this[this.tableListaPrecio.kermesseColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsproductoNull() {
-                return this.IsNull(this.tableIngresoComunidad.productoColumn);
+            public bool IsnombreNull() {
+                return this.IsNull(this.tableListaPrecio.nombreColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetproductoNull() {
-                this[this.tableIngresoComunidad.productoColumn] = global::System.Convert.DBNull;
+            public void SetnombreNull() {
+                this[this.tableListaPrecio.nombreColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsfechaCreacionNull() {
-                return this.IsNull(this.tableIngresoComunidad.fechaCreacionColumn);
+            public bool IsdescripcionNull() {
+                return this.IsNull(this.tableListaPrecio.descripcionColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetfechaCreacionNull() {
-                this[this.tableIngresoComunidad.fechaCreacionColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsusuarioCreacionNull() {
-                return this.IsNull(this.tableIngresoComunidad.usuarioCreacionColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetusuarioCreacionNull() {
-                this[this.tableIngresoComunidad.usuarioCreacionColumn] = global::System.Convert.DBNull;
-            }
-        }
-        
-        /// <summary>
-        ///Represents strongly named DataRow class.
-        ///</summary>
-        public partial class IngresoComunidadDetRow : global::System.Data.DataRow {
-            
-            private IngresoComunidadDetDataTable tableIngresoComunidadDet;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal IngresoComunidadDetRow(global::System.Data.DataRowBuilder rb) : 
-                    base(rb) {
-                this.tableIngresoComunidadDet = ((IngresoComunidadDetDataTable)(this.Table));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string idIngresoComunidadDet {
-                get {
-                    try {
-                        return ((string)(this[this.tableIngresoComunidadDet.idIngresoComunidadDetColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'idIngresoComunidadDet\' de la tabla \'IngresoComunidadDet\' " +
-                                "es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableIngresoComunidadDet.idIngresoComunidadDetColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string ControlBono {
-                get {
-                    try {
-                        return ((string)(this[this.tableIngresoComunidadDet.ControlBonoColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'ControlBono\' de la tabla \'IngresoComunidadDet\' es DBNull." +
-                                "", e);
-                    }
-                }
-                set {
-                    this[this.tableIngresoComunidadDet.ControlBonoColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string IngresoComunidad1 {
-                get {
-                    try {
-                        return ((string)(this[this.tableIngresoComunidadDet.IngresoComunidad1Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'IngresoComunidad1\' de la tabla \'IngresoComunidadDet\' es D" +
-                                "BNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableIngresoComunidadDet.IngresoComunidad1Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string denominacion {
-                get {
-                    try {
-                        return ((string)(this[this.tableIngresoComunidadDet.denominacionColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'denominacion\' de la tabla \'IngresoComunidadDet\' es DBNull" +
-                                ".", e);
-                    }
-                }
-                set {
-                    this[this.tableIngresoComunidadDet.denominacionColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string cantidad {
-                get {
-                    try {
-                        return ((string)(this[this.tableIngresoComunidadDet.cantidadColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'cantidad\' de la tabla \'IngresoComunidadDet\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableIngresoComunidadDet.cantidadColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string subTotalBono {
-                get {
-                    try {
-                        return ((string)(this[this.tableIngresoComunidadDet.subTotalBonoColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'subTotalBono\' de la tabla \'IngresoComunidadDet\' es DBNull" +
-                                ".", e);
-                    }
-                }
-                set {
-                    this[this.tableIngresoComunidadDet.subTotalBonoColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsidIngresoComunidadDetNull() {
-                return this.IsNull(this.tableIngresoComunidadDet.idIngresoComunidadDetColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetidIngresoComunidadDetNull() {
-                this[this.tableIngresoComunidadDet.idIngresoComunidadDetColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsControlBonoNull() {
-                return this.IsNull(this.tableIngresoComunidadDet.ControlBonoColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetControlBonoNull() {
-                this[this.tableIngresoComunidadDet.ControlBonoColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsIngresoComunidad1Null() {
-                return this.IsNull(this.tableIngresoComunidadDet.IngresoComunidad1Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetIngresoComunidad1Null() {
-                this[this.tableIngresoComunidadDet.IngresoComunidad1Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsdenominacionNull() {
-                return this.IsNull(this.tableIngresoComunidadDet.denominacionColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetdenominacionNull() {
-                this[this.tableIngresoComunidadDet.denominacionColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IscantidadNull() {
-                return this.IsNull(this.tableIngresoComunidadDet.cantidadColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetcantidadNull() {
-                this[this.tableIngresoComunidadDet.cantidadColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IssubTotalBonoNull() {
-                return this.IsNull(this.tableIngresoComunidadDet.subTotalBonoColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetsubTotalBonoNull() {
-                this[this.tableIngresoComunidadDet.subTotalBonoColumn] = global::System.Convert.DBNull;
+            public void SetdescripcionNull() {
+                this[this.tableListaPrecio.descripcionColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -5182,22 +5046,22 @@ namespace SolucionKermesseGrupo2.Reportes.DataSet {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public class IngresoComunidadRowChangeEvent : global::System.EventArgs {
+        public class ProductoRowChangeEvent : global::System.EventArgs {
             
-            private IngresoComunidadRow eventRow;
+            private ProductoRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public IngresoComunidadRowChangeEvent(IngresoComunidadRow row, global::System.Data.DataRowAction action) {
+            public ProductoRowChangeEvent(ProductoRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public IngresoComunidadRow Row {
+            public ProductoRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -5216,22 +5080,22 @@ namespace SolucionKermesseGrupo2.Reportes.DataSet {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public class IngresoComunidadDetRowChangeEvent : global::System.EventArgs {
+        public class ListaPrecioRowChangeEvent : global::System.EventArgs {
             
-            private IngresoComunidadDetRow eventRow;
+            private ListaPrecioRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public IngresoComunidadDetRowChangeEvent(IngresoComunidadDetRow row, global::System.Data.DataRowAction action) {
+            public ListaPrecioRowChangeEvent(ListaPrecioRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public IngresoComunidadDetRow Row {
+            public ListaPrecioRow Row {
                 get {
                     return this.eventRow;
                 }

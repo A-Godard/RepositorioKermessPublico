@@ -944,34 +944,31 @@
       <End Role="TasaCambio" EntitySet="TasaCambio" />
       <End Role="TasaCambioDet" EntitySet="TasaCambioDet" />
     </AssociationSet>
-    <EntitySet Name="VwIngresoComunidad" EntityType="BDKermesseModel.VwIngresoComunidad" />
-    <EntitySet Name="vwIngresoComunidadDetalle" EntityType="BDKermesseModel.vwIngresoComunidadDetalle" />
+    <EntitySet Name="VwProducto" EntityType="BDKermesseModel.VwProducto" />
+    <EntitySet Name="VwListaPrecio" EntityType="BDKermesseModel.VwListaPrecio" />
   </EntityContainer>
-  <EntityType Name="VwIngresoComunidad">
+  <EntityType Name="VwProducto">
     <Key>
-      <PropertyRef Name="idIngresoComunidad" />
+      <PropertyRef Name="idProducto" />
     </Key>
-    <Property Name="idIngresoComunidad" Type="Int32" Nullable="false" />
-    <Property Name="comunidad" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="true" />
-    <Property Name="kermesse" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
-    <Property Name="producto" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="true" />
-    <Property Name="fechaCreacion" Type="DateTime" Nullable="false" Precision="3" />
-    <Property Name="usuarioCreacion" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="idProducto" Type="Int32" Nullable="false" />
+    <Property Name="Comunidad" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="true" />
+    <Property Name="Categoria" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="true" />
+    <Property Name="Producto" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="true" />
+    <Property Name="descripcion" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="cantidad" Type="Int32" />
+    <Property Name="precioVSugerido" Type="Double" Nullable="false" />
   </EntityType>
-  <EntityType Name="vwIngresoComunidadDetalle">
+  <EntityType Name="VwListaPrecio">
     <Key>
-      <PropertyRef Name="idIngresoComunidadDet" />
-      <PropertyRef Name="ControlBono" />
-      <PropertyRef Name="IngresoComunidad1" />
-      <PropertyRef Name="denominacion" />
-      <PropertyRef Name="cantidad" />
-      <PropertyRef Name="subTotalBono" />
+      <PropertyRef Name="idListaPrecio" />
     </Key>
-    <Property Name="idIngresoComunidadDet" Type="Int32" Nullable="false" />
-    <Property Name="ControlBono" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="true" />
-    <Property Name="IngresoComunidad1" Type="Int32" Nullable="false" />
-    <Property Name="denominacion" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="true" />
-    <Property Name="cantidad" Type="Int32" Nullable="false" />
-    <Property Name="subTotalBono" Type="Double" Nullable="false" />
+    <Property Name="idListaPrecio" Type="Int32" Nullable="false" />
+    <Property Name="Kermesse" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Parroquia" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Usuario" Type="String" Nullable="false" MaxLength="91" FixedLength="false" Unicode="true" />
+    <Property Name="listaPrecio" Type="Int32" Nullable="false" />
+    <Property Name="Lista" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="descripcion" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
   </EntityType>
 </Schema>

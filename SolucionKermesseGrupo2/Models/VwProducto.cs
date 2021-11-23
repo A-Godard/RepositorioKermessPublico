@@ -12,13 +12,14 @@ namespace SolucionKermesseGrupo2.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class vwIngresoComunidadDetalle
+    public partial class VwProducto
     {
-        public int idIngresoComunidadDet { get; set; }
-        public string ControlBono { get; set; }
-        public int IngresoComunidad1 { get; set; }
-        public string denominacion { get; set; }
-        public int cantidad { get; set; }
-        public double subTotalBono { get; set; }
+        public int idProducto { get; set; }
+        public string Comunidad { get; set; }
+        public string Categoria { get; set; }
+        public string Producto { get; set; }
+        public string descripcion { get; set; }
+        public Nullable<int> cantidad { get; set; }
+        public double precioVSugerido { get; set; }
     }
 }
