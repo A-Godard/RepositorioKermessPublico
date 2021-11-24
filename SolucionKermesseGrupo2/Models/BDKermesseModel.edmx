@@ -1913,7 +1913,6 @@ advertencia 6002: La tabla o vista 'BDKermesse.dbo.VwProducto' no tiene definida
             <End Role="TasaCambioDet" EntitySet="TasaCambioDet" />
           </AssociationSet>
           <EntitySet Name="VwProducto" EntityType="BDKermesseModel.VwProducto" />
-          <EntitySet Name="VwListaPrecio" EntityType="BDKermesseModel.VwListaPrecio" />
           <EntitySet Name="VwIngresoComunidad" EntityType="BDKermesseModel.VwIngresoComunidad" />
           <EntitySet Name="vwIngresoComunidadDetalle" EntityType="BDKermesseModel.vwIngresoComunidadDetalle" />
         </EntityContainer>
@@ -1928,18 +1927,6 @@ advertencia 6002: La tabla o vista 'BDKermesse.dbo.VwProducto' no tiene definida
           <Property Name="descripcion" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="cantidad" Type="Int32" />
           <Property Name="precioVSugerido" Type="Double" Nullable="false" />
-        </EntityType>
-        <EntityType Name="VwListaPrecio">
-          <Key>
-            <PropertyRef Name="idListaPrecio" />
-          </Key>
-          <Property Name="idListaPrecio" Type="Int32" Nullable="false" />
-          <Property Name="Kermesse" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="Parroquia" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="Usuario" Type="String" Nullable="false" MaxLength="91" FixedLength="false" Unicode="true" />
-          <Property Name="listaPrecio" Type="Int32" Nullable="false" />
-          <Property Name="Lista" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="descripcion" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="VwIngresoComunidad">
           <Key>

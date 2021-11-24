@@ -30,8 +30,8 @@ namespace SolucionKermesseGrupo2.Controllers
 
                 catProducto = catProducto.Where(s => s.nombre.Contains(ValorBusqued));
             }
-
             return View(catProducto.ToList());
+            //return View(catProducto.ToList());
         }
 
 

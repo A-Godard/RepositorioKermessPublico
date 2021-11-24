@@ -18,16 +18,17 @@ namespace SolucionKermesseGrupo2.Controllers
         // GET: ListaPrecio
         public ActionResult Index(string ValorBusqued)
         {
-            var listas = from m in db.VwListaPrecio
-                            select m;
+            //var listas = from m in db.VwListaPrecio
+            var listas=1;
+                          
 
             if (!String.IsNullOrEmpty(ValorBusqued))
             {
 
-                listas = listas.Where(s => s.Lista.Contains(ValorBusqued));
+                
             }
 
-            return View(listas.ToList());
+            return View(listas);
         }
 
         public ActionResult Details(int? id)
@@ -36,12 +37,9 @@ namespace SolucionKermesseGrupo2.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            VwListaPrecio lista = db.VwListaPrecio.Find(id);
-            if (lista == null)
-            {
-                return HttpNotFound();
-            }
-            return View(lista);
+            //VwListaPrecio lista = db.VwListaPrecio.Find(id);
+           
+            return View();
         }
 
         public ActionResult Crear()
@@ -82,10 +80,10 @@ namespace SolucionKermesseGrupo2.Controllers
             rpt.ReportPath = ruta;
 
             BDKermesseEntities modelo = new BDKermesseEntities();
-            List<VwListaPrecio> ls = new List<VwListaPrecio>();
-            ls = modelo.VwListaPrecio.ToList();
+            /*List<VwListaPrecio> ls = new List<VwListaPrecio>();
+            ls = modelo.VwListaPrecio.ToList();*/
 
-            ReportDataSource rd = new ReportDataSource("DSListaPrecio", ls);
+            ReportDataSource rd = new ReportDataSource("DSListaPrecio");
             rpt.DataSources.Add(rd);
 
             var b = rpt.Render(tipo, null, out mt, out enc, out f, out s, out w);
