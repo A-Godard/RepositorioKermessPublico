@@ -508,7 +508,6 @@
     <EmbeddedResource Include="Reportes\RptMoneda.rdlc" />
     <EmbeddedResource Include="Reportes\RptOpcion.rdlc" />
     <EmbeddedResource Include="Reportes\RptParroquia.rdlc" />
-    <EmbeddedResource Include="Reportes\RptProducto.rdlc" />
     <EmbeddedResource Include="Reportes\RptRol.rdlc" />
     <EmbeddedResource Include="Reportes\RptUsuario.rdlc" />
   </ItemGroup>
