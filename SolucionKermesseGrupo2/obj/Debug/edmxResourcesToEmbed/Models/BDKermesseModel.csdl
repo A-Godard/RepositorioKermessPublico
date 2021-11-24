@@ -946,6 +946,8 @@
     </AssociationSet>
     <EntitySet Name="VwProducto" EntityType="BDKermesseModel.VwProducto" />
     <EntitySet Name="VwListaPrecio" EntityType="BDKermesseModel.VwListaPrecio" />
+    <EntitySet Name="VwKermesse" EntityType="BDKermesseModel.VwKermesse" />
+    <EntitySet Name="VwListaPrecioDet" EntityType="BDKermesseModel.VwListaPrecioDet" />
   </EntityContainer>
   <EntityType Name="VwProducto">
     <Key>
@@ -965,10 +967,28 @@
     </Key>
     <Property Name="idListaPrecio" Type="Int32" Nullable="false" />
     <Property Name="Kermesse" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
-    <Property Name="Parroquia" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
-    <Property Name="Usuario" Type="String" Nullable="false" MaxLength="91" FixedLength="false" Unicode="true" />
-    <Property Name="listaPrecio" Type="Int32" Nullable="false" />
     <Property Name="Lista" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="descripcion" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="VwKermesse">
+    <Key>
+      <PropertyRef Name="idKermesse" />
+    </Key>
+    <Property Name="idKermesse" Type="Int32" Nullable="false" />
+    <Property Name="Parroquia" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Kermesse" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="fInicio" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="fFinal" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="descripcion" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Usuario" Type="String" Nullable="false" MaxLength="91" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="VwListaPrecioDet">
+    <Key>
+      <PropertyRef Name="idListaPrecioDet" />
+    </Key>
+    <Property Name="idListaPrecioDet" Type="Int32" Nullable="false" />
+    <Property Name="Lista" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Producto" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="true" />
+    <Property Name="precioVenta" Type="Double" Nullable="false" />
   </EntityType>
 </Schema>

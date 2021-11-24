@@ -71,9 +71,10 @@
                             @Html.DisplayFor(modelItem => item.precioVSugerido)
                         </td>
                         <td>
-                            @Html.ActionLink("Edit", "Edit", new { id = item.idProducto }) |
-                            @Html.ActionLink("Details", "Details", new { id = item.idProducto }) |
-                            @Html.ActionLink("Delete", "Delete", new { id = item.idProducto })
+                            @Html.ActionLink("Editar", "Edit", new { id = item.idProducto }) |
+                            @Html.ActionLink("Detalles", "Details", new { id = item.idProducto }) |
+                            @Html.ActionLink("Borrar", "Delete", new { id = item.idProducto }) |
+                            @Html.ActionLink("Reporte", "VerReporteProducto", new { id = item.idProducto })
                         </td>
                     </tr>
                 }

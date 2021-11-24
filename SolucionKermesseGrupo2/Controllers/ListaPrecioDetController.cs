@@ -10,24 +10,24 @@ using System.Web.Mvc;
 
 namespace SolucionKermesseGrupo2.Controllers
 {
-    public class ProductoController : Controller
+    public class ListaPrecioDetController : Controller
     {
+
         private BDKermesseEntities db = new BDKermesseEntities();
 
-
-        // GET: Producto
+        // GET: ListaPrecioDet
         public ActionResult Index(string ValorBusqued)
         {
-            var productos = from m in db.VwProducto
-                          select m;
+            var listaDet = from m in db.VwListaPrecioDet
+                         select m;
 
             if (!String.IsNullOrEmpty(ValorBusqued))
             {
 
-                productos = productos.Where(s => s.Producto.Contains(ValorBusqued));
+                listaDet = listaDet.Where(s => s.Lista.Contains(ValorBusqued));
             }
 
-            return View(productos.ToList());
+            return View(listaDet.ToList());
         }
 
         public ActionResult Details(int? id)
@@ -36,46 +36,40 @@ namespace SolucionKermesseGrupo2.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            VwProducto producto = db.VwProducto.Find(id);
-            if (producto == null)
+            VwListaPrecioDet listaDet = db.VwListaPrecioDet.Find(id);
+            if (listaDet == null)
             {
                 return HttpNotFound();
             }
-            return View(producto);
+            return View(listaDet);
         }
-
 
         public ActionResult Crear()
         {
-            ViewBag.comunidad = new SelectList(db.Comunidad, "idComunidad", "nombre" );
-            ViewBag.catProd = new SelectList(db.CategoriaProducto, "idCatProd", "nombre");
+            ViewBag.listaPrecio = new SelectList(db.ListaPrecio, "idListaPrecio", "nombre");
+            ViewBag.producto = new SelectList(db.Producto, "idProducto", "nombre");
             return View();
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
 
-        public ActionResult Crear(Producto producto)
+        public ActionResult Crear(ListaPrecioDet listaPrecioDet)
         {
             if (ModelState.IsValid)
             {
-                Producto p = new Producto();
-                p.comunidad = producto.comunidad;
-                p.catProd = producto.catProd;
-                p.nombre = producto.nombre;
-                p.descripcion = producto.descripcion;
-                p.cantidad = producto.cantidad;
-                p.precioVSugerido = producto.precioVSugerido;
-                
+                ListaPrecioDet ld = new ListaPrecioDet();
+                ld.listaPrecio = listaPrecioDet.listaPrecio;
+                ld.producto = listaPrecioDet.producto;
+                ld.precioVenta = listaPrecioDet.precioVenta;
 
-                db.Producto.Add(p);
+
+                db.ListaPrecioDet.Add(ld);
                 db.SaveChanges();
                 ModelState.Clear();
-
             }
-
-            ViewBag.comunidad = new SelectList(db.Comunidad, "idComunidad", "nombre");
-            ViewBag.catProd = new SelectList(db.CategoriaProducto, "idCatProd", "nombre");
+            ViewBag.listaPrecio = new SelectList(db.ListaPrecio, "idListaPrecio", "nombre");
+            ViewBag.producto = new SelectList(db.Producto, "idProducto", "nombre");
 
             return View("Crear");
         }
@@ -87,44 +81,43 @@ namespace SolucionKermesseGrupo2.Controllers
             string[] s;
             Warning[] w;
 
-            string ruta = Path.Combine(Server.MapPath("~/Reportes"), "RptProducto.rdlc");
+            string ruta = Path.Combine(Server.MapPath("~/Reportes"), "RptListaPrecioDet.rdlc");
             rpt.ReportPath = ruta;
 
             BDKermesseEntities modelo = new BDKermesseEntities();
-            List<VwProducto> ls = new List<VwProducto>();
-            ls = modelo.VwProducto.ToList();
+            List<VwListaPrecioDet> ls = new List<VwListaPrecioDet>();
+            ls = modelo.VwListaPrecioDet.ToList();
 
-            ReportDataSource rd = new ReportDataSource("DSProducto", ls);
+            ReportDataSource rd = new ReportDataSource("DSListaPrecioDet", ls);
             rpt.DataSources.Add(rd);
 
             var b = rpt.Render(tipo, null, out mt, out enc, out f, out s, out w);
             return new FileContentResult(b, mt);
         }
 
-
-        public ActionResult VerReporteProducto(int id)
+        public ActionResult VerReporteListaDet1(int id)
         {
             LocalReport rpt = new LocalReport();
             string mt, enc, f;
             string[] s;
             Warning[] w;
 
-            var productos = from m in db.Producto select m;
+            var listaPrecioDet = from m in db.ListaPrecioDet select m;
             if (id != null)
             {
-                Producto producto = db.Producto.Find(id);
+                ListaPrecioDet listaDet = db.ListaPrecioDet.Find(id);
 
             }
 
-            string ruta = Path.Combine(Server.MapPath("~/Reportes"), "RptProducto2.rdlc");
+            string ruta = Path.Combine(Server.MapPath("~/Reportes"), "RptListaPrecioDet1.rdlc");
             rpt.ReportPath = ruta;
 
             BDKermesseEntities modelo = new BDKermesseEntities();
-            List<Producto> ls = new List<Producto>();
-            ls = modelo.Producto.ToList();
+            List<ListaPrecioDet> ls = new List<ListaPrecioDet>();
+            ls = modelo.ListaPrecioDet.ToList();
 
 
-            ReportDataSource rds = new ReportDataSource("DSProducto", ls);
+            ReportDataSource rds = new ReportDataSource("DSListaPrecioDet", ls);
             rpt.DataSources.Add(rds);
 
             byte[] b = rpt.Render("PDF", null, out mt, out enc, out f, out s, out w);
@@ -133,36 +126,38 @@ namespace SolucionKermesseGrupo2.Controllers
             return File(b, mt);
         }
 
+
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Producto producto = db.Producto.Find(id);
-            if (producto == null)
+            ListaPrecioDet listaDet = db.ListaPrecioDet.Find(id);
+            if (listaDet == null)
             {
                 return HttpNotFound();
             }
-            ViewBag.comunidad = new SelectList(db.Comunidad, "idComunidad", "nombre");
-            ViewBag.catProd = new SelectList(db.CategoriaProducto, "idCatProd", "nombre");
-            
-            return View(producto);
+            ViewBag.listaPrecio = new SelectList(db.ListaPrecio, "idListaPrecio", "nombre");
+            ViewBag.producto = new SelectList(db.Producto, "idProducto", "nombre");
+
+            return View(listaDet);
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "idProducto, comunidad, catProd, nombre, descripcion, cantidad, precioVSugerido, estado")] Producto producto)
+        public ActionResult Edit([Bind(Include = "idListaPrecioDet, listaPrecio, producto, precioVenta")] ListaPrecioDet listaDet)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(producto).State = System.Data.Entity.EntityState.Modified;
+                db.Entry(listaDet).State = System.Data.Entity.EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.comunidad = new SelectList(db.Comunidad, "idComunidad", "nombre");
-            ViewBag.catProd = new SelectList(db.CategoriaProducto, "idCatProd", "nombre");
-            return View(producto);
+            ViewBag.listaPrecio = new SelectList(db.ListaPrecio, "idListaPrecio", "nombre");
+            ViewBag.producto = new SelectList(db.Producto, "idProducto", "nombre");
+
+            return View(listaDet);
         }
 
         public ActionResult Delete(int? id)
@@ -171,12 +166,12 @@ namespace SolucionKermesseGrupo2.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Producto producto = db.Producto.Find(id);
-            if (producto == null)
+            ListaPrecioDet listaDet = db.ListaPrecioDet.Find(id);
+            if (listaDet == null)
             {
                 return HttpNotFound();
             }
-            return View(producto);
+            return View(listaDet);
         }
 
 
@@ -184,8 +179,8 @@ namespace SolucionKermesseGrupo2.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Producto producto = db.Producto.Find(id);
-            db.Producto.Remove(producto);
+            ListaPrecioDet listaDet = db.ListaPrecioDet.Find(id);
+            db.ListaPrecioDet.Remove(listaDet);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

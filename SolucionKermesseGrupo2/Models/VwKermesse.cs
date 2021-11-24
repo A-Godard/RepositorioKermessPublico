@@ -12,12 +12,14 @@ namespace SolucionKermesseGrupo2.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class sysdiagrams
+    public partial class VwKermesse
     {
-        public string name { get; set; }
-        public int principal_id { get; set; }
-        public int diagram_id { get; set; }
-        public Nullable<int> version { get; set; }
-        public byte[] definition { get; set; }
+        public int idKermesse { get; set; }
+        public string Parroquia { get; set; }
+        public string Kermesse { get; set; }
+        public System.DateTime fInicio { get; set; }
+        public System.DateTime fFinal { get; set; }
+        public string descripcion { get; set; }
+        public string Usuario { get; set; }
     }
 }

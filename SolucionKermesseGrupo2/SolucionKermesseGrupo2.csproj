@@ -156,7 +156,9 @@
     <Compile Include="Controllers\ComunidadesController.cs" />
     <Compile Include="Controllers\ControlBonoesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\KermesseController.cs" />
     <Compile Include="Controllers\ListaPrecioController.cs" />
+    <Compile Include="Controllers\ListaPrecioDetController.cs" />
     <Compile Include="Controllers\MonedasController.cs" />
     <Compile Include="Controllers\OpcionsController.cs" />
     <Compile Include="Controllers\ParroquiasController.cs" />
@@ -241,9 +243,6 @@
     <Compile Include="Models\RolUsuario.cs">
       <DependentUpon>BDKermesseModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\sysdiagrams.cs">
-      <DependentUpon>BDKermesseModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="Models\TasaCambio.cs">
       <DependentUpon>BDKermesseModel.tt</DependentUpon>
     </Compile>
@@ -253,7 +252,13 @@
     <Compile Include="Models\Usuario.cs">
       <DependentUpon>BDKermesseModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\VwKermesse.cs">
+      <DependentUpon>BDKermesseModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\VwListaPrecio.cs">
+      <DependentUpon>BDKermesseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\VwListaPrecioDet.cs">
       <DependentUpon>BDKermesseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\VwProducto.cs">
@@ -463,10 +468,20 @@
     <Content Include="Views\ListaPrecio\Details.cshtml" />
     <Content Include="Views\Producto\Crear.cshtml" />
     <Content Include="Views\ListaPrecio\Crear.cshtml" />
-    <Content Include="Views\Producto\Edit.cshtml" />
     <Content Include="Views\Producto\Delete.cshtml" />
     <Content Include="Views\ListaPrecio\Edit.cshtml" />
     <Content Include="Views\ListaPrecio\Delete.cshtml" />
+    <Content Include="Views\Kermesse\Index.cshtml" />
+    <Content Include="Views\Kermesse\Details.cshtml" />
+    <Content Include="Views\Kermesse\Crear.cshtml" />
+    <Content Include="Views\Producto\Edit.cshtml" />
+    <Content Include="Views\Kermesse\Edit.cshtml" />
+    <Content Include="Views\Kermesse\Delete.cshtml" />
+    <Content Include="Views\ListaPrecioDet\Index.cshtml" />
+    <Content Include="Views\ListaPrecioDet\Details.cshtml" />
+    <Content Include="Views\ListaPrecioDet\Crear.cshtml" />
+    <Content Include="Views\ListaPrecioDet\Edit.cshtml" />
+    <Content Include="Views\ListaPrecioDet\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -492,12 +507,17 @@
     <EmbeddedResource Include="Reportes\RptCategoriaProducto.rdlc" />
     <EmbeddedResource Include="Reportes\RptComunidad.rdlc" />
     <EmbeddedResource Include="Reportes\RptControlBono.rdlc" />
+    <EmbeddedResource Include="Reportes\RptKermesse.rdlc" />
+    <EmbeddedResource Include="Reportes\RptKermesse2.rdlc" />
     <EmbeddedResource Include="Reportes\RptListaPrecio.rdlc" />
     <EmbeddedResource Include="Reportes\RptListaPrecio2.rdlc" />
+    <EmbeddedResource Include="Reportes\RptListaPrecioDet.rdlc" />
+    <EmbeddedResource Include="Reportes\RptListaPrecioDet1.rdlc" />
     <EmbeddedResource Include="Reportes\RptMoneda.rdlc" />
     <EmbeddedResource Include="Reportes\RptOpcion.rdlc" />
     <EmbeddedResource Include="Reportes\RptParroquia.rdlc" />
     <EmbeddedResource Include="Reportes\RptProducto.rdlc" />
+    <EmbeddedResource Include="Reportes\RptProducto2.rdlc" />
     <EmbeddedResource Include="Reportes\RptRol.rdlc" />
     <EmbeddedResource Include="Reportes\RptUsuario.rdlc" />
   </ItemGroup>

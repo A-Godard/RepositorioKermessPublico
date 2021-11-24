@@ -92,7 +92,7 @@ namespace SolucionKermesseGrupo2.Controllers
             return new FileContentResult(b, mt);
         }
 
-        public ActionResult VerReporteLista1(int id)
+        public ActionResult VerReporteLista(int id)
         {
             LocalReport rpt = new LocalReport();
             string mt, enc, f;
@@ -135,6 +135,8 @@ namespace SolucionKermesseGrupo2.Controllers
             {
                 return HttpNotFound();
             }
+            ViewBag.kermesse = new SelectList(db.Kermesse, "idKermesse", "nombre");
+            
             return View(lista);
         }
 
@@ -148,6 +150,8 @@ namespace SolucionKermesseGrupo2.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
+            ViewBag.kermesse = new SelectList(db.Kermesse, "idKermesse", "nombre");
+
             return View(lista);
         }
 

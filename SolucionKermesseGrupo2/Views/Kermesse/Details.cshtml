@@ -1,0 +1,67 @@
+﻿@model SolucionKermesseGrupo2.Models.VwKermesse
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutControladores.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>VwKermesse</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Parroquia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Parroquia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Kermesse)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Kermesse)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.fInicio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fInicio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.fFinal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fFinal)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Usuario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Usuario)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.idKermesse }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
