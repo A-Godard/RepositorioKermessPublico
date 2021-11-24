@@ -4,19 +4,28 @@
     ViewBag.Title = "Create";
     Layout = "~/Views/Shared/_LayoutControladores.cshtml";
 }
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<h2>Crear Nuevo Ingreso</h2>
+<head>
+    @Styles.Render("~/Content/StyleSheetComunidad.css")
+    @Styles.Render("~/Content/Site.css")
+</head>
 
-<h2>Create</h2>
 
-
-@using (Html.BeginForm()) 
+@using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
-        <h4>IngresoComunidad</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        <div class="form-group">
+        <div class="form-group" id="lblFormCM">
             @Html.LabelFor(model => model.kermesse, "kermesse", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.DropDownList("kermesse", null, htmlAttributes: new { @class = "form-control" })
@@ -24,7 +33,7 @@
             </div>
         </div>
 
-        <div class="form-group">
+        <div class="form-group" id="lblFormCM">
             @Html.LabelFor(model => model.comunidad, "comunidad", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.DropDownList("comunidad", null, htmlAttributes: new { @class = "form-control" })
@@ -32,7 +41,7 @@
             </div>
         </div>
 
-        <div class="form-group">
+        <div class="form-group" id="lblFormCM">
             @Html.LabelFor(model => model.producto, "producto", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.DropDownList("producto", null, htmlAttributes: new { @class = "form-control" })
@@ -40,7 +49,7 @@
             </div>
         </div>
 
-        <div class="form-group">
+        <div class="form-group" id="lblFormCM">
             @Html.LabelFor(model => model.cantProducto, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.cantProducto, new { htmlAttributes = new { @class = "form-control" } })
@@ -48,7 +57,7 @@
             </div>
         </div>
 
-        <div class="form-group">
+        <div class="form-group" id="lblFormCM">
             @Html.LabelFor(model => model.totalBonos, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.totalBonos, new { htmlAttributes = new { @class = "form-control" } })
@@ -56,7 +65,7 @@
             </div>
         </div>
 
-        <div class="form-group">
+        <div class="form-group" id="lblFormCM">
             @Html.LabelFor(model => model.usuarioCreacion, "usuarioCreacion", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.DropDownList("usuarioCreacion", null, htmlAttributes: new { @class = "form-control" })
@@ -64,7 +73,7 @@
             </div>
         </div>
 
-        <div class="form-group">
+        <div class="form-group" id="lblFormCM">
             @Html.LabelFor(model => model.fechaCreacion, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.fechaCreacion, new { htmlAttributes = new { @class = "form-control" } })
@@ -72,7 +81,7 @@
             </div>
         </div>
 
-        <div class="form-group">
+        <div class="form-group" id="lblFormCM">
             @Html.LabelFor(model => model.usuarioModificacion, "usuarioModificacion", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.DropDownList("usuarioModificacion", null, htmlAttributes: new { @class = "form-control" })
@@ -80,7 +89,7 @@
             </div>
         </div>
 
-        <div class="form-group">
+        <div class="form-group" id="lblFormCM">
             @Html.LabelFor(model => model.fechaModificacion, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.fechaModificacion, new { htmlAttributes = new { @class = "form-control" } })
@@ -88,7 +97,7 @@
             </div>
         </div>
 
-        <div class="form-group">
+        <div class="form-group" id="lblFormCM">
             @Html.LabelFor(model => model.usuarioEliminacion, "usuarioEliminacion", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.DropDownList("usuarioEliminacion", null, htmlAttributes: new { @class = "form-control" })
@@ -96,7 +105,7 @@
             </div>
         </div>
 
-        <div class="form-group">
+        <div class="form-group" id="lblFormCM">
             @Html.LabelFor(model => model.fechaEliminacion, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.fechaEliminacion, new { htmlAttributes = new { @class = "form-control" } })
@@ -106,16 +115,20 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
+                <input type="submit" value="Crear" class="btn btn-primary" id="Boton" />
             </div>
         </div>
     </div>
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Regresar a la página principal", "Index")
 </div>
+
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
 }
+<br />
+<br />
+<br />
