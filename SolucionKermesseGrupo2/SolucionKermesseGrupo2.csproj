@@ -326,6 +326,7 @@
     <Content Include="Content\StyleSheetIndexRol.css" />
     <Content Include="Content\StyleSheetIndexUser.css" />
     <Content Include="Content\StyleSheetLogin.css" />
+    <Content Include="Content\StyleSheetPrueba.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />

@@ -1,0 +1,32 @@
+﻿#TblBonos1 {
+    max-width: 1280px;
+    width: 90%;
+    margin: 35px;
+    table-layout: fixed;
+    background-color: lightblue;
+    width: 1280px;
+    border-collapse: collapse;
+    border: 3px solid black;
+}
+
+#Container {
+    position: relative;
+    margin: 0 auto;
+    max-width: 1280px;
+    width: 90%;
+    margin: 75px;
+}
+
+.center {
+    margin: 0;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+#BtnCrearBonos {
+    margin-top:1px;
+    margin-left:170px;
+
+}
