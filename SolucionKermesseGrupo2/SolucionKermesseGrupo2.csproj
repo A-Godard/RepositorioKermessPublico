@@ -475,6 +475,10 @@
     <Content Include="Views\IngresoComunidads\Edit.cshtml" />
     <Content Include="Views\IngresoComunidads\Index.cshtml" />
     <Content Include="Views\IngresoComunidadDets\Index.cshtml" />
+    <Content Include="Views\IngresoComunidadDets\Details.cshtml" />
+    <Content Include="Views\IngresoComunidadDets\Create.cshtml" />
+    <Content Include="Views\IngresoComunidadDets\Edit.cshtml" />
+    <Content Include="Views\IngresoComunidadDets\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
