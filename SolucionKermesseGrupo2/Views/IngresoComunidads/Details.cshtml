@@ -4,13 +4,23 @@
     ViewBag.Title = "Details";
     Layout = "~/Views/Shared/_LayoutControladores.cshtml";
 }
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
 
-<h2>Details</h2>
+<h2>Detalles Ingreso Comunidad</h2>
+<head>
+    @Styles.Render("~/Content/StyleSheetComunidad.css")
+    @Styles.Render("~/Content/Site.css")
+</head>
 
 <div>
-    <h4>IngresoComunidad</h4>
     <hr />
-    <dl class="dl-horizontal">
+    <dl class="dl-horizontal" id="DetComunidad">
         <dt>
             @Html.DisplayNameFor(model => model.cantProducto)
         </dt>
@@ -102,6 +112,6 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.idIngresoComunidad }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Editar", "Edit", new { id = Model.idIngresoComunidad }) |
+    @Html.ActionLink("Regresar a la página principal", "Index")
 </p>
