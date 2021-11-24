@@ -11,7 +11,8 @@ namespace SolucionKermesseGrupo2.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Comunidad
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -22,8 +23,14 @@ namespace SolucionKermesseGrupo2.Models
         }
     
         public int idComunidad { get; set; }
+        [Display(Name = "Nombre")]
+        [Required]
         public string nombre { get; set; }
+        [Display(Name = "Responsable")]
+        [Required]
         public string responsble { get; set; }
+        [Display(Name = "Contribución")]
+        [Required]
         public string descContribucion { get; set; }
         public int estado { get; set; }
     
