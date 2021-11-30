@@ -11,8 +11,7 @@ namespace SolucionKermesseGrupo2.Models
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-
+    
     public partial class ControlBono
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -22,11 +21,7 @@ namespace SolucionKermesseGrupo2.Models
         }
     
         public int idBono { get; set; }
-        [Display(Name = "Bonos")]
-        [Required]
         public string nombre { get; set; }
-        [Display(Name = "Valor")]
-        [Required]
         public double valor { get; set; }
         public int estado { get; set; }
     

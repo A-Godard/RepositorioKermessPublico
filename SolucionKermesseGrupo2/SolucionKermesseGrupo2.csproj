@@ -155,6 +155,7 @@
     <Compile Include="Controllers\CategoriaProductoesController.cs" />
     <Compile Include="Controllers\ComunidadesController.cs" />
     <Compile Include="Controllers\ControlBonoesController.cs" />
+    <Compile Include="Controllers\GastoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\IngresoComunidadDetsController.cs" />
     <Compile Include="Controllers\IngresoComunidadsController.cs" />
@@ -163,6 +164,7 @@
     <Compile Include="Controllers\OpcionsController.cs" />
     <Compile Include="Controllers\ParroquiasController.cs" />
     <Compile Include="Controllers\ProductoController.cs" />
+    <Compile Include="Controllers\RolOpcionsController.cs" />
     <Compile Include="Controllers\RolsController.cs" />
     <Compile Include="Controllers\UsuariosController.cs" />
     <Compile Include="Global.asax.cs">
@@ -252,6 +254,9 @@
     <Compile Include="Models\Usuario.cs">
       <DependentUpon>BDKermesseModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\VwGasto.cs">
+      <DependentUpon>BDKermesseModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\VwIngresoComunidad.cs">
       <DependentUpon>BDKermesseModel.tt</DependentUpon>
     </Compile>
@@ -259,6 +264,9 @@
       <DependentUpon>BDKermesseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\VwProducto.cs">
+      <DependentUpon>BDKermesseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\VwRolOpciones.cs">
       <DependentUpon>BDKermesseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -480,6 +488,14 @@
     <Content Include="Views\IngresoComunidadDets\Create.cshtml" />
     <Content Include="Views\IngresoComunidadDets\Edit.cshtml" />
     <Content Include="Views\IngresoComunidadDets\Delete.cshtml" />
+    <Content Include="Views\Gasto\Index.cshtml" />
+    <Content Include="Views\Gasto\Detalle.cshtml" />
+    <Content Include="Views\Gasto\Crear.cshtml" />
+    <Content Include="Views\RolOpcions\Create.cshtml" />
+    <Content Include="Views\RolOpcions\Delete.cshtml" />
+    <Content Include="Views\RolOpcions\Details.cshtml" />
+    <Content Include="Views\RolOpcions\Edit.cshtml" />
+    <Content Include="Views\RolOpcions\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

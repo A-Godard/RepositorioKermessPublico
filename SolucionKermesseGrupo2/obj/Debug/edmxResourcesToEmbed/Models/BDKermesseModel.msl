@@ -315,5 +315,27 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="VwGasto">
+      <EntityTypeMapping TypeName="BDKermesseModel.VwGasto">
+        <MappingFragment StoreEntitySet="VwGasto">
+          <ScalarProperty Name="Usuario" ColumnName="Usuario" />
+          <ScalarProperty Name="monto" ColumnName="monto" />
+          <ScalarProperty Name="concepto" ColumnName="concepto" />
+          <ScalarProperty Name="fechGasto" ColumnName="fechGasto" />
+          <ScalarProperty Name="Categoria" ColumnName="Categoria" />
+          <ScalarProperty Name="Kermesse" ColumnName="Kermesse" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VwRolOpciones">
+      <EntityTypeMapping TypeName="BDKermesseModel.VwRolOpciones">
+        <MappingFragment StoreEntitySet="VwRolOpciones">
+          <ScalarProperty Name="Opcion" ColumnName="Opcion" />
+          <ScalarProperty Name="Rol" ColumnName="Rol" />
+          <ScalarProperty Name="idRolOpcion" ColumnName="idRolOpcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

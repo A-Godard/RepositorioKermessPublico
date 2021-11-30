@@ -947,6 +947,8 @@
     <EntitySet Name="VwProducto" EntityType="BDKermesseModel.VwProducto" />
     <EntitySet Name="VwIngresoComunidad" EntityType="BDKermesseModel.VwIngresoComunidad" />
     <EntitySet Name="vwIngresoComunidadDetalle" EntityType="BDKermesseModel.vwIngresoComunidadDetalle" />
+    <EntitySet Name="VwGasto" EntityType="BDKermesseModel.VwGasto" />
+    <EntitySet Name="VwRolOpciones" EntityType="BDKermesseModel.VwRolOpciones" />
   </EntityContainer>
   <EntityType Name="VwProducto">
     <Key>
@@ -981,5 +983,25 @@
     <Property Name="denominacion" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="true" />
     <Property Name="cantidad" Type="Int32" Nullable="false" />
     <Property Name="subTotalBono" Type="Double" Nullable="false" />
+  </EntityType>
+  <EntityType Name="VwGasto">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="Kermesse" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Categoria" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="true" />
+    <Property Name="fechGasto" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="concepto" Type="String" Nullable="false" MaxLength="70" FixedLength="false" Unicode="true" />
+    <Property Name="monto" Type="Double" Nullable="false" />
+    <Property Name="Usuario" Type="String" Nullable="false" MaxLength="91" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="VwRolOpciones">
+    <Key>
+      <PropertyRef Name="idRolOpcion" />
+    </Key>
+    <Property Name="idRolOpcion" Type="Int32" Nullable="false" />
+    <Property Name="Rol" Type="String" Nullable="false" MaxLength="70" FixedLength="false" Unicode="true" />
+    <Property Name="Opcion" Type="String" Nullable="false" MaxLength="70" FixedLength="false" Unicode="true" />
   </EntityType>
 </Schema>

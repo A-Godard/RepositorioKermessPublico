@@ -68,6 +68,8 @@
         <EntityTypeShape EntityType="BDKermesseModel.VwProducto" Width="1.5" PointX="8.25" PointY="2.625" />
         <EntityTypeShape EntityType="BDKermesseModel.VwIngresoComunidad" Width="1.5" PointX="7.375" PointY="5.75" />
         <EntityTypeShape EntityType="BDKermesseModel.vwIngresoComunidadDetalle" Width="1.5" PointX="8.375" PointY="8.75" />
+        <EntityTypeShape EntityType="BDKermesseModel.VwGasto" Width="1.5" PointX="10.375" PointY="0.75" />
+        <EntityTypeShape EntityType="BDKermesseModel.VwRolOpciones" Width="1.5" PointX="11" PointY="4.5" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
