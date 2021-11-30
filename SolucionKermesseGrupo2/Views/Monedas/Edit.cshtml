@@ -22,58 +22,56 @@
 {
     @Html.AntiForgeryToken()
 
-<div class="form-horizontal" id="FomularioMoneda">
+    <div class="form-horizontal" id="FomularioMoneda">
 
-    <hr />
-    <br />
-    <br />
-    <br />
+        <hr />
+        
+        <br />
 
-    <br />
-    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-    @Html.HiddenFor(model => model.idMoneda)
-    <div id="Container">
-        <div class="center">
-            <div class="form-group" id="IFormMoneda1">
-                @Html.LabelFor(model => model.nombre, htmlAttributes: new { @class = "control-label col-md-2, TitleEdit" })
-                <div class="col-md-10" id="FormEdit">
-                    @Html.EditorFor(model => model.nombre, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.nombre, "", new { @class = "text-danger" })
+        <br />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.idMoneda)
+        <div id="Container">
+            <div class="center">
+                <div class="form-group" id="IFormMoneda1">
+                    @Html.LabelFor(model => model.nombre, htmlAttributes: new { @class = "control-label col-md-2, TitleEdit" })
+                    <div class="col-md-10" id="FormEdit">
+                        @Html.EditorFor(model => model.nombre, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.nombre, "", new { @class = "text-danger" })
+                    </div>
                 </div>
-            </div>
 
-            <div class="form-group" id="IFormMoneda2">
-                @Html.LabelFor(model => model.simbolo, htmlAttributes: new { @class = "control-label col-md-2, TitleEdit" })
-                <div class="col-md-10" id="FormEdit">
-                    @Html.EditorFor(model => model.simbolo, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.simbolo, "", new { @class = "text-danger" })
+                <div class="form-group" id="IFormMoneda2">
+                    @Html.LabelFor(model => model.simbolo, htmlAttributes: new { @class = "control-label col-md-2, TitleEdit" })
+                    <div class="col-md-10" id="FormEdit">
+                        @Html.EditorFor(model => model.simbolo, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.simbolo, "", new { @class = "text-danger" })
+                    </div>
                 </div>
-            </div>
 
-            <div class="form-group" id="IFormMoneda3">
-                @Html.LabelFor(model => model.estado, htmlAttributes: new { @class = "control-label col-md-2, TitleEdit" })
-                <div class="col-md-10" id="FormEdit">
-                    @Html.EditorFor(model => model.estado, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.estado, "", new { @class = "text-danger" })
+                @*      <div class="form-group" id="IFormMoneda3">
+                        @Html.LabelFor(model => model.estado, htmlAttributes: new { @class = "control-label col-md-2, TitleEdit" })
+                        <div class="col-md-10" id="FormEdit">
+                            @Html.EditorFor(model => model.estado, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.estado, "", new { @class = "text-danger" })
+                        </div>
+                    </div>*@
+            </div>
+        </div>
+        
+        <br />
+        <br />
+        <br />
+        <div id="Container">
+            <div class="center">
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" value="Guardar" id="BtnGuardar" class="btn btn-primary" />
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <div id="Container">
-        <div class="center">
-            <div class="form-group">
-                <div class="col-md-offset-2 col-md-10">
-                    <input type="submit" value="Guardar" id="BtnGuardar" class="btn btn-primary" />
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 }
 
 <div>
@@ -89,4 +87,11 @@
 <br />
 <br />
 <br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
 <br />

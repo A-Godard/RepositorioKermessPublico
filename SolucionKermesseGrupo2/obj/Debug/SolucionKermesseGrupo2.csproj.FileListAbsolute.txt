@@ -1846,3 +1846,4 @@ C:\Users\Andres Quintero\Desktop\RepositorioKermessPublico\SolucionKermesseGrupo
 C:\Users\Andres Quintero\Desktop\RepositorioKermessPublico\SolucionKermesseGrupo2\obj\Debug\SolucionKermesseGrupo2.csproj.CopyComplete
 C:\Users\Andres Quintero\Desktop\RepositorioKermessPublico\SolucionKermesseGrupo2\obj\Debug\SolucionKermesseGrupo2.dll
 C:\Users\Andres Quintero\Desktop\RepositorioKermessPublico\SolucionKermesseGrupo2\obj\Debug\SolucionKermesseGrupo2.pdb
+C:\Users\Andres Quintero\Desktop\RepositorioKermessPublico\SolucionKermesseGrupo2\obj\Debug\SolucionKermesseGrupo2.csprojAssemblyReference.cache
