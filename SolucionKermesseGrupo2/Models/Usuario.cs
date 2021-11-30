@@ -11,7 +11,8 @@ namespace SolucionKermesseGrupo2.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Usuario
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -33,10 +34,19 @@ namespace SolucionKermesseGrupo2.Models
         }
     
         public int idUsuario { get; set; }
+        [Display(Name = "Usuario")]
+        [Required]
         public string userName { get; set; }
+        
         public string pwd { get; set; }
+        [Display(Name = "Nombres")]
+        [Required]
         public string nombres { get; set; }
+        [Display(Name = "Apellidos")]
+        [Required]
         public string apellidos { get; set; }
+        [Display(Name = "Correo")]
+        [Required]
         public string email { get; set; }
         public int estado { get; set; }
     

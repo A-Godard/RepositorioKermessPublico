@@ -1840,10 +1840,10 @@ C:\Users\Andres Quintero\Desktop\RepositorioKermessPublico\SolucionKermesseGrupo
 C:\Users\Andres Quintero\Desktop\RepositorioKermessPublico\SolucionKermesseGrupo2\bin\ru\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\Andres Quintero\Desktop\RepositorioKermessPublico\SolucionKermesseGrupo2\bin\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\Andres Quintero\Desktop\RepositorioKermessPublico\SolucionKermesseGrupo2\bin\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Andres Quintero\Desktop\RepositorioKermessPublico\SolucionKermesseGrupo2\obj\Debug\SolucionKermesseGrupo2.csprojAssemblyReference.cache
 C:\Users\Andres Quintero\Desktop\RepositorioKermessPublico\SolucionKermesseGrupo2\obj\Debug\RdlCompile.cache
 C:\Users\Andres Quintero\Desktop\RepositorioKermessPublico\SolucionKermesseGrupo2\obj\Debug\RdlCompile.compiled
 C:\Users\Andres Quintero\Desktop\RepositorioKermessPublico\SolucionKermesseGrupo2\obj\Debug\SolucionKermesseGrupo2.csproj.CoreCompileInputs.cache
 C:\Users\Andres Quintero\Desktop\RepositorioKermessPublico\SolucionKermesseGrupo2\obj\Debug\SolucionKermesseGrupo2.csproj.CopyComplete
 C:\Users\Andres Quintero\Desktop\RepositorioKermessPublico\SolucionKermesseGrupo2\obj\Debug\SolucionKermesseGrupo2.dll
 C:\Users\Andres Quintero\Desktop\RepositorioKermessPublico\SolucionKermesseGrupo2\obj\Debug\SolucionKermesseGrupo2.pdb
-C:\Users\Andres Quintero\Desktop\RepositorioKermessPublico\SolucionKermesseGrupo2\obj\Debug\SolucionKermesseGrupo2.csprojAssemblyReference.cache

@@ -28,7 +28,7 @@ namespace SolucionKermesseGrupo2.Controllers
             if(!String.IsNullOrEmpty(ValorBusqued))
             {
 
-                usuario = usuario.Where(s => s.userName.Contains(ValorBusqued));
+                usuario = usuario.Where(s => s.nombres.Contains(ValorBusqued));
             }
 
             return View(usuario.ToList());
