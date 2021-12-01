@@ -260,6 +260,17 @@
           <Property Name="estado" Type="int" Nullable="false" />
         </EntityType>
         <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'BDKermesse.dbo.VwArqueoCaja' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+        <EntityType Name="VwArqueoCaja">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="Kermesse" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Fecha" Type="datetime" />
+          <Property Name="Total" Type="decimal" Precision="18" Scale="2" />
+        </EntityType>
+        <!--Errores durante la generación:
 advertencia 6002: La tabla o vista 'BDKermesse.dbo.VwGasto' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
         <EntityType Name="VwGasto">
           <Key>
@@ -339,6 +350,8 @@ advertencia 6002: La tabla o vista 'BDKermesse.dbo.VwRolOpciones' no tiene defin
         <EntityType Name="VwRolOpciones">
           <Key>
             <PropertyRef Name="idRolOpcion" />
+            
+            
           </Key>
           <Property Name="idRolOpcion" Type="int" Nullable="false" />
           <Property Name="Rol" Type="nvarchar" MaxLength="70" Nullable="false" />
@@ -812,6 +825,14 @@ advertencia 6002: La tabla o vista 'BDKermesse.dbo.VwRolOpciones' no tiene defin
           <EntitySet Name="TasaCambio" EntityType="Self.TasaCambio" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TasaCambioDet" EntityType="Self.TasaCambioDet" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Usuario" EntityType="Self.Usuario" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="VwArqueoCaja" EntityType="Self.VwArqueoCaja" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [VwArqueoCaja].[ID] AS [ID], 
+    [VwArqueoCaja].[Kermesse] AS [Kermesse], 
+    [VwArqueoCaja].[Fecha] AS [Fecha], 
+    [VwArqueoCaja].[Total] AS [Total]
+    FROM [dbo].[VwArqueoCaja] AS [VwArqueoCaja]</DefiningQuery>
+          </EntitySet>
           <EntitySet Name="VwGasto" EntityType="Self.VwGasto" store:Type="Views" store:Schema="dbo">
             <DefiningQuery>SELECT 
     [VwGasto].[ID] AS [ID], 
@@ -1963,6 +1984,7 @@ advertencia 6002: La tabla o vista 'BDKermesse.dbo.VwRolOpciones' no tiene defin
           <EntitySet Name="vwIngresoComunidadDetalle" EntityType="BDKermesseModel.vwIngresoComunidadDetalle" />
           <EntitySet Name="VwGasto" EntityType="BDKermesseModel.VwGasto" />
           <EntitySet Name="VwRolOpciones" EntityType="BDKermesseModel.VwRolOpciones" />
+          <EntitySet Name="VwArqueoCaja" EntityType="BDKermesseModel.VwArqueoCaja" />
         </EntityContainer>
         <EntityType Name="VwProducto">
           <Key>
@@ -2017,6 +2039,15 @@ advertencia 6002: La tabla o vista 'BDKermesse.dbo.VwRolOpciones' no tiene defin
           <Property Name="idRolOpcion" Type="Int32" Nullable="false" />
           <Property Name="Rol" Type="String" Nullable="false" MaxLength="70" FixedLength="false" Unicode="true" />
           <Property Name="Opcion" Type="String" Nullable="false" MaxLength="70" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="VwArqueoCaja">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="Kermesse" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Fecha" Type="DateTime" Precision="3" />
+          <Property Name="Total" Type="Decimal" Precision="18" Scale="2" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -2357,6 +2388,16 @@ advertencia 6002: La tabla o vista 'BDKermesse.dbo.VwRolOpciones' no tiene defin
                 <ScalarProperty Name="Opcion" ColumnName="Opcion" />
                 <ScalarProperty Name="Rol" ColumnName="Rol" />
                 <ScalarProperty Name="idRolOpcion" ColumnName="idRolOpcion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VwArqueoCaja">
+            <EntityTypeMapping TypeName="BDKermesseModel.VwArqueoCaja">
+              <MappingFragment StoreEntitySet="VwArqueoCaja">
+                <ScalarProperty Name="Total" ColumnName="Total" />
+                <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+                <ScalarProperty Name="Kermesse" ColumnName="Kermesse" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

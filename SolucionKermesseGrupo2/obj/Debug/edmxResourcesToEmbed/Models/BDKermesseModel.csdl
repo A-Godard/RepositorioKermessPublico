@@ -949,6 +949,7 @@
     <EntitySet Name="vwIngresoComunidadDetalle" EntityType="BDKermesseModel.vwIngresoComunidadDetalle" />
     <EntitySet Name="VwGasto" EntityType="BDKermesseModel.VwGasto" />
     <EntitySet Name="VwRolOpciones" EntityType="BDKermesseModel.VwRolOpciones" />
+    <EntitySet Name="VwArqueoCaja" EntityType="BDKermesseModel.VwArqueoCaja" />
   </EntityContainer>
   <EntityType Name="VwProducto">
     <Key>
@@ -1003,5 +1004,14 @@
     <Property Name="idRolOpcion" Type="Int32" Nullable="false" />
     <Property Name="Rol" Type="String" Nullable="false" MaxLength="70" FixedLength="false" Unicode="true" />
     <Property Name="Opcion" Type="String" Nullable="false" MaxLength="70" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="VwArqueoCaja">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="Kermesse" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Fecha" Type="DateTime" Precision="3" />
+    <Property Name="Total" Type="Decimal" Precision="18" Scale="2" />
   </EntityType>
 </Schema>

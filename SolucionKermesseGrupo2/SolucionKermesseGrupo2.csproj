@@ -150,6 +150,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\ArqueoCajasController.cs" />
     <Compile Include="Controllers\AuthController.cs" />
     <Compile Include="Controllers\CategoriaGastoesController.cs" />
     <Compile Include="Controllers\CategoriaProductoesController.cs" />
@@ -252,6 +253,9 @@
       <DependentUpon>BDKermesseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Usuario.cs">
+      <DependentUpon>BDKermesseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\VwArqueoCaja.cs">
       <DependentUpon>BDKermesseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\VwGasto.cs">
@@ -496,6 +500,11 @@
     <Content Include="Views\RolOpcions\Details.cshtml" />
     <Content Include="Views\RolOpcions\Edit.cshtml" />
     <Content Include="Views\RolOpcions\Index.cshtml" />
+    <Content Include="Views\ArqueoCajas\Crear.cshtml" />
+    <Content Include="Views\ArqueoCajas\Delete.cshtml" />
+    <Content Include="Views\ArqueoCajas\Details.cshtml" />
+    <Content Include="Views\ArqueoCajas\Edit.cshtml" />
+    <Content Include="Views\ArqueoCajas\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -517,6 +526,7 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Reportes\RptArqueoCaja.rdlc" />
     <EmbeddedResource Include="Reportes\RptCategoriaGasto.rdlc" />
     <EmbeddedResource Include="Reportes\RptCategoriaProducto.rdlc" />
     <EmbeddedResource Include="Reportes\RptComunidad.rdlc" />
