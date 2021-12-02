@@ -1,0 +1,88 @@
+﻿@model SolucionKermesseGrupo2.Models.Gasto
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutControladores.cshtml";
+}
+
+<div class="mx-auto" style="margin-top: 150px;">
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Begin Page Content -->
+        <div class="container-fluid">
+
+            <!-- Formulario -->
+            <div class="container">
+
+                <div class="row ">
+
+                    <div class="col-lg-10 mx-auto m-auto">
+
+                        <div class="card rounded shadow border-0 card-secondary">
+
+                            <div class="card-header text-center">
+                                <h2>
+                                    Detalle Gastos
+                                </h2>
+                            </div>
+
+                            <div class="card-body bg-white rounded text-center">
+
+                                <div class="">
+                                    <div class="">
+                                        <label>Kermesse:</label>
+                                        <br />
+                                        <span class="info-box-text">@Html.DisplayFor(model => model.Kermesse1.nombre)</span>
+                                        <hr class="sidebar-divider my-2">
+
+                                    </div>
+                                </div>
+                                <div class="">
+                                    <div class="">
+                                        <label>Categoria:</label>
+                                        <br />
+                                        <span class="info-box-text">@Html.DisplayFor(model => model.CategoriaGasto.nombreCategoria)</span>
+                                        <hr class="sidebar-divider my-2">
+                                    </div>
+                                </div>
+                                <div class="">
+                                    <div class="">
+                                        <label>Concepto:</label>
+                                        <br />
+                                        <span class="info-box-text">@Html.DisplayFor(model => model.concepto)</span>
+                                        <hr class="sidebar-divider my-2">
+                                    </div>
+                                </div>
+                                <div class="">
+                                    <div class="">
+                                        <label>monto:</label>
+                                        <br />
+                                        <span class="info-box-text">@Html.DisplayFor(model => model.monto)</span>
+                                        <hr class="sidebar-divider my-2">
+                                    </div>
+                                </div>
+                                <div class="">
+                                    <div class="">
+                                        <label>Fecha:</label>
+                                        <br />
+                                        <span class="info-box-text">@Html.DisplayFor(model => model.fechGasto)</span>
+                                        <hr class="sidebar-divider my-2">
+                                    </div>
+                                </div>
+                  
+                                <div class="text-center mt-4">
+                                    <a href="@Url.Action("Index","Gastoes")">
+                                        <i class="fas fa-arrow-circle-left"></i>&nbsp;Volver a la tabla
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.container-fluid -->
+    </div>
+    <!-- End of Main Content -->
+</div>

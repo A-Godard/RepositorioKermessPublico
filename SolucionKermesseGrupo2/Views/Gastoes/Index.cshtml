@@ -1,0 +1,141 @@
+﻿@model IEnumerable<SolucionKermesseGrupo2.Models.Gasto>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutControladores.cshtml";
+}
+
+@Styles.Render("~/Views/Shared/_Layout.cshtml")
+@Styles.Render("~/Views/Shared/_LayoutControladores.cshtml")
+
+
+
+
+
+<div class="mx-auto" style="margin-top: 150px;">
+    <div class="container-fluid">
+
+        <!-- Page Heading -->
+        <h1 class="h3 mb-2 text-gray-800">Gastos</h1>
+
+        <!-- DataTales Banner -->
+        <div class="card shadow mb-4">
+            <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-primary">Gestión de Gastos</h6>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="Prod" width="100%" cellspacing="0">
+                        <div class="text-left" style="margin-left:1162px;"><a href="@Url.Action("Create","Gastoes")"><i class="fas fa-user-plus"></i>&nbsp; Nuevo Gasto</a></div>
+
+                        <thead>
+                            <tr>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Kermesse1.nombre)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.CategoriaGasto.nombreCategoria)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.concepto)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.monto)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.fechGasto)
+                                </th>
+                                
+                                <th>Opciones</th>
+                            </tr>
+                        </thead>
+                        <tfoot>
+                            <tr>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Kermesse1.nombre)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.CategoriaGasto.nombreCategoria)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.concepto)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.monto)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.fechGasto)
+                                </th>
+                                <th>Opciones</th>
+                            </tr>
+                        </tfoot>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Kermesse1.nombre)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.CategoriaGasto.nombreCategoria)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.concepto)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.monto)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.fechGasto)
+                                    </td>
+                                  
+                                    <td>
+                                        <span style="cursor:pointer;" title="Ver detalles"><a href="@Url.Action("Details", "Gastoes", new { id=item.idGasto })" style="color:blue;" title="Detalle Gasto">&nbsp;<i class="fas fa-eye"></i></a></span>
+                                        <span style="cursor:pointer;" title="Editar"><a href="@Url.Action("Edit", "Gastoes", new { id=item.idGasto })" style="color:blue;" title="Editar">&nbsp;<i class="fas fa-edit"></i></a></span>
+                                        <span style="cursor:pointer;" title="Eliminar"><a href="@Url.Action("Delete", "Gastoes", new { id=item.idGasto })" style="color:red;" title="Eliminar Gasto">&nbsp;<i class="fas fa-trash"></i></a></span>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    <script>
+        $(document).ready(function () {
+            $('#Prod').DataTable({
+                dom: 'Bfrtip',
+                buttons: [{
+                    extend: 'pdf', text: '<i class="fas fa-file-pdf" style="margin-right:10px"></i>PDF', titleAttr: 'PDF',
+                    exportOptions: {
+                        columns: [0, 1, 2, 3, 4]
+                    }
+                },
+                {
+                    extend: 'excel', text: '<i class="fas fa-file-excel" style="margin-right:10px"></i>Excel', titleAttr: 'Excel',
+                    exportOptions: {
+                        columns: [0, 1, 2, 3, 4]
+                    }
+                },
+                {
+                    extend: 'print', text: '<i class="fas fa-print" style="margin-right:10px"></i>Imprimir', titleAttr: 'Imprimir',
+                    exportOptions: {
+                        columns: [0, 1, 2, 3, 4]
+                    }
+                }
+                ],
+                initComplete: function () {
+                    var btns = $('.dt-button');
+                    btns.addClass('btn btn-outline-primary btn-sm');
+                    btns.removeClass('dt-button');
+                }
+            });
+        });
+    </script>
+}
+
