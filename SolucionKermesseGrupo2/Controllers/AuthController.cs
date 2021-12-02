@@ -26,6 +26,7 @@ namespace SolucionKermesseGrupo2.Controllers
                 if (user != null)
                 {
                     FormsAuthentication.SetAuthCookie(user.email, true);
+
                     return RedirectToAction("Index", "Home");
                 }
                 else

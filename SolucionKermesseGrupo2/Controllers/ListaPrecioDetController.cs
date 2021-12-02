@@ -95,17 +95,17 @@ namespace SolucionKermesseGrupo2.Controllers
             return new FileContentResult(b, mt);
         }
 
-        public ActionResult VerReporteListaDet1(int id)
+        public ActionResult VerReporteDetalle(int id)
         {
             LocalReport rpt = new LocalReport();
             string mt, enc, f;
             string[] s;
             Warning[] w;
 
-            var listaPrecioDet = from m in db.ListaPrecioDet select m;
+            var listaPreciosDet = from m in db.ListaPrecioDet select m;
             if (id != null)
             {
-                ListaPrecioDet listaDet = db.ListaPrecioDet.Find(id);
+                ListaPrecioDet detalle = db.ListaPrecioDet.Find(id);
 
             }
 

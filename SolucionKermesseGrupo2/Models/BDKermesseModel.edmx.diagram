@@ -69,6 +69,7 @@
         <EntityTypeShape EntityType="BDKermesseModel.VwListaPrecio" Width="1.5" PointX="7.375" PointY="5.75" />
         <EntityTypeShape EntityType="BDKermesseModel.VwKermesse" Width="1.5" PointX="9.375" PointY="5.375" />
         <EntityTypeShape EntityType="BDKermesseModel.VwListaPrecioDet" Width="1.5" PointX="10" PointY="3.125" />
+        <EntityTypeShape EntityType="BDKermesseModel.VwIngresoKermesse" Width="1.5" PointX="8.375" PointY="8.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

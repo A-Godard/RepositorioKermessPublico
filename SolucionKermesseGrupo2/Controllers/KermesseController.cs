@@ -132,6 +132,36 @@ namespace SolucionKermesseGrupo2.Controllers
             return File(b, mt);
         }
 
+        public ActionResult VerReporte2(string tipo, string valorB, string opcR)
+        {
+            LocalReport rpt = new LocalReport();
+            string mt, enc, f;
+            string[] s;
+            Warning[] w;
+
+            string ruta = Path.Combine(Server.MapPath("~/Reportes"), "RptKermesse2.rdlc");
+            rpt.ReportPath = ruta;
+
+            var listaP = from VwKermesse in db.VwKermesse select VwKermesse;
+
+            if (!string.IsNullOrEmpty(valorB) && opcR.Equals("a"))
+            {
+                listaP = listaP.Where(VwKermesse => VwKermesse.Kermesse.Contains(valorB));
+            }
+            if (opcR.Equals("b"))
+            {
+                listaP = listaP.Where(VwKermesse => VwKermesse.idKermesse.ToString().Equals(valorB));
+            }
+            List<VwKermesse> ls = new List<VwKermesse>();
+            ls = listaP.ToList();
+
+            ReportDataSource rd = new ReportDataSource("DSKermesse", ls);
+            rpt.DataSources.Add(rd);
+
+            var b = rpt.Render(tipo, null, out mt, out enc, out f, out s, out w);
+            return new FileContentResult(b, mt);
+        }
+
         public ActionResult Edit(int? id)
         {
             if (id == null)

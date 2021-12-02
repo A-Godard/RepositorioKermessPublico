@@ -433,13 +433,19 @@
         <Width>5cm</Width>
         <Style>
           <Border>
-            <Style>None</Style>
+            <Color>PaleTurquoise</Color>
+            <Style>Double</Style>
           </Border>
         </Style>
       </Tablix>
     </ReportItems>
     <Height>1.82292in</Height>
-    <Style />
+    <Style>
+      <Border>
+        <Style>None</Style>
+      </Border>
+      <BackgroundColor>Khaki</BackgroundColor>
+    </Style>
   </Body>
   <Width>3.80208in</Width>
   <Page>
@@ -486,6 +492,7 @@
                 <TextRun>
                   <Value>Ficha de Productos</Value>
                   <Style>
+                    <FontFamily>Bahnschrift</FontFamily>
                     <FontSize>18pt</FontSize>
                   </Style>
                 </TextRun>
@@ -514,6 +521,7 @@
         <Border>
           <Style>None</Style>
         </Border>
+        <BackgroundColor>PaleTurquoise</BackgroundColor>
       </Style>
     </PageHeader>
     <PageFooter>
@@ -555,6 +563,7 @@
         <Border>
           <Style>None</Style>
         </Border>
+        <BackgroundColor>PaleTurquoise</BackgroundColor>
       </Style>
     </PageFooter>
     <PageHeight>29.7cm</PageHeight>

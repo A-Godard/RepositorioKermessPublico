@@ -324,5 +324,17 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="VwIngresoKermesse">
+      <EntityTypeMapping TypeName="BDKermesseModel.VwIngresoKermesse">
+        <MappingFragment StoreEntitySet="VwIngresoKermesse">
+          <ScalarProperty Name="Total" ColumnName="Total" />
+          <ScalarProperty Name="subTotalBono" ColumnName="subTotalBono" />
+          <ScalarProperty Name="cantidad" ColumnName="cantidad" />
+          <ScalarProperty Name="Producto" ColumnName="Producto" />
+          <ScalarProperty Name="NombreKermesse" ColumnName="NombreKermesse" />
+          <ScalarProperty Name="idKermesse" ColumnName="idKermesse" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

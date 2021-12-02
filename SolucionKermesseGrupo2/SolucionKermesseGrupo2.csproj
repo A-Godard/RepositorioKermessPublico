@@ -252,6 +252,9 @@
     <Compile Include="Models\Usuario.cs">
       <DependentUpon>BDKermesseModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\VwIngresoKermesse.cs">
+      <DependentUpon>BDKermesseModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\VwKermesse.cs">
       <DependentUpon>BDKermesseModel.tt</DependentUpon>
     </Compile>
@@ -507,6 +510,7 @@
     <EmbeddedResource Include="Reportes\RptCategoriaProducto.rdlc" />
     <EmbeddedResource Include="Reportes\RptComunidad.rdlc" />
     <EmbeddedResource Include="Reportes\RptControlBono.rdlc" />
+    <EmbeddedResource Include="Reportes\RptIngresoKermesse.rdlc" />
     <EmbeddedResource Include="Reportes\RptKermesse.rdlc" />
     <EmbeddedResource Include="Reportes\RptKermesse2.rdlc" />
     <EmbeddedResource Include="Reportes\RptListaPrecio.rdlc" />

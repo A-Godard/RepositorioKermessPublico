@@ -948,6 +948,7 @@
     <EntitySet Name="VwListaPrecio" EntityType="BDKermesseModel.VwListaPrecio" />
     <EntitySet Name="VwKermesse" EntityType="BDKermesseModel.VwKermesse" />
     <EntitySet Name="VwListaPrecioDet" EntityType="BDKermesseModel.VwListaPrecioDet" />
+    <EntitySet Name="VwIngresoKermesse" EntityType="BDKermesseModel.VwIngresoKermesse" />
   </EntityContainer>
   <EntityType Name="VwProducto">
     <Key>
@@ -990,5 +991,16 @@
     <Property Name="Lista" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="Producto" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="true" />
     <Property Name="precioVenta" Type="Double" Nullable="false" />
+  </EntityType>
+  <EntityType Name="VwIngresoKermesse">
+    <Key>
+      <PropertyRef Name="idKermesse" />
+    </Key>
+    <Property Name="idKermesse" Type="Int32" Nullable="false" />
+    <Property Name="NombreKermesse" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Producto" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="true" />
+    <Property Name="cantidad" Type="Int32" />
+    <Property Name="subTotalBono" Type="Double" Nullable="false" />
+    <Property Name="Total" Type="Double" />
   </EntityType>
 </Schema>

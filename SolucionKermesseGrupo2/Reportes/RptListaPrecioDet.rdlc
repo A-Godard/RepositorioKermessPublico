@@ -88,7 +88,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>precio Venta</Value>
+                              <Value>Precio Venta</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -172,6 +172,7 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
+                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
@@ -228,8 +229,8 @@
         <DataSetName>DSListaPrecioDet</DataSetName>
         <Top>0.77735cm</Top>
         <Left>1.79599cm</Left>
-        <Height>1.62333cm</Height>
-        <Width>8.18792cm</Width>
+        <Height>1.62334cm</Height>
+        <Width>8.18793cm</Width>
         <Style>
           <Border>
             <Style>None</Style>

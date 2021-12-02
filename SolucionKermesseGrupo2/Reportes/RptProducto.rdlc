@@ -424,7 +424,8 @@
         <Width>15.42838cm</Width>
         <Style>
           <Border>
-            <Style>None</Style>
+            <Color>PaleTurquoise</Color>
+            <Style>Double</Style>
           </Border>
         </Style>
       </Tablix>
@@ -436,7 +437,9 @@
             <TextRuns>
               <TextRun>
                 <Value>Último Registro...</Value>
-                <Style />
+                <Style>
+                  <FontFamily>Bahnschrift</FontFamily>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -460,7 +463,12 @@
       </Textbox>
     </ReportItems>
     <Height>1.5in</Height>
-    <Style />
+    <Style>
+      <Border>
+        <Style>None</Style>
+      </Border>
+      <BackgroundColor>Khaki</BackgroundColor>
+    </Style>
   </Body>
   <Width>6.75in</Width>
   <Page>
@@ -507,6 +515,7 @@
                 <TextRun>
                   <Value>Reporte de Productos</Value>
                   <Style>
+                    <FontFamily>Bahnschrift</FontFamily>
                     <FontSize>16pt</FontSize>
                     <FontWeight>Bold</FontWeight>
                   </Style>
@@ -536,6 +545,7 @@
         <Border>
           <Style>None</Style>
         </Border>
+        <BackgroundColor>PaleTurquoise</BackgroundColor>
       </Style>
     </PageHeader>
     <PageFooter>
@@ -577,6 +587,7 @@
         <Border>
           <Style>None</Style>
         </Border>
+        <BackgroundColor>PaleTurquoise</BackgroundColor>
       </Style>
     </PageFooter>
     <PageHeight>29.7cm</PageHeight>

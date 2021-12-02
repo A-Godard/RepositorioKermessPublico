@@ -72,7 +72,8 @@
                             @Html.ActionLink("Edit", "Edit", new { id = item.idKermesse }) |
                             @Html.ActionLink("Details", "Details", new { id = item.idKermesse }) |
                             @Html.ActionLink("Delete", "Delete", new { id = item.idKermesse }) |
-                            @Html.ActionLink("Reporte", "VerReporteLista1", new { id = item.idKermesse })
+                            @Html.ActionLink("Reporte", "VerReporte2", new { tipo = "PDF", valorB = item.idKermesse, opcR = "b" }, new { target = "blank" })
+
                         </td>
                     </tr>
                 }

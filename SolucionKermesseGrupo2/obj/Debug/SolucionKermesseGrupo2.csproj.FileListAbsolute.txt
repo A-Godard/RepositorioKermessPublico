@@ -1717,9 +1717,9 @@ C:\Users\hasser\Source\Repos\RepositorioKermessPublico\SolucionKermesseGrupo2\bi
 C:\Users\hasser\Source\Repos\RepositorioKermessPublico\SolucionKermesseGrupo2\bin\ru\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\hasser\Source\Repos\RepositorioKermessPublico\SolucionKermesseGrupo2\bin\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\hasser\Source\Repos\RepositorioKermessPublico\SolucionKermesseGrupo2\bin\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\hasser\Source\Repos\RepositorioKermessPublico\SolucionKermesseGrupo2\obj\Debug\SolucionKermesseGrupo2.csproj.AssemblyReference.cache
 C:\Users\hasser\Source\Repos\RepositorioKermessPublico\SolucionKermesseGrupo2\obj\Debug\RdlCompile.cache
 C:\Users\hasser\Source\Repos\RepositorioKermessPublico\SolucionKermesseGrupo2\obj\Debug\RdlCompile.compiled
 C:\Users\hasser\Source\Repos\RepositorioKermessPublico\SolucionKermesseGrupo2\obj\Debug\SolucionKermesseGrupo2.csproj.CoreCompileInputs.cache
 C:\Users\hasser\Source\Repos\RepositorioKermessPublico\SolucionKermesseGrupo2\obj\Debug\SolucionKermesseGrupo2.dll
 C:\Users\hasser\Source\Repos\RepositorioKermessPublico\SolucionKermesseGrupo2\obj\Debug\SolucionKermesseGrupo2.pdb
-C:\Users\hasser\Source\Repos\RepositorioKermessPublico\SolucionKermesseGrupo2\obj\Debug\SolucionKermesseGrupo2.csproj.AssemblyReference.cache

@@ -101,7 +101,7 @@
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
-                          <Style>Solid</Style>
+                          <Style>Double</Style>
                         </Border>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -131,7 +131,7 @@
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
-                          <Style>Solid</Style>
+                          <Style>Double</Style>
                         </Border>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -178,21 +178,21 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="F_Inicio">
+                    <Textbox Name="fInicio">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!F_Inicio.Value</Value>
+                              <Value>=Fields!fInicio.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>F_Inicio</rd:DefaultName>
+                      <rd:DefaultName>fInicio</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -243,21 +243,21 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="F_Final">
+                    <Textbox Name="fFinal">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!F_Final.Value</Value>
+                              <Value>=Fields!fFinal.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>F_Final</rd:DefaultName>
+                      <rd:DefaultName>fFinal</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -285,7 +285,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Descripción</Value>
+                              <Value>descripcion</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -308,21 +308,21 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Descripción">
+                    <Textbox Name="descripcion">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!Descripción.Value</Value>
+                              <Value>=Fields!descripcion.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Descripción</rd:DefaultName>
+                      <rd:DefaultName>descripcion</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -433,13 +433,32 @@
         <Width>5cm</Width>
         <Style>
           <Border>
-            <Style>None</Style>
+            <Color>PaleTurquoise</Color>
+            <Style>Double</Style>
+            <Width>2pt</Width>
           </Border>
+          <TopBorder>
+            <Style>Double</Style>
+          </TopBorder>
+          <BottomBorder>
+            <Style>Double</Style>
+          </BottomBorder>
+          <LeftBorder>
+            <Style>Double</Style>
+          </LeftBorder>
+          <RightBorder>
+            <Style>Double</Style>
+          </RightBorder>
         </Style>
       </Tablix>
     </ReportItems>
     <Height>1.77083in</Height>
-    <Style />
+    <Style>
+      <Border>
+        <Style>None</Style>
+      </Border>
+      <BackgroundColor>Khaki</BackgroundColor>
+    </Style>
   </Body>
   <Width>4.29526in</Width>
   <Page>
@@ -457,6 +476,7 @@
                 <TextRun>
                   <Value>Ficha de Kermesse</Value>
                   <Style>
+                    <FontFamily>Bahnschrift</FontFamily>
                     <FontSize>18pt</FontSize>
                   </Style>
                 </TextRun>
@@ -514,6 +534,7 @@
         <Border>
           <Style>None</Style>
         </Border>
+        <BackgroundColor>PaleTurquoise</BackgroundColor>
       </Style>
     </PageHeader>
     <PageFooter>
@@ -555,6 +576,7 @@
         <Border>
           <Style>None</Style>
         </Border>
+        <BackgroundColor>PaleTurquoise</BackgroundColor>
       </Style>
     </PageFooter>
     <PageHeight>29.7cm</PageHeight>
@@ -591,16 +613,16 @@
           <DataField>Kermesse</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="F_Inicio">
-          <DataField>F_Inicio</DataField>
+        <Field Name="fInicio">
+          <DataField>fInicio</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="F_Final">
-          <DataField>F_Final</DataField>
+        <Field Name="fFinal">
+          <DataField>fFinal</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="Descripción">
-          <DataField>Descripción</DataField>
+        <Field Name="descripcion">
+          <DataField>descripcion</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="Usuario">

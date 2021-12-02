@@ -2,23 +2,23 @@
 <Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
   <Body>
     <ReportItems>
-      <Tablix Name="Tablix1">
+      <Tablix Name="Tablix2">
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>2.73813cm</Width>
+              <Width>3.41281cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.73813cm</Width>
+              <Width>3.41281cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
             <TablixRow>
-              <Height>0.80285cm</Height>
+              <Height>0.82049cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox5">
+                    <Textbox Name="Textbox15">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -32,7 +32,7 @@
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox5</rd:DefaultName>
+                      <rd:DefaultName>Textbox15</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -79,11 +79,11 @@
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>0.80285cm</Height>
+              <Height>0.82049cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox10">
+                    <Textbox Name="Textbox20">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -97,7 +97,7 @@
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox10</rd:DefaultName>
+                      <rd:DefaultName>Textbox20</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -144,11 +144,11 @@
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>0.80285cm</Height>
+              <Height>0.82049cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox12">
+                    <Textbox Name="Textbox22">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -162,7 +162,7 @@
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox12</rd:DefaultName>
+                      <rd:DefaultName>Textbox22</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -178,21 +178,21 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="PrecioVenta">
+                    <Textbox Name="precioVenta">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!PrecioVenta.Value</Value>
+                              <Value>=Fields!precioVenta.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>PrecioVenta</rd:DefaultName>
+                      <rd:DefaultName>precioVenta</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -229,10 +229,10 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DSListaPrecioDet</DataSetName>
-        <Top>0.32755cm</Top>
-        <Left>2.85433cm</Left>
-        <Height>2.40854cm</Height>
-        <Width>5.47625cm</Width>
+        <Top>0.59214cm</Top>
+        <Left>1.86245cm</Left>
+        <Height>2.46146cm</Height>
+        <Width>6.82562cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -240,47 +240,16 @@
         </Style>
       </Tablix>
     </ReportItems>
-    <Height>1.30208in</Height>
+    <Height>1.44792in</Height>
     <Style />
   </Body>
-  <Width>4.41009in</Width>
+  <Width>4.23958in</Width>
   <Page>
     <PageHeader>
-      <Height>2.43417cm</Height>
+      <Height>2.54cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
-        <Textbox Name="Textbox1">
-          <CanGrow>true</CanGrow>
-          <KeepTogether>true</KeepTogether>
-          <Paragraphs>
-            <Paragraph>
-              <TextRuns>
-                <TextRun>
-                  <Value>Ficha de Lista Precio Detalle</Value>
-                  <Style>
-                    <FontSize>18pt</FontSize>
-                  </Style>
-                </TextRun>
-              </TextRuns>
-              <Style />
-            </Paragraph>
-          </Paragraphs>
-          <rd:DefaultName>Textbox1</rd:DefaultName>
-          <Top>0.27464cm</Top>
-          <Left>1.18745cm</Left>
-          <Height>1.04979cm</Height>
-          <Width>8.66479cm</Width>
-          <Style>
-            <Border>
-              <Style>None</Style>
-            </Border>
-            <PaddingLeft>2pt</PaddingLeft>
-            <PaddingRight>2pt</PaddingRight>
-            <PaddingTop>2pt</PaddingTop>
-            <PaddingBottom>2pt</PaddingBottom>
-          </Style>
-        </Textbox>
         <Textbox Name="ExecutionTime">
           <CanGrow>true</CanGrow>
           <KeepTogether>true</KeepTogether>
@@ -296,10 +265,41 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>ExecutionTime</rd:DefaultName>
-          <Top>1.50082cm</Top>
-          <Left>1.18745cm</Left>
+          <Top>1.83417cm</Top>
+          <Left>1.39912cm</Left>
           <Height>0.6cm</Height>
           <Width>2.5cm</Width>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="Textbox3">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>Ficha Lista Precio Detalle</Value>
+                  <Style>
+                    <FontSize>18pt</FontSize>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox3</rd:DefaultName>
+          <Top>0.59214cm</Top>
+          <Left>1.39912cm</Left>
+          <Height>0.99688cm</Height>
+          <Width>7.97688cm</Width>
           <ZIndex>1</ZIndex>
           <Style>
             <Border>
@@ -319,27 +319,27 @@
       </Style>
     </PageHeader>
     <PageFooter>
-      <Height>1.69333cm</Height>
+      <Height>1.27cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
-        <Textbox Name="TotalPages">
+        <Textbox Name="PageNumber">
           <CanGrow>true</CanGrow>
           <KeepTogether>true</KeepTogether>
           <Paragraphs>
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>=Globals!TotalPages</Value>
+                  <Value>=Globals!PageNumber</Value>
                   <Style />
                 </TextRun>
               </TextRuns>
               <Style />
             </Paragraph>
           </Paragraphs>
-          <rd:DefaultName>TotalPages</rd:DefaultName>
-          <Top>0.40693cm</Top>
-          <Left>7.35224cm</Left>
+          <rd:DefaultName>PageNumber</rd:DefaultName>
+          <Top>0.32755cm</Top>
+          <Left>6.87599cm</Left>
           <Height>0.6cm</Height>
           <Width>2.5cm</Width>
           <Style>
@@ -375,7 +375,7 @@
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>9569b864-fd74-4f81-aa13-914f153ca9eb</rd:DataSourceID>
+      <rd:DataSourceID>10cc30d3-9fd7-4c45-8821-2d2c0329743e</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
@@ -393,8 +393,8 @@
           <DataField>Producto</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="PrecioVenta">
-          <DataField>PrecioVenta</DataField>
+        <Field Name="precioVenta">
+          <DataField>precioVenta</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>
@@ -409,5 +409,5 @@
     </DataSet>
   </DataSets>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>
-  <rd:ReportID>603b17aa-065c-4520-9999-8ff291007988</rd:ReportID>
+  <rd:ReportID>9fe580b9-0b17-4e14-b0ec-a4d2feb9092c</rd:ReportID>
 </Report>

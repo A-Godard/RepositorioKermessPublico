@@ -255,6 +255,19 @@
     <Property Name="estado" Type="int" Nullable="false" />
   </EntityType>
   <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'BDKermesse.dbo.VwIngresoKermesse' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="VwIngresoKermesse">
+    <Key>
+      <PropertyRef Name="idKermesse" />
+    </Key>
+    <Property Name="idKermesse" Type="int" Nullable="false" />
+    <Property Name="NombreKermesse" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Producto" Type="nvarchar" MaxLength="45" Nullable="false" />
+    <Property Name="cantidad" Type="int" />
+    <Property Name="subTotalBono" Type="float" Nullable="false" />
+    <Property Name="Total" Type="float" />
+  </EntityType>
+  <!--Errores durante la generación:
 advertencia 6002: La tabla o vista 'BDKermesse.dbo.VwKermesse' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
   <EntityType Name="VwKermesse">
     <Key>
@@ -772,6 +785,16 @@ advertencia 6002: La tabla o vista 'BDKermesse.dbo.VwProducto' no tiene definida
     <EntitySet Name="TasaCambio" EntityType="Self.TasaCambio" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TasaCambioDet" EntityType="Self.TasaCambioDet" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Usuario" EntityType="Self.Usuario" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="VwIngresoKermesse" EntityType="Self.VwIngresoKermesse" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [VwIngresoKermesse].[idKermesse] AS [idKermesse], 
+    [VwIngresoKermesse].[NombreKermesse] AS [NombreKermesse], 
+    [VwIngresoKermesse].[Producto] AS [Producto], 
+    [VwIngresoKermesse].[cantidad] AS [cantidad], 
+    [VwIngresoKermesse].[subTotalBono] AS [subTotalBono], 
+    [VwIngresoKermesse].[Total] AS [Total]
+    FROM [dbo].[VwIngresoKermesse] AS [VwIngresoKermesse]</DefiningQuery>
+    </EntitySet>
     <EntitySet Name="VwKermesse" EntityType="Self.VwKermesse" store:Type="Views" store:Schema="dbo">
       <DefiningQuery>SELECT 
     [VwKermesse].[idKermesse] AS [idKermesse], 

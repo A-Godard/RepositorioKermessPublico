@@ -17,7 +17,6 @@
 
         <h2>Tabla de Productos</h2>
 
-
         <form asp-controller="Producto" asp-action="Index" id="FormBusq">
             <p>
                 Buscar: <input type="text" name="ValorBusqued" />
@@ -74,7 +73,7 @@
                             @Html.ActionLink("Editar", "Edit", new { id = item.idProducto }) |
                             @Html.ActionLink("Detalles", "Details", new { id = item.idProducto }) |
                             @Html.ActionLink("Borrar", "Delete", new { id = item.idProducto }) |
-                            @Html.ActionLink("Reporte", "VerReporteProducto", new { id = item.idProducto })
+                            @Html.ActionLink("Reporte", "VerReporte2", new { tipo = "PDF", valorB = item.idProducto, opcR = "b" }, new { target = "blank" })
                         </td>
                     </tr>
                 }

@@ -79,7 +79,7 @@
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="@Url.Action("Index", "ListaPrecio")">Precios</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Precios Detalle</a>
+                            <a class="dropdown-item" href="@Url.Action("Index", "ListaPrecioDet")">Precios Detalle</a>
                         </div>
                     </li>
 
@@ -140,6 +140,26 @@
                         </div>
                     </li>
                     <!--FIN DEL MODULO SEGURIDAD-->
+                    <!--Modulo Reportes-->
+                    <li class="nav-item dropdown mx-0 mx-lg-1">
+                        <a class="nav-link dropdown-toggle py-3 px-0 px-lg-3 rounded" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+
+                            Reportes
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="@Url.Action("RptIngresoKermesse", "~/Reportes")">Ingresos</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Egresos</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Lista Precios</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Arqueo Caja</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Resumen</a>
+                            <div class="dropdown-divider"></div>
+                        </div>
+                    </li>
+                    <!--FIN DEL MODULO Reportes-->
                     @if (User.Identity.IsAuthenticated)
                     {
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" margin-left="20px" href="/Auth/Logout">Logout</a></li>
