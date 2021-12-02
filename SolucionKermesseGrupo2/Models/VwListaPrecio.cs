@@ -16,6 +16,7 @@ namespace SolucionKermesseGrupo2.Models
     {
         public int idListaPrecio { get; set; }
         public int idListaPrecioDet { get; set; }
+        public int idKermesse { get; set; }
         public int idCatProd { get; set; }
         public string NombrePrecio { get; set; }
         public string DescPrecio { get; set; }

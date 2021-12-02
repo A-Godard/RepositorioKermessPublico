@@ -150,6 +150,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\ArqueoCajaDetsController.cs" />
     <Compile Include="Controllers\ArqueoCajasController.cs" />
     <Compile Include="Controllers\AuthController.cs" />
     <Compile Include="Controllers\CategoriaGastoesController.cs" />
@@ -2423,6 +2424,12 @@
     <Content Include="vendor\fontawesome-free\webfonts\fa-solid-900.woff2" />
     <Content Include="vendor\jquery\jquery.min.map" />
     <Content Include="vendor\jquery\jquery.slim.min.map" />
+    <Content Include="Views\ListaPrecio\ReporteListaPrecio.cshtml" />
+    <Content Include="Views\ArqueoCajaDets\Create.cshtml" />
+    <Content Include="Views\ArqueoCajaDets\Delete.cshtml" />
+    <Content Include="Views\ArqueoCajaDets\Details.cshtml" />
+    <Content Include="Views\ArqueoCajaDets\Edit.cshtml" />
+    <Content Include="Views\ArqueoCajaDets\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -2455,6 +2462,7 @@
     <EmbeddedResource Include="Reportes\RptParroquia.rdlc" />
     <EmbeddedResource Include="Reportes\RptRol.rdlc" />
     <EmbeddedResource Include="Reportes\RptUsuario.rdlc" />
+    <EmbeddedResource Include="Reportes\RptVwListaPrecio.rdlc" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

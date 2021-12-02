@@ -949,8 +949,8 @@
     <EntitySet Name="vwIngresoComunidadDetalle" EntityType="BDKermesseModel.vwIngresoComunidadDetalle" />
     <EntitySet Name="VwGasto" EntityType="BDKermesseModel.VwGasto" />
     <EntitySet Name="VwRolOpciones" EntityType="BDKermesseModel.VwRolOpciones" />
-    <EntitySet Name="VwListaPrecio" EntityType="BDKermesseModel.VwListaPrecio" />
     <EntitySet Name="VwArqueoCaja" EntityType="BDKermesseModel.VwArqueoCaja" />
+    <EntitySet Name="VwListaPrecio" EntityType="BDKermesseModel.VwListaPrecio" />
   </EntityContainer>
   <EntityType Name="VwProducto">
     <Key>
@@ -1006,12 +1006,22 @@
     <Property Name="Rol" Type="String" Nullable="false" MaxLength="70" FixedLength="false" Unicode="true" />
     <Property Name="Opcion" Type="String" Nullable="false" MaxLength="70" FixedLength="false" Unicode="true" />
   </EntityType>
+  <EntityType Name="VwArqueoCaja">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="Kermesse" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Fecha" Type="DateTime" Precision="3" />
+    <Property Name="Total" Type="Decimal" Precision="18" Scale="2" />
+  </EntityType>
   <EntityType Name="VwListaPrecio">
     <Key>
       <PropertyRef Name="idListaPrecio" />
     </Key>
     <Property Name="idListaPrecio" Type="Int32" Nullable="false" />
     <Property Name="idListaPrecioDet" Type="Int32" Nullable="false" />
+    <Property Name="idKermesse" Type="Int32" Nullable="false" />
     <Property Name="idCatProd" Type="Int32" Nullable="false" />
     <Property Name="NombrePrecio" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="DescPrecio" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
@@ -1021,14 +1031,5 @@
     <Property Name="CantidadProducto" Type="Int32" />
     <Property Name="NombreCategoria" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="true" />
     <Property Name="estado" Type="Int32" Nullable="false" />
-  </EntityType>
-  <EntityType Name="VwArqueoCaja">
-    <Key>
-      <PropertyRef Name="ID" />
-    </Key>
-    <Property Name="ID" Type="Int32" Nullable="false" />
-    <Property Name="Kermesse" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
-    <Property Name="Fecha" Type="DateTime" Precision="3" />
-    <Property Name="Total" Type="Decimal" Precision="18" Scale="2" />
   </EntityType>
 </Schema>

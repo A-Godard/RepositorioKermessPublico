@@ -1,0 +1,66 @@
+﻿@model SolucionKermesseGrupo2.Models.VwListaPrecio
+
+@{
+    ViewBag.Title = "ReporteListaPrecio";
+    Layout = "~/Views/Shared/_LayoutControladores.cshtml";
+}
+
+<!-- Page Wrapper -->
+<div id="wrapper">
+
+    <!-- Begin Page Content -->
+    <div class="container-fluid">
+
+        <!-- Formulario -->
+        <div class="container">
+
+            <div class="row ">
+
+                <div class="col-lg-10 mx-auto m-auto">
+
+                    <div class="card rounded shadow border-0">
+
+                        <div class="card-header">
+                            <h2>
+                                Formulario de reporte Maestro Reporte Lista Precio
+                            </h2>
+                        </div>
+
+                        <div class="card-body bg-white rounded">
+                            @using (Html.BeginForm("VerRptFiltradoListaPrecio", "ListaPrecio", FormMethod.Post))
+                            {
+
+                            <div class="form-group row">
+                                <div class="col-sm-12 mb-3">
+                                    <label>Kermesse:</label>
+                                    @Html.DropDownList("kermesse", ViewBag.idKermesse as SelectList, "Seleccione...", htmlAttributes: new { @class = "form-control form-control-user", @onchange = "cogerVal()" })
+
+                                    @Html.HiddenFor(m => m.idKermesse)
+                                </div>
+                                <div class="col-sm-12 mb-3">
+                                    <label>Categoria Producto:</label>
+                                    @Html.DropDownList("CatProd", ViewBag.idCatProd as SelectList, "Seleccione...", htmlAttributes: new { @class = "form-control form-control-user", @onchange = "cogerVal()" })
+
+                                    @Html.HiddenFor(m => m.idCatProd)
+                                </div>
+
+                            </div>
+                                <div class="text-center form-group">
+                                    <input class="btn btn-outline-success btn-block" type="submit" value="Generar" />
+                                    <input class="btn btn-outline-danger btn-block" type="reset" value="Cancelar" />
+                                </div>
+                                <div class="text-center">
+                                    <a href="@Url.Action("Reportes","Home")" style="color: #1CC88A">
+                                        <i class="fas fa-arrow-circle-left"></i>&nbsp;Volver a reportes
+                                    </a>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.container-fluid -->
+</div>
+<!-- End of Main Content -->

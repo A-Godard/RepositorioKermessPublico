@@ -1,4 +1,4 @@
-﻿@model IEnumerable<SolucionKermesseGrupo2.Models.VwListaPrecio>
+﻿@model IEnumerable<SolucionKermesseGrupo2.Models.ListaPrecio>
 
 @{
     ViewBag.Title = "Index";
@@ -28,10 +28,10 @@
             <table class="table" id="TablaUsers">
                 <tr>
                     <th>
-                        @Html.DisplayNameFor(model => model.Kermesse)
+                        @Html.DisplayNameFor(model => model.kermesse)
                     </th>
                     <th>
-                        @Html.DisplayNameFor(model => model.Lista)
+                        @Html.DisplayNameFor(model => model.nombre)
                     </th>
                     <th>
                         @Html.DisplayNameFor(model => model.descripcion)
@@ -43,10 +43,10 @@
                 {
                     <tr>
                         <td>
-                            @Html.DisplayFor(modelItem => item.Kermesse)
+                            @Html.DisplayFor(modelItem => item.kermesse)
                         </td>
                         <td>
-                            @Html.DisplayFor(modelItem => item.Lista)
+                            @Html.DisplayFor(modelItem => item.nombre)
                         </td>
                         <td>
                             @Html.DisplayFor(modelItem => item.descripcion)

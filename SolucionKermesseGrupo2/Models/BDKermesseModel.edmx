@@ -264,6 +264,7 @@ advertencia 6002: La tabla o vista 'BDKermesse.dbo.VwArqueoCaja' no tiene defini
         <EntityType Name="VwArqueoCaja">
           <Key>
             <PropertyRef Name="ID" />
+            
           </Key>
           <Property Name="ID" Type="int" Nullable="false" />
           <Property Name="Kermesse" Type="nvarchar" MaxLength="100" Nullable="false" />
@@ -331,18 +332,10 @@ advertencia 6002: La tabla o vista 'BDKermesse.dbo.VwListaPrecio' no tiene defin
         <EntityType Name="VwListaPrecio">
           <Key>
             <PropertyRef Name="idListaPrecio" />
-            
-            
-            
-            
-            
-            
-            
-            
-            
           </Key>
           <Property Name="idListaPrecio" Type="int" Nullable="false" />
           <Property Name="idListaPrecioDet" Type="int" Nullable="false" />
+          <Property Name="idKermesse" Type="int" Nullable="false" />
           <Property Name="idCatProd" Type="int" Nullable="false" />
           <Property Name="NombrePrecio" Type="nvarchar" MaxLength="100" Nullable="false" />
           <Property Name="DescPrecio" Type="nvarchar" MaxLength="100" Nullable="false" />
@@ -895,6 +888,7 @@ advertencia 6002: La tabla o vista 'BDKermesse.dbo.VwRolOpciones' no tiene defin
             <DefiningQuery>SELECT 
     [VwListaPrecio].[idListaPrecio] AS [idListaPrecio], 
     [VwListaPrecio].[idListaPrecioDet] AS [idListaPrecioDet], 
+    [VwListaPrecio].[idKermesse] AS [idKermesse], 
     [VwListaPrecio].[idCatProd] AS [idCatProd], 
     [VwListaPrecio].[NombrePrecio] AS [NombrePrecio], 
     [VwListaPrecio].[DescPrecio] AS [DescPrecio], 
@@ -2026,8 +2020,8 @@ advertencia 6002: La tabla o vista 'BDKermesse.dbo.VwRolOpciones' no tiene defin
           <EntitySet Name="vwIngresoComunidadDetalle" EntityType="BDKermesseModel.vwIngresoComunidadDetalle" />
           <EntitySet Name="VwGasto" EntityType="BDKermesseModel.VwGasto" />
           <EntitySet Name="VwRolOpciones" EntityType="BDKermesseModel.VwRolOpciones" />
-          <EntitySet Name="VwListaPrecio" EntityType="BDKermesseModel.VwListaPrecio" />
           <EntitySet Name="VwArqueoCaja" EntityType="BDKermesseModel.VwArqueoCaja" />
+          <EntitySet Name="VwListaPrecio" EntityType="BDKermesseModel.VwListaPrecio" />
         </EntityContainer>
         <EntityType Name="VwProducto">
           <Key>
@@ -2083,12 +2077,22 @@ advertencia 6002: La tabla o vista 'BDKermesse.dbo.VwRolOpciones' no tiene defin
           <Property Name="Rol" Type="String" Nullable="false" MaxLength="70" FixedLength="false" Unicode="true" />
           <Property Name="Opcion" Type="String" Nullable="false" MaxLength="70" FixedLength="false" Unicode="true" />
         </EntityType>
+        <EntityType Name="VwArqueoCaja">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="Kermesse" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Fecha" Type="DateTime" Precision="3" />
+          <Property Name="Total" Type="Decimal" Precision="18" Scale="2" />
+        </EntityType>
         <EntityType Name="VwListaPrecio">
           <Key>
             <PropertyRef Name="idListaPrecio" />
           </Key>
           <Property Name="idListaPrecio" Type="Int32" Nullable="false" />
           <Property Name="idListaPrecioDet" Type="Int32" Nullable="false" />
+          <Property Name="idKermesse" Type="Int32" Nullable="false" />
           <Property Name="idCatProd" Type="Int32" Nullable="false" />
           <Property Name="NombrePrecio" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="DescPrecio" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
@@ -2098,15 +2102,6 @@ advertencia 6002: La tabla o vista 'BDKermesse.dbo.VwRolOpciones' no tiene defin
           <Property Name="CantidadProducto" Type="Int32" />
           <Property Name="NombreCategoria" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="true" />
           <Property Name="estado" Type="Int32" Nullable="false" />
-        </EntityType>
-        <EntityType Name="VwArqueoCaja">
-          <Key>
-            <PropertyRef Name="ID" />
-          </Key>
-          <Property Name="ID" Type="Int32" Nullable="false" />
-          <Property Name="Kermesse" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="Fecha" Type="DateTime" Precision="3" />
-          <Property Name="Total" Type="Decimal" Precision="18" Scale="2" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -2450,6 +2445,16 @@ advertencia 6002: La tabla o vista 'BDKermesse.dbo.VwRolOpciones' no tiene defin
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="VwArqueoCaja">
+            <EntityTypeMapping TypeName="BDKermesseModel.VwArqueoCaja">
+              <MappingFragment StoreEntitySet="VwArqueoCaja">
+                <ScalarProperty Name="Total" ColumnName="Total" />
+                <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+                <ScalarProperty Name="Kermesse" ColumnName="Kermesse" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="VwListaPrecio">
             <EntityTypeMapping TypeName="BDKermesseModel.VwListaPrecio">
               <MappingFragment StoreEntitySet="VwListaPrecio">
@@ -2462,18 +2467,9 @@ advertencia 6002: La tabla o vista 'BDKermesse.dbo.VwRolOpciones' no tiene defin
                 <ScalarProperty Name="DescPrecio" ColumnName="DescPrecio" />
                 <ScalarProperty Name="NombrePrecio" ColumnName="NombrePrecio" />
                 <ScalarProperty Name="idCatProd" ColumnName="idCatProd" />
+                <ScalarProperty Name="idKermesse" ColumnName="idKermesse" />
                 <ScalarProperty Name="idListaPrecioDet" ColumnName="idListaPrecioDet" />
                 <ScalarProperty Name="idListaPrecio" ColumnName="idListaPrecio" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="VwArqueoCaja">
-            <EntityTypeMapping TypeName="BDKermesseModel.VwArqueoCaja">
-              <MappingFragment StoreEntitySet="VwArqueoCaja">
-                <ScalarProperty Name="Total" ColumnName="Total" />
-                <ScalarProperty Name="Fecha" ColumnName="Fecha" />
-                <ScalarProperty Name="Kermesse" ColumnName="Kermesse" />
-                <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

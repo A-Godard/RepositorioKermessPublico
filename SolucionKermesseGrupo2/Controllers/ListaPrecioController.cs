@@ -38,8 +38,9 @@ namespace SolucionKermesseGrupo2.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             //VwListaPrecio lista = db.VwListaPrecio.Find(id);
-           
+            ViewBag.CatProd = new SelectList(db.CategoriaProducto, "idCatProd", "nombre");
             return View();
+
         }
 
         public ActionResult Crear()
@@ -90,38 +91,27 @@ namespace SolucionKermesseGrupo2.Controllers
             return new FileContentResult(b, mt);
         }
 
-        public ActionResult VerReporteLista1(int id)
+        public ActionResult VerRptFiltradoListaPrecio(VwListaPrecio Lp)
         {
-            LocalReport rpt = new LocalReport();
-            string mt, enc, f;
+            LocalReport lrpt = new LocalReport();
+
+            string mt, enc, f, tipo;
             string[] s;
             Warning[] w;
 
-            var listaPrecios = from m in db.ListaPrecio select m;
-            if (id != null)
-            {
-                ListaPrecio lista = db.ListaPrecio.Find(id);
+            string ruta = Path.Combine(Server.MapPath("~/Reportes"), "rptVwListaPrecio.rdlc");
+            lrpt.ReportPath = ruta;
+            
+            var listaPrecio = db.VwListaPrecio.Where(x => x.idKermesse == Lp.idKermesse  && x.idCatProd == Lp.idCatProd  );
 
-            }
+            ReportDataSource rds = new ReportDataSource("DsListaPrecio", listaPrecio);
+            lrpt.DataSources.Add(rds);
+            tipo = "PDF";
 
-            string ruta = Path.Combine(Server.MapPath("~/Reportes"), "RptListaPrecio2.rdlc");
-            rpt.ReportPath = ruta;
+            var b = lrpt.Render(tipo, null, out mt, out enc, out f, out s, out w);
+            return new FileContentResult(b, mt);
 
-            BDKermesseEntities modelo = new BDKermesseEntities();
-            List<ListaPrecio> ls = new List<ListaPrecio>();
-            ls = modelo.ListaPrecio.ToList();
-
-
-            ReportDataSource rds = new ReportDataSource("DSListaPrecio", ls);
-            rpt.DataSources.Add(rds);
-
-            byte[] b = rpt.Render("PDF", null, out mt, out enc, out f, out s, out w);
-
-
-            return File(b, mt);
         }
-
-
         public ActionResult Edit(int? id)
         {
             if (id == null)

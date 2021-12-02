@@ -313,6 +313,7 @@ advertencia 6002: La tabla o vista 'BDKermesse.dbo.VwListaPrecio' no tiene defin
     </Key>
     <Property Name="idListaPrecio" Type="int" Nullable="false" />
     <Property Name="idListaPrecioDet" Type="int" Nullable="false" />
+    <Property Name="idKermesse" Type="int" Nullable="false" />
     <Property Name="idCatProd" Type="int" Nullable="false" />
     <Property Name="NombrePrecio" Type="nvarchar" MaxLength="100" Nullable="false" />
     <Property Name="DescPrecio" Type="nvarchar" MaxLength="100" Nullable="false" />
@@ -858,6 +859,7 @@ advertencia 6002: La tabla o vista 'BDKermesse.dbo.VwRolOpciones' no tiene defin
       <DefiningQuery>SELECT 
     [VwListaPrecio].[idListaPrecio] AS [idListaPrecio], 
     [VwListaPrecio].[idListaPrecioDet] AS [idListaPrecioDet], 
+    [VwListaPrecio].[idKermesse] AS [idKermesse], 
     [VwListaPrecio].[idCatProd] AS [idCatProd], 
     [VwListaPrecio].[NombrePrecio] AS [NombrePrecio], 
     [VwListaPrecio].[DescPrecio] AS [DescPrecio], 
