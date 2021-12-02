@@ -5,63 +5,93 @@
     Layout = "~/Views/Shared/_LayoutControladores.cshtml";
 }
 
-<h2>Details</h2>
 
-<div>
-    <h4>VwProducto</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Comunidad)
-        </dt>
+<div class="mx-auto" style="margin-top: 150px;">
+    <!-- Page Wrapper -->
+    <div id="wrapper">
 
-        <dd>
-            @Html.DisplayFor(model => model.Comunidad)
-        </dd>
+        <!-- Begin Page Content -->
+        <div class="container-fluid">
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Categoria)
-        </dt>
+            <!-- Formulario -->
+            <div class="container">
 
-        <dd>
-            @Html.DisplayFor(model => model.Categoria)
-        </dd>
+                <div class="row ">
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Producto)
-        </dt>
+                    <div class="col-lg-10 mx-auto m-auto">
 
-        <dd>
-            @Html.DisplayFor(model => model.Producto)
-        </dd>
+                        <div class="card rounded shadow border-0 card-secondary">
 
-        <dt>
-            @Html.DisplayNameFor(model => model.descripcion)
-        </dt>
+                            <div class="card-header text-center">
+                                <h2>
+                                    Detalles Productos
+                                </h2>
+                            </div>
 
-        <dd>
-            @Html.DisplayFor(model => model.descripcion)
-        </dd>
+                            <div class="card-body bg-white rounded text-center">
 
-        <dt>
-            @Html.DisplayNameFor(model => model.cantidad)
-        </dt>
+                                <div class="">
+                                    <div class="">
+                                        <label>Comunidad:</label>
+                                        <br />
+                                        <span class="info-box-text">@Html.DisplayFor(model => model.Comunidad)</span>
+                                        <hr class="sidebar-divider my-2">
 
-        <dd>
-            @Html.DisplayFor(model => model.cantidad)
-        </dd>
+                                    </div>
+                                </div>
+                                <div class="">
+                                    <div class="">
+                                        <label>Categoria:</label>
+                                        <br />
+                                        <span class="info-box-text">@Html.DisplayFor(model => model.Categoria)</span>
+                                        <hr class="sidebar-divider my-2">
+                                    </div>
+                                </div>
+                                <div class="">
+                                    <div class="">
+                                        <label>Producto:</label>
+                                        <br />
+                                        <span class="info-box-text">@Html.DisplayFor(model => model.Producto)</span>
+                                        <hr class="sidebar-divider my-2">
+                                    </div>
+                                </div>
+                                <div class="">
+                                    <div class="">
+                                        <label>Descripción:</label>
+                                        <br />
+                                        <span class="info-box-text">@Html.DisplayFor(model => model.descripcion)</span>
+                                        <hr class="sidebar-divider my-2">
+                                    </div>
+                                </div>
+                                <div class="">
+                                    <div class="">
+                                        <label>Cantidad:</label>
+                                        <br />
+                                        <span class="info-box-text">@Html.DisplayFor(model => model.cantidad)</span>
+                                        <hr class="sidebar-divider my-2">
+                                    </div>
+                                </div>
+                                <div class="">
+                                    <div class="">
+                                        <label>Precio Sugerido:</label>
+                                        <br />
+                                        <span class="info-box-text">@Html.DisplayFor(model => model.precioVSugerido)</span>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.precioVSugerido)
-        </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.precioVSugerido)
-        </dd>
-
-    </dl>
-</div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.idProducto }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+                                    </div>
+                                </div>
+                                <div class="text-center mt-4">
+                                    <a href="@Url.Action("Index","Producto")">
+                                        <i class="fas fa-arrow-circle-left"></i>&nbsp;Volver a la tabla
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.container-fluid -->
+    </div>
+    <!-- End of Main Content -->
+    </div>

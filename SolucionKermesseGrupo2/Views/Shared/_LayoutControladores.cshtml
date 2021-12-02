@@ -21,6 +21,11 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="~/Content/Site.css" />
+    <!-- Datatable -->
+    <link href="~/DataTables/DataTables-1.10.21/css/jquery.dataTables.min.css" rel="stylesheet">
+
+    <!-- Datatable Buttons -->
+    <link href="~/DataTables/Buttons-1.6.3/css/buttons.dataTables.min.css" rel="stylesheet">
 
 </head>
 <body id="page-top">
@@ -42,13 +47,37 @@
         </div>
     </nav>
     @RenderBody()
-    <!-- Footer-->
-<footer class="footer bottom-0 left 0 w-100" style="padding-top: 50px; padding-bottom:50px">
-    <div class="copyright py-4 text-center text-white bottom-0">
-        <div class="container"><small>Copyright &copy; Todos los derechos Reservados</small></div>
-    </div>
+        <!-- Bootstrap core JavaScript-->
+    <script src="~/vendor/jquery/jquery.min.js"></script>
+    <script src="~/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="~/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+   
+
+    <!-- Datatable -->
+    <script src="~/DataTables/DataTables-1.10.21/js/jquery.dataTables.js"></script>
+
+    <!-- Datatable Buttons -->
+    <script src="~/DataTables/Buttons-1.6.3/js/dataTables.buttons.min.js"></script>
+
+    <!-- Datatable Buttons Print -->
+    <script src="~/DataTables/Buttons-1.6.3/js/buttons.html5.min.js"></script>
+    <script src="~/DataTables/Buttons-1.6.3/js/buttons.print.min.js"></script>
+
+    <!-- Datatable Buttons PDF -->
+    <script src="~/DataTables/pdfmake-0.1.36/pdfmake.min.js"></script>
+    <script src="~/DataTables/pdfmake-0.1.36/vfs_fonts.js"></script>
+
+    <!-- Datatable Buttons Excel -->
+    <script src="~/DataTables/JSZip-2.5.0/jszip.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="~/js/demo/datatables-demo.js"></script>
+
+
     @RenderSection("Scripts", required: false)
-    <!-- Copyright Section-->
-</footer>
+
 </body>
 </html>

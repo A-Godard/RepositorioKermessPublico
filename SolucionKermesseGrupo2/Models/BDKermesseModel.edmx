@@ -327,6 +327,33 @@ advertencia 6002: La tabla o vista 'BDKermesse.dbo.vwIngresoComunidadDetalle' no
           <Property Name="subTotalBono" Type="float" Nullable="false" />
         </EntityType>
         <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'BDKermesse.dbo.VwListaPrecio' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+        <EntityType Name="VwListaPrecio">
+          <Key>
+            <PropertyRef Name="idListaPrecio" />
+            
+            
+            
+            
+            
+            
+            
+            
+            
+          </Key>
+          <Property Name="idListaPrecio" Type="int" Nullable="false" />
+          <Property Name="idListaPrecioDet" Type="int" Nullable="false" />
+          <Property Name="idCatProd" Type="int" Nullable="false" />
+          <Property Name="NombrePrecio" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="DescPrecio" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="precioVenta" Type="float" Nullable="false" />
+          <Property Name="NombreKermesse" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="NombreProducto" Type="nvarchar" MaxLength="45" Nullable="false" />
+          <Property Name="CantidadProducto" Type="int" />
+          <Property Name="NombreCategoria" Type="nvarchar" MaxLength="45" Nullable="false" />
+          <Property Name="estado" Type="int" Nullable="false" />
+        </EntityType>
+        <!--Errores durante la generación:
 advertencia 6002: La tabla o vista 'BDKermesse.dbo.VwProducto' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
         <EntityType Name="VwProducto">
           <Key>
@@ -863,6 +890,21 @@ advertencia 6002: La tabla o vista 'BDKermesse.dbo.VwRolOpciones' no tiene defin
     [vwIngresoComunidadDetalle].[cantidad] AS [cantidad], 
     [vwIngresoComunidadDetalle].[subTotalBono] AS [subTotalBono]
     FROM [dbo].[vwIngresoComunidadDetalle] AS [vwIngresoComunidadDetalle]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="VwListaPrecio" EntityType="Self.VwListaPrecio" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [VwListaPrecio].[idListaPrecio] AS [idListaPrecio], 
+    [VwListaPrecio].[idListaPrecioDet] AS [idListaPrecioDet], 
+    [VwListaPrecio].[idCatProd] AS [idCatProd], 
+    [VwListaPrecio].[NombrePrecio] AS [NombrePrecio], 
+    [VwListaPrecio].[DescPrecio] AS [DescPrecio], 
+    [VwListaPrecio].[precioVenta] AS [precioVenta], 
+    [VwListaPrecio].[NombreKermesse] AS [NombreKermesse], 
+    [VwListaPrecio].[NombreProducto] AS [NombreProducto], 
+    [VwListaPrecio].[CantidadProducto] AS [CantidadProducto], 
+    [VwListaPrecio].[NombreCategoria] AS [NombreCategoria], 
+    [VwListaPrecio].[estado] AS [estado]
+    FROM [dbo].[VwListaPrecio] AS [VwListaPrecio]</DefiningQuery>
           </EntitySet>
           <EntitySet Name="VwProducto" EntityType="Self.VwProducto" store:Type="Views" store:Schema="dbo">
             <DefiningQuery>SELECT 
@@ -1984,6 +2026,7 @@ advertencia 6002: La tabla o vista 'BDKermesse.dbo.VwRolOpciones' no tiene defin
           <EntitySet Name="vwIngresoComunidadDetalle" EntityType="BDKermesseModel.vwIngresoComunidadDetalle" />
           <EntitySet Name="VwGasto" EntityType="BDKermesseModel.VwGasto" />
           <EntitySet Name="VwRolOpciones" EntityType="BDKermesseModel.VwRolOpciones" />
+          <EntitySet Name="VwListaPrecio" EntityType="BDKermesseModel.VwListaPrecio" />
           <EntitySet Name="VwArqueoCaja" EntityType="BDKermesseModel.VwArqueoCaja" />
         </EntityContainer>
         <EntityType Name="VwProducto">
@@ -2039,6 +2082,22 @@ advertencia 6002: La tabla o vista 'BDKermesse.dbo.VwRolOpciones' no tiene defin
           <Property Name="idRolOpcion" Type="Int32" Nullable="false" />
           <Property Name="Rol" Type="String" Nullable="false" MaxLength="70" FixedLength="false" Unicode="true" />
           <Property Name="Opcion" Type="String" Nullable="false" MaxLength="70" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="VwListaPrecio">
+          <Key>
+            <PropertyRef Name="idListaPrecio" />
+          </Key>
+          <Property Name="idListaPrecio" Type="Int32" Nullable="false" />
+          <Property Name="idListaPrecioDet" Type="Int32" Nullable="false" />
+          <Property Name="idCatProd" Type="Int32" Nullable="false" />
+          <Property Name="NombrePrecio" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="DescPrecio" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="precioVenta" Type="Double" Nullable="false" />
+          <Property Name="NombreKermesse" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="NombreProducto" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="true" />
+          <Property Name="CantidadProducto" Type="Int32" />
+          <Property Name="NombreCategoria" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="true" />
+          <Property Name="estado" Type="Int32" Nullable="false" />
         </EntityType>
         <EntityType Name="VwArqueoCaja">
           <Key>
@@ -2388,6 +2447,23 @@ advertencia 6002: La tabla o vista 'BDKermesse.dbo.VwRolOpciones' no tiene defin
                 <ScalarProperty Name="Opcion" ColumnName="Opcion" />
                 <ScalarProperty Name="Rol" ColumnName="Rol" />
                 <ScalarProperty Name="idRolOpcion" ColumnName="idRolOpcion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VwListaPrecio">
+            <EntityTypeMapping TypeName="BDKermesseModel.VwListaPrecio">
+              <MappingFragment StoreEntitySet="VwListaPrecio">
+                <ScalarProperty Name="estado" ColumnName="estado" />
+                <ScalarProperty Name="NombreCategoria" ColumnName="NombreCategoria" />
+                <ScalarProperty Name="CantidadProducto" ColumnName="CantidadProducto" />
+                <ScalarProperty Name="NombreProducto" ColumnName="NombreProducto" />
+                <ScalarProperty Name="NombreKermesse" ColumnName="NombreKermesse" />
+                <ScalarProperty Name="precioVenta" ColumnName="precioVenta" />
+                <ScalarProperty Name="DescPrecio" ColumnName="DescPrecio" />
+                <ScalarProperty Name="NombrePrecio" ColumnName="NombrePrecio" />
+                <ScalarProperty Name="idCatProd" ColumnName="idCatProd" />
+                <ScalarProperty Name="idListaPrecioDet" ColumnName="idListaPrecioDet" />
+                <ScalarProperty Name="idListaPrecio" ColumnName="idListaPrecio" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

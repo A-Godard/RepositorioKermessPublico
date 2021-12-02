@@ -2,6 +2,7 @@
 using SolucionKermesseGrupo2.Models;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.IO;
 using System.Linq;
 using System.Net;
@@ -70,14 +71,15 @@ namespace SolucionKermesseGrupo2.Controllers
 
                 db.Producto.Add(p);
                 db.SaveChanges();
-                ModelState.Clear();
+                
+
 
             }
-
+            ModelState.Clear();
             ViewBag.comunidad = new SelectList(db.Comunidad, "idComunidad", "nombre");
             ViewBag.catProd = new SelectList(db.CategoriaProducto, "idCatProd", "nombre");
 
-            return View("Crear");
+            return RedirectToAction("Index");
         }
 
         public ActionResult VerReporte(string tipo)
@@ -103,6 +105,8 @@ namespace SolucionKermesseGrupo2.Controllers
 
         public ActionResult Edit(int? id)
         {
+            ViewBag.comunidad = new SelectList(db.Comunidad, "idComunidad", "nombre");
+            ViewBag.catProd = new SelectList(db.CategoriaProducto, "idCatProd", "nombre");
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
@@ -112,6 +116,7 @@ namespace SolucionKermesseGrupo2.Controllers
             {
                 return HttpNotFound();
             }
+
             return View(producto);
         }
 
@@ -125,6 +130,8 @@ namespace SolucionKermesseGrupo2.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
+            ViewBag.comunidad = new SelectList(db.Comunidad, "idComunidad", "nombre");
+            ViewBag.catProd = new SelectList(db.CategoriaProducto, "idCatProd", "nombre");
             return View(producto);
         }
 
@@ -152,6 +159,8 @@ namespace SolucionKermesseGrupo2.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
+
+
 
         protected override void Dispose(bool disposing)
         {

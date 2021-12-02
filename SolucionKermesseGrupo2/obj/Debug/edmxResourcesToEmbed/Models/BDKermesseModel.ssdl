@@ -306,6 +306,24 @@ advertencia 6002: La tabla o vista 'BDKermesse.dbo.vwIngresoComunidadDetalle' no
     <Property Name="subTotalBono" Type="float" Nullable="false" />
   </EntityType>
   <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'BDKermesse.dbo.VwListaPrecio' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="VwListaPrecio">
+    <Key>
+      <PropertyRef Name="idListaPrecio" />
+    </Key>
+    <Property Name="idListaPrecio" Type="int" Nullable="false" />
+    <Property Name="idListaPrecioDet" Type="int" Nullable="false" />
+    <Property Name="idCatProd" Type="int" Nullable="false" />
+    <Property Name="NombrePrecio" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="DescPrecio" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="precioVenta" Type="float" Nullable="false" />
+    <Property Name="NombreKermesse" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="NombreProducto" Type="nvarchar" MaxLength="45" Nullable="false" />
+    <Property Name="CantidadProducto" Type="int" />
+    <Property Name="NombreCategoria" Type="nvarchar" MaxLength="45" Nullable="false" />
+    <Property Name="estado" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errores durante la generación:
 advertencia 6002: La tabla o vista 'BDKermesse.dbo.VwProducto' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
   <EntityType Name="VwProducto">
     <Key>
@@ -835,6 +853,21 @@ advertencia 6002: La tabla o vista 'BDKermesse.dbo.VwRolOpciones' no tiene defin
     [vwIngresoComunidadDetalle].[cantidad] AS [cantidad], 
     [vwIngresoComunidadDetalle].[subTotalBono] AS [subTotalBono]
     FROM [dbo].[vwIngresoComunidadDetalle] AS [vwIngresoComunidadDetalle]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="VwListaPrecio" EntityType="Self.VwListaPrecio" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [VwListaPrecio].[idListaPrecio] AS [idListaPrecio], 
+    [VwListaPrecio].[idListaPrecioDet] AS [idListaPrecioDet], 
+    [VwListaPrecio].[idCatProd] AS [idCatProd], 
+    [VwListaPrecio].[NombrePrecio] AS [NombrePrecio], 
+    [VwListaPrecio].[DescPrecio] AS [DescPrecio], 
+    [VwListaPrecio].[precioVenta] AS [precioVenta], 
+    [VwListaPrecio].[NombreKermesse] AS [NombreKermesse], 
+    [VwListaPrecio].[NombreProducto] AS [NombreProducto], 
+    [VwListaPrecio].[CantidadProducto] AS [CantidadProducto], 
+    [VwListaPrecio].[NombreCategoria] AS [NombreCategoria], 
+    [VwListaPrecio].[estado] AS [estado]
+    FROM [dbo].[VwListaPrecio] AS [VwListaPrecio]</DefiningQuery>
     </EntitySet>
     <EntitySet Name="VwProducto" EntityType="Self.VwProducto" store:Type="Views" store:Schema="dbo">
       <DefiningQuery>SELECT 

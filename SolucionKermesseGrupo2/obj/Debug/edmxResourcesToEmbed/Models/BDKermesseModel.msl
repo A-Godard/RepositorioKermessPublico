@@ -337,6 +337,23 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="VwListaPrecio">
+      <EntityTypeMapping TypeName="BDKermesseModel.VwListaPrecio">
+        <MappingFragment StoreEntitySet="VwListaPrecio">
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="NombreCategoria" ColumnName="NombreCategoria" />
+          <ScalarProperty Name="CantidadProducto" ColumnName="CantidadProducto" />
+          <ScalarProperty Name="NombreProducto" ColumnName="NombreProducto" />
+          <ScalarProperty Name="NombreKermesse" ColumnName="NombreKermesse" />
+          <ScalarProperty Name="precioVenta" ColumnName="precioVenta" />
+          <ScalarProperty Name="DescPrecio" ColumnName="DescPrecio" />
+          <ScalarProperty Name="NombrePrecio" ColumnName="NombrePrecio" />
+          <ScalarProperty Name="idCatProd" ColumnName="idCatProd" />
+          <ScalarProperty Name="idListaPrecioDet" ColumnName="idListaPrecioDet" />
+          <ScalarProperty Name="idListaPrecio" ColumnName="idListaPrecio" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="VwArqueoCaja">
       <EntityTypeMapping TypeName="BDKermesseModel.VwArqueoCaja">
         <MappingFragment StoreEntitySet="VwArqueoCaja">
