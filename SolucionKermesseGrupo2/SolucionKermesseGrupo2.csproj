@@ -485,6 +485,7 @@
     <Content Include="Views\ListaPrecioDet\Crear.cshtml" />
     <Content Include="Views\ListaPrecioDet\Edit.cshtml" />
     <Content Include="Views\ListaPrecioDet\Delete.cshtml" />
+    <Content Include="Views\Kermesse\ReporteKermesse.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

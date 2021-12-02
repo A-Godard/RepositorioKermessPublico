@@ -69,9 +69,9 @@
                             @Html.DisplayFor(modelItem => item.Usuario)
                         </td>
                         <td>
-                            @Html.ActionLink("Edit", "Edit", new { id = item.idKermesse }) |
-                            @Html.ActionLink("Details", "Details", new { id = item.idKermesse }) |
-                            @Html.ActionLink("Delete", "Delete", new { id = item.idKermesse }) |
+                            @Html.ActionLink("Editar", "Edit", new { id = item.idKermesse }) |
+                            @Html.ActionLink("Detalles", "Details", new { id = item.idKermesse }) |
+                            @Html.ActionLink("Borrar", "Delete", new { id = item.idKermesse }) |
                             @Html.ActionLink("Reporte", "VerReporte2", new { tipo = "PDF", valorB = item.idKermesse, opcR = "b" }, new { target = "blank" })
 
                         </td>

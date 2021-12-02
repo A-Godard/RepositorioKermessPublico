@@ -29,6 +29,20 @@ namespace SolucionKermesseGrupo2.Controllers
             return View(kermesse.ToList());
         }
 
+        public ActionResult ReporteKermesse(string ValorBusqued)
+        {
+            var kermesse = from m in db.VwIngresoKermesse
+                           select m;
+
+            if (!String.IsNullOrEmpty(ValorBusqued))
+            {
+
+                kermesse = kermesse.Where(s => s.NombreKermesse.Contains(ValorBusqued));
+            }
+
+            return View(kermesse.ToList());
+        }
+
 
         public ActionResult Details(int? id)
         {

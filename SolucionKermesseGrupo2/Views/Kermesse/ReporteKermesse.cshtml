@@ -1,0 +1,68 @@
+﻿@model IEnumerable<SolucionKermesseGrupo2.Models.VwIngresoKermesse>
+
+@{
+    ViewBag.Title = "ReporteKermesse";
+    Layout = "~/Views/Shared/_LayoutControladores.cshtml";
+}
+
+<head>
+    @Styles.Render("~/Content/StyleSheetIndexUser.css")
+    @Styles.Render("~/Content/Site.css")
+</head>
+
+<body>
+
+    <div id="Container">
+
+
+        <h2>Reporte de Ingresos Kermesse</h2>
+
+        <div class="center">
+
+            <table class="table" id="TablaUsers">
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.NombreKermesse)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Producto)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.cantidad)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.subTotalBono)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Total)
+                    </th>
+                    <th></th>
+                </tr>
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.NombreKermesse)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Producto)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.cantidad)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.subTotalBono)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Total)
+                        </td>
+                    </tr>
+                }
+
+            </table>
+        </div>
+
+    </div>
+
+</body>
