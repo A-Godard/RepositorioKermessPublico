@@ -1,0 +1,118 @@
+﻿@model IEnumerable<SolucionKermesseGrupo2.Models.Denominacion>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutControladores.cshtml";
+}
+
+<div class="mx-auto" style="margin-top: 150px;">
+    <div class="container-fluid">
+
+        <!-- Page Heading -->
+        <h1 class="h3 mb-2 text-gray-800">Denominacion</h1>
+
+        <!-- DataTales Banner -->
+        <div class="card shadow mb-4">
+            <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-primary">Gestión Denominacion</h6>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="Prod" width="100%" cellspacing="0">
+                        <div class="text-left" style="margin-left:1162px;"><a href="@Url.Action("Create","Denominacions")"><i class="fas fa-user-plus"></i>&nbsp; Nuevo Producto</a></div>
+
+                        <thead>
+                            <tr>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.valor)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.valorLetras)
+                                </th>
+                           
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Moneda1.nombre)
+                                </th>
+                                <th>Opciones</th>
+                            </tr>
+                        </thead>
+                        <tfoot>
+                            <tr>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.valor)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.valorLetras)
+                                </th>
+
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Moneda1.nombre)
+                                </th>
+                                <th>Opciones</th>
+                            </tr>
+                        </tfoot>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.valor)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.valorLetras)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.estado)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Moneda1.nombre)
+                                </td>
+                                <td>
+                                    <span style="cursor:pointer;" title="Ver detalles"><a href="@Url.Action("Details", "Denominacions", new { id = item.idDenominacion })" style="color:blue;" title="Detalle Categoria Producto">&nbsp;<i class="fas fa-eye"></i></a></span>
+                                    <span style="cursor:pointer;" title="Editar"><a href="@Url.Action("Edit", "Denominacions", new { id = item.idDenominacion })" style="color:blue;" title="Editar">&nbsp;<i class="fas fa-edit"></i></a></span>
+                                    <span style="cursor:pointer;" title="Eliminar"><a href="@Url.Action("Delete", "Denominacions", new { id = item.idDenominacion })" style="color:red;" title="Eliminar Denominacion">&nbsp;<i class="fas fa-trash"></i></a></span>
+                                </td>
+                            </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    <script>
+        $(document).ready(function () {
+            $('#Prod').DataTable({
+                dom: 'Bfrtip',
+                buttons: [{
+                    extend: 'pdf', text: '<i class="fas fa-file-pdf" style="margin-right:10px"></i>PDF', titleAttr: 'PDF',
+                    exportOptions: {
+                        columns: [0, 1, 2, 3, 4, 5]
+                    }
+                },
+                {
+                    extend: 'excel', text: '<i class="fas fa-file-excel" style="margin-right:10px"></i>Excel', titleAttr: 'Excel',
+                    exportOptions: {
+                        columns: [0, 1, 2, 3, 4, 5]
+                    }
+                },
+                {
+                    extend: 'print', text: '<i class="fas fa-print" style="margin-right:10px"></i>Imprimir', titleAttr: 'Imprimir',
+                    exportOptions: {
+                        columns: [0, 1, 2, 3, 4, 5]
+                    }
+                }
+                ],
+                initComplete: function () {
+                    var btns = $('.dt-button');
+                    btns.addClass('btn btn-outline-primary btn-sm');
+                    btns.removeClass('dt-button');
+                }
+            });
+        });
+    </script>
+}

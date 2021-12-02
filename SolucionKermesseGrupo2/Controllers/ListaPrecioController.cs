@@ -10,6 +10,7 @@ using System.Web.Mvc;
 
 namespace SolucionKermesseGrupo2.Controllers
 {
+    [Authorize]
     public class ListaPrecioController : Controller
     {
 

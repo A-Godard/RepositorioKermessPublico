@@ -5,6 +5,7 @@ using System.Web.Security;
 
 namespace SolucionKermesseGrupo2.Controllers
 {
+    
     public class AuthController : Controller
     {
         private BDKermesseEntities db = new BDKermesseEntities();

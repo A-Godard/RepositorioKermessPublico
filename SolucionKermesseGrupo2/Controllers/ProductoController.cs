@@ -11,6 +11,7 @@ using System.Web.Mvc;
 
 namespace SolucionKermesseGrupo2.Controllers
 {
+    [Authorize]
     public class ProductoController : Controller
     {
         private BDKermesseEntities db = new BDKermesseEntities();

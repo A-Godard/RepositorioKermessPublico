@@ -10,6 +10,7 @@ using SolucionKermesseGrupo2.Models;
 
 namespace SolucionKermesseGrupo2.Controllers
 {
+    [Authorize]
     public class ArqueoCajaDetsController : Controller
     {
         private BDKermesseEntities db = new BDKermesseEntities();

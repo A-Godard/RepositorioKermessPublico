@@ -8,8 +8,10 @@ using System.Web;
 using System.Web.Mvc;
 using SolucionKermesseGrupo2.Models;
 
+
 namespace SolucionKermesseGrupo2.Controllers
 {
+    [Authorize]
     public class GastoesController : Controller
     {
         private BDKermesseEntities db = new BDKermesseEntities();

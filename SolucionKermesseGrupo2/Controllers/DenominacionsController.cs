@@ -10,117 +10,112 @@ using SolucionKermesseGrupo2.Models;
 
 namespace SolucionKermesseGrupo2.Controllers
 {
-   
-    public class RolOpcionsController : Controller
+    public class DenominacionsController : Controller
     {
         private BDKermesseEntities db = new BDKermesseEntities();
 
-        // GET: RolOpcions
+        // GET: Denominacions
         public ActionResult Index()
         {
-            var rolOpcion = db.RolOpcion.Include(r => r.Opcion1).Include(r => r.Rol1);
-            return View(rolOpcion.ToList());
+            var denominacion = db.Denominacion.Include(d => d.Moneda1);
+            return View(denominacion.ToList());
         }
 
-        // GET: RolOpcions/Details/5
+        // GET: Denominacions/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            RolOpcion rolOpcion = db.RolOpcion.Find(id);
-            if (rolOpcion == null)
+            Denominacion denominacion = db.Denominacion.Find(id);
+            if (denominacion == null)
             {
                 return HttpNotFound();
             }
-            return View(rolOpcion);
+            return View(denominacion);
         }
 
-        // GET: RolOpcions/Create
+        // GET: Denominacions/Create
         public ActionResult Create()
         {
-            ViewBag.opcion = new SelectList(db.Opcion, "idOpcion", "opcionDescripcion");
-            ViewBag.rol = new SelectList(db.Rol, "idRol", "rolDescripcion");
+            ViewBag.moneda = new SelectList(db.Moneda, "idMoneda", "nombre");
             return View();
         }
 
-        // POST: RolOpcions/Create
+        // POST: Denominacions/Create
         // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que quiere enlazarse. Para obtener 
         // más detalles, vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "idRolOpcion,rol,opcion")] RolOpcion rolOpcion)
+        public ActionResult Create([Bind(Include = "idDenominacion,moneda,valor,valorLetras,estado")] Denominacion denominacion)
         {
             if (ModelState.IsValid)
             {
-                db.RolOpcion.Add(rolOpcion);
+                db.Denominacion.Add(denominacion);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            ViewBag.opcion = new SelectList(db.Opcion, "idOpcion", "opcionDescripcion", rolOpcion.opcion);
-            ViewBag.rol = new SelectList(db.Rol, "idRol", "rolDescripcion", rolOpcion.rol);
-            return View(rolOpcion);
+            ViewBag.moneda = new SelectList(db.Moneda, "idMoneda", "nombre", denominacion.moneda);
+            return View(denominacion);
         }
 
-        // GET: RolOpcions/Edit/5
+        // GET: Denominacions/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            RolOpcion rolOpcion = db.RolOpcion.Find(id);
-            if (rolOpcion == null)
+            Denominacion denominacion = db.Denominacion.Find(id);
+            if (denominacion == null)
             {
                 return HttpNotFound();
             }
-            ViewBag.opcion = new SelectList(db.Opcion, "idOpcion", "opcionDescripcion", rolOpcion.opcion);
-            ViewBag.rol = new SelectList(db.Rol, "idRol", "rolDescripcion", rolOpcion.rol);
-            return View(rolOpcion);
+            ViewBag.moneda = new SelectList(db.Moneda, "idMoneda", "nombre", denominacion.moneda);
+            return View(denominacion);
         }
 
-        // POST: RolOpcions/Edit/5
+        // POST: Denominacions/Edit/5
         // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que quiere enlazarse. Para obtener 
         // más detalles, vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "idRolOpcion,rol,opcion")] RolOpcion rolOpcion)
+        public ActionResult Edit([Bind(Include = "idDenominacion,moneda,valor,valorLetras,estado")] Denominacion denominacion)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(rolOpcion).State = (System.Data.Entity.EntityState)System.Data.EntityState.Modified;
+                db.Entry(denominacion).State = (System.Data.Entity.EntityState)System.Data.EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.opcion = new SelectList(db.Opcion, "idOpcion", "opcionDescripcion", rolOpcion.opcion);
-            ViewBag.rol = new SelectList(db.Rol, "idRol", "rolDescripcion", rolOpcion.rol);
-            return View(rolOpcion);
+            ViewBag.moneda = new SelectList(db.Moneda, "idMoneda", "nombre", denominacion.moneda);
+            return View(denominacion);
         }
 
-        // GET: RolOpcions/Delete/5
+        // GET: Denominacions/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            RolOpcion rolOpcion = db.RolOpcion.Find(id);
-            if (rolOpcion == null)
+            Denominacion denominacion = db.Denominacion.Find(id);
+            if (denominacion == null)
             {
                 return HttpNotFound();
             }
-            return View(rolOpcion);
+            return View(denominacion);
         }
 
-        // POST: RolOpcions/Delete/5
+        // POST: Denominacions/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            RolOpcion rolOpcion = db.RolOpcion.Find(id);
-            db.RolOpcion.Remove(rolOpcion);
+            Denominacion denominacion = db.Denominacion.Find(id);
+            db.Denominacion.Remove(denominacion);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
